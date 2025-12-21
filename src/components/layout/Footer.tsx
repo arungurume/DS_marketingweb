@@ -50,15 +50,16 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-secondary text-secondary-foreground">
       <div className="container py-12 lg:py-24">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div className="col-span-2 lg:col-span-1">
                 <Logo />
+                 <p className="text-sm text-muted-foreground mt-4">DSHub, powered by {SITE_NAME}</p>
             </div>
             {footerLinks.map((section) => (
                 <div key={section.title}>
-                <h3 className="font-headline font-semibold tracking-wide">
+                <h3 className="font-headline font-semibold tracking-wide text-foreground">
                     {section.title}
                 </h3>
                 <ul className="mt-4 space-y-2">
@@ -66,7 +67,7 @@ export function Footer() {
                     <li key={link.label}>
                         <Link
                         href={link.href}
-                        className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                         >
                         {link.label}
                         </Link>
@@ -76,8 +77,8 @@ export function Footer() {
                 </div>
             ))}
         </div>
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/60">
+        <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
           <div className="flex space-x-4">
@@ -86,7 +87,7 @@ export function Footer() {
                     key={link['aria-label']}
                     href={link.href}
                     aria-label={link['aria-label']}
-                    className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                     <link.icon className="h-5 w-5" />
                 </Link>

@@ -41,7 +41,7 @@ export function Header() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
@@ -52,7 +52,7 @@ export function Header() {
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
                   <DropdownMenuTrigger asChild>
-                    <span className="flex items-center cursor-pointer text-sm text-foreground/60 transition-colors hover:text-foreground/80 data-[state=open]:text-foreground/80">
+                    <span className="flex items-center cursor-pointer text-sm text-foreground/80 transition-colors hover:text-foreground data-[state=open]:text-foreground">
                       {link.label}
                     </span>
                   </DropdownMenuTrigger>
@@ -77,7 +77,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'text-sm text-foreground/60 transition-colors hover:text-foreground/80',
+                    'text-sm text-foreground/80 transition-colors hover:text-foreground',
                     pathname === link.href && 'text-foreground font-semibold'
                   )}
                 >

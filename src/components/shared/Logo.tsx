@@ -1,8 +1,9 @@
-import { SITE_NAME } from '@/lib/constants';
+import { cn } from "@/lib/utils";
 
 const Logo = ({ className }: { className?: string }) => (
-  <div className={`font-headline font-bold text-2xl ${className}`}>
-    <span className="text-primary">{SITE_NAME}</span>
+  <div className={cn("font-headline font-bold text-2xl tracking-tighter", className)}>
+    <span>.DS</span>
+    <span className="text-primary">.</span>
   </div>
 );
 

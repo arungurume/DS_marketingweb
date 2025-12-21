@@ -12,9 +12,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
 
-const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
+const title = `Digital Signage Software for Modern Businesses | ${SITE_NAME}`;
 const description =
-  'Create stunning digital signage with our easy-to-use content management system. Perfect for restaurants, retail, and more. Get started for free!';
+  'DSHub is the leading cloud-based digital signage software CMS that empowers you to create and manage stunning content on any screen. Perfect for restaurants, retail, and corporate communication.';
 
 export const metadata: Metadata = {
   title,
@@ -30,9 +30,6 @@ export const metadata: Metadata = {
 };
 
 const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-home');
-const feature1Image = PlaceHolderImages.find((p) => p.id === 'feature-1');
-const feature2Image = PlaceHolderImages.find((p) => p.id === 'feature-2');
-const feature3Image = PlaceHolderImages.find((p) => p.id === 'feature-3');
 const appShowcase1 = PlaceHolderImages.find((p) => p.id === 'app-showcase-1');
 const appShowcase2 = PlaceHolderImages.find((p) => p.id === 'app-showcase-2');
 const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
@@ -48,18 +45,18 @@ const players = [
 const features = [
   {
     icon: Monitor,
-    title: 'Design with Ease',
-    description: 'Use our intuitive drag-and-drop editor to create beautiful, dynamic content. No design skills needed.',
+    title: 'Intuitive Content Creation',
+    description: 'Leverage our user-friendly, drag-and-drop editor to build beautiful, dynamic content for your digital displays. Absolutely no design experience required.',
   },
   {
     icon: Smartphone,
-    title: 'Schedule & Automate',
-    description: 'Plan your content for days, weeks, or months in advance. Set schedules to update your screens automatically.',
+    title: 'Advanced Scheduling & Automation',
+    description: 'Organize your digital signage content for days, weeks, or even months. Configure automated schedules to update your screens at the perfect time.',
   },
   {
     icon: Tablet,
-    title: 'Manage from Anywhere',
-    description: 'Our cloud-based platform lets you manage one screen or thousands from any device, anywhere in the world.',
+    title: 'Remote Screen Management',
+    description: 'Our powerful cloud-based CMS lets you control one screen or thousands from any device, anywhere in the world. DSHub gives you complete control.',
   },
 ];
 
@@ -105,12 +102,10 @@ export default function Home() {
                 </div>
             </div>
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-            The Easiest Way To Power Your Screens
+            Cloud-Based Digital Signage Software
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Create stunning digital signage with our easy-to-use content
-            management system. Perfect for restaurants, retail, and more. Get
-            started for free!
+            Welcome to DSHub, powered by {SITE_NAME}. Create and manage stunning content on your screens with our powerful, easy-to-use digital signage CMS.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
@@ -144,10 +139,10 @@ export default function Home() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
-              Manage all your screens from one app.
+              All-in-One Digital Signage Content Management
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Our platform is packed with powerful features designed to make managing your digital signs simple and effective, from anywhere in the world.
+              Our cloud-based platform is packed with powerful features designed to make managing your digital signs simple, effective, and scalable.
             </p>
           </div>
           <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
@@ -190,12 +185,10 @@ export default function Home() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
-              Use your hardware. Or ours.
+              Use Your Existing Hardware.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              From dedicated signage players to the devices you already own. We
-              support a wide range of hardware to make getting started as easy
-              as possible.
+             Our digital signage software is designed for maximum compatibility. Bring your own device and connect to DSHub today. We support a wide range of hardware to make getting started as easy as possible.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -214,11 +207,11 @@ export default function Home() {
       <section className="bg-primary text-primary-foreground py-20 sm:py-24">
         <div className="container text-center">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
-            Ready to revolutionize your displays?
+            Ready to Revolutionize Your Displays?
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
             Join thousands of businesses and start creating beautiful,
-            effective digital signage today. It&apos;s free to get started.
+            effective digital signage today. It&apos;s free to get started with DSHub.
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="secondary">

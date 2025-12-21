@@ -9,9 +9,9 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 
-const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
+const title = `Digital Signage Software for Modern Businesses | ${SITE_NAME}`;
 const description =
-  'Create stunning digital signage with our easy-to-use content management system. Perfect for restaurants, retail, and more. Get started for free!';
+  'DSHub is the leading cloud-based digital signage software CMS that empowers you to create and manage stunning content on any screen. Perfect for restaurants, retail, and corporate communication.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   authors: [{ name: 'DigitalSigns.ai Team', url: `${SITE_URL}/about-us-ds/` }],
-  keywords: ['digital signage', 'cms', 'menu board', 'qsr', 'restaurant'],
+  keywords: ['digital signage software', 'digital signage cms', 'cloud digital signage', 'dshub', 'content management system'],
   openGraph: {
     type: 'website',
     url: SITE_URL,
