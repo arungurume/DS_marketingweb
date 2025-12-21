@@ -133,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="players" className="py-20 sm:py-32">
+      <section id="players" className="py-20 sm:py-32 bg-secondary">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -145,10 +145,10 @@ export default function Home() {
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
             {players.map((player) => (
-              <Card key={player.name} className="text-center bg-secondary">
+              <Card key={player.name} className="text-center bg-background">
                   <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                       <player.icon className="h-10 w-10 text-primary" />
-                      <p className="font-semibold text-primary">{player.name}</p>
+                      <p className="font-semibold">{player.name}</p>
                   </CardContent>
               </Card>
             ))}
@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-20 sm:py-32 bg-secondary">
+      <section id="features" className="py-20 sm:py-32">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -168,7 +168,7 @@ export default function Home() {
           </div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-background p-6 rounded-lg">
+              <div key={index} className="bg-card p-6 rounded-lg border">
                 {feature.image && (
                   <Image
                     src={feature.image.imageUrl}
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="py-20 sm:py-32">
+      <section id="how-it-works" className="py-20 sm:py-32 bg-secondary">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
