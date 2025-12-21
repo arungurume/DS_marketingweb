@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { PlayCircle, Tv, Globe, Monitor, Smartphone, Tablet } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -11,6 +11,10 @@ import type { SoftwareApplication } from 'schema-dts';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
+import { GoogleTvIcon } from '@/components/icons/GoogleTvIcon';
+import { AndroidTvIcon } from '@/components/icons/AndroidTvIcon';
+import { AmazonFireTvIcon } from '@/components/icons/AmazonFireTvIcon';
+import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
 
 const title = `Digital Signage Software for Modern Businesses | ${SITE_NAME}`;
 const description =
@@ -36,25 +40,25 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'Google TV', icon: Tv },
-  { name: 'Android TV', icon: Tv },
-  { name: 'Amazon Fire TV', icon: Tv },
-  { name: 'Web Player', icon: Globe },
+  { name: 'Google TV', icon: GoogleTvIcon },
+  { name: 'Android TV', icon: AndroidTvIcon },
+  { name: 'Amazon Fire TV', icon: AmazonFireTvIcon },
+  { name: 'Web Player', icon: WebPlayerIcon },
 ];
 
 const features = [
   {
-    icon: Monitor,
+    icon: '/images/icons/editor.svg',
     title: 'Intuitive Content Creation',
     description: 'Leverage our user-friendly, drag-and-drop editor to build beautiful, dynamic content for your digital displays. Absolutely no design experience required.',
   },
   {
-    icon: Smartphone,
+    icon: '/images/icons/scheduler.svg',
     title: 'Advanced Scheduling & Automation',
     description: 'Organize your digital signage content for days, weeks, or even months. Configure automated schedules to update your screens at the perfect time.',
   },
   {
-    icon: Tablet,
+    icon: '/images/icons/remote.svg',
     title: 'Remote Screen Management',
     description: 'Our powerful cloud-based CMS lets you control one screen or thousands from any device, anywhere in the world. DSHub gives you complete control.',
   },
@@ -149,7 +153,7 @@ export default function Home() {
             {features.map((feature, index) => (
               <div key={index}>
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mx-auto">
-                    <feature.icon className="h-6 w-6" />
+                    <Image src={feature.icon} alt={feature.title} width={24} height={24} className="h-6 w-6" />
                 </div>
                 <h3 className="font-headline text-xl font-semibold mt-6">{feature.title}</h3>
                 <p className="mt-2 text-muted-foreground">{feature.description}</p>
@@ -195,7 +199,7 @@ export default function Home() {
             {players.map((player) => (
               <Card key={player.name} className="text-center bg-background/50 border">
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
-                  <player.icon className="h-10 w-10 text-primary" />
+                  <player.icon className="h-10 w-auto text-foreground" />
                   <p className="font-semibold">{player.name}</p>
                 </CardContent>
               </Card>
