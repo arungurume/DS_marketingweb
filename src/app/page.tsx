@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { CheckCircle, PlayCircle, Star, Tv, Smartphone, Globe } from 'lucide-react';
+import { PlayCircle, Tv, Globe } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -72,24 +72,6 @@ const steps = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: `DigitalSigns.ai transformed our restaurant's ambiance. Updating our menu is now a breeze, and our sales have increased by 15%!`,
-    author: 'Maria Garcia',
-    role: 'Owner, The Corner Bistro',
-  },
-  {
-    quote: `The scheduling feature is a game-changer for our retail promotions. We can plan our marketing campaigns months ahead. Highly recommended!`,
-    author: 'David Chen',
-    role: 'Marketing Director, Urban Apparel',
-  },
-  {
-    quote: `I was up and running in minutes. The platform is incredibly user-friendly, and their support team is top-notch.`,
-    author: 'Sarah Jenkins',
-    role: 'Manager, The Daily Grind Cafe',
-  },
-];
-
 const jsonLd: SoftwareApplication = {
   '@type': 'SoftwareApplication',
   name: SITE_NAME,
@@ -116,10 +98,10 @@ export default function Home() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-primary">
+              <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
                 The Easiest Way To Power Your Screens
               </h1>
-              <p className="mt-6 text-lg text-foreground/80 max-w-2xl mx-auto lg:mx-0">
+              <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Create stunning digital signage with our easy-to-use content management system. Perfect for restaurants, retail, and more. Get started for free!
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -141,7 +123,7 @@ export default function Home() {
                   alt={heroImage.description}
                   width={1200}
                   height={800}
-                  className="rounded-xl shadow-2xl"
+                  className="rounded-xl"
                   data-ai-hint={heroImage.imageHint}
                   priority
                 />
@@ -154,19 +136,19 @@ export default function Home() {
       <section id="players" className="py-20 sm:py-32">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+            <h2 className="font-headline text-3xl sm:text-4xl font-bold">
               Works With Your Hardware
             </h2>
-            <p className="mt-4 text-lg text-foreground/70">
+            <p className="mt-4 text-lg text-muted-foreground">
               From dedicated signage players to the devices you already own. We support a wide range of hardware to make getting started as easy as possible.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
             {players.map((player) => (
-              <Card key={player.name} className="text-center">
+              <Card key={player.name} className="text-center bg-secondary">
                   <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                       <player.icon className="h-10 w-10 text-primary" />
-                      <p className="font-semibold text-foreground/90">{player.name}</p>
+                      <p className="font-semibold text-primary">{player.name}</p>
                   </CardContent>
               </Card>
             ))}
@@ -174,19 +156,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-20 sm:py-32 bg-primary/5">
+      <section id="features" className="py-20 sm:py-32 bg-secondary">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+            <h2 className="font-headline text-3xl sm:text-4xl font-bold">
               Everything you need, nothing you don&apos;t.
             </h2>
-            <p className="mt-4 text-lg text-foreground/70">
+            <p className="mt-4 text-lg text-muted-foreground">
               Our platform is packed with powerful features designed to make managing your digital signs simple and effective.
             </p>
           </div>
           <div className="mt-16 grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-background p-6 rounded-lg shadow-lg border border-border/20">
+              <div key={index} className="bg-background p-6 rounded-lg">
                 {feature.image && (
                   <Image
                     src={feature.image.imageUrl}
@@ -197,8 +179,8 @@ export default function Home() {
                     data-ai-hint={feature.image.imageHint}
                   />
                 )}
-                <h3 className="font-headline text-xl font-semibold text-primary">{feature.title}</h3>
-                <p className="mt-2 text-foreground/70">{feature.description}</p>
+                <h3 className="font-headline text-xl font-semibold">{feature.title}</h3>
+                <p className="mt-2 text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -208,14 +190,12 @@ export default function Home() {
       <section id="how-it-works" className="py-20 sm:py-32">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+            <h2 className="font-headline text-3xl sm:text-4xl font-bold">
               Digital Signage Menu in 3 Easy Steps
             </h2>
           </div>
           <div className="mt-16 relative">
-            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2">
-                <div className="w-2/3 mx-auto border-t-2 border-dashed border-border"></div>
-            </div>
+            <div className="absolute left-0 right-0 top-8 h-px w-2/3 mx-auto bg-border"></div>
             <div className="grid sm:grid-cols-3 gap-8 text-center relative">
               {steps.map((step, index) => (
                 <div key={step.title}>
@@ -231,45 +211,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-20 sm:py-32">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
-              Loved by businesses worldwide
-            </h2>
-            <p className="mt-4 text-lg text-foreground/70">
-              Don&apos;t just take our word for it. Here&apos;s what our customers have to say.
-            </p>
-          </div>
-          <div className="mt-16 grid lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-background border border-border/20 rounded-lg p-6 flex flex-col">
-                <div className="flex mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current h-5 w-5" />
-                  ))}
-                </div>
-                <p className="text-foreground/80 flex-grow">&quot;{testimonial.quote}&quot;</p>
-                <div className="mt-4">
-                  <p className="font-semibold text-primary">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-accent text-accent-foreground py-20 sm:py-24">
+      <section className="bg-primary text-primary-foreground py-20 sm:py-24">
         <div className="container text-center">
            <h2 className="font-headline text-3xl sm:text-4xl font-bold">
             Ready to revolutionize your displays?
           </h2>
-          <p className="mt-4 text-lg text-accent-foreground/80 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
             Join thousands of businesses and start creating beautiful, effective digital signage today. It&apos;s free to get started.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="secondary" className="bg-background text-primary hover:bg-background/90">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/free-digital-signage/">
                 Claim Your Free Account Now
               </Link>
