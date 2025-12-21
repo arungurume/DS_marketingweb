@@ -15,6 +15,7 @@ import { GoogleTvIcon } from '@/components/icons/GoogleTvIcon';
 import { AndroidTvIcon } from '@/components/icons/AndroidTvIcon';
 import { AmazonFireTvIcon } from '@/components/icons/AmazonFireTvIcon';
 import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
+import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 
 const title = `Digital Signage Software for Modern Businesses | ${SITE_NAME}`;
 const description =
@@ -42,7 +43,8 @@ const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 const players = [
   { name: 'Google TV', icon: GoogleTvIcon },
   { name: 'Android TV', icon: AndroidTvIcon },
-  { name: 'Amazon Fire TV', icon: AmazonFireTvIcon },
+  { name: 'Amazon Signage', icon: AmazonSignageIcon },
+  { name: 'Fire TV', icon: AmazonFireTvIcon },
   { name: 'Web Player', icon: WebPlayerIcon },
 ];
 
@@ -195,7 +197,7 @@ export default function Home() {
              Our digital signage software is designed for maximum compatibility. Bring your own device and connect to DSHub today. We support a wide range of hardware to make getting started as easy as possible.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {players.map((player) => (
               <Card key={player.name} className="text-center bg-background/50 border">
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
