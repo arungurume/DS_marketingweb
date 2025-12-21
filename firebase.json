@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "trailingSlash": true,
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/404.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/example-old-path",
+        "destination": "/example-new-path",
+        "type": 301
+      }
+    ]
+  }
+}
