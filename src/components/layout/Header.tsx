@@ -9,6 +9,12 @@ import Logo from '@/components/shared/Logo';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const navLinks = [
   { href: '/free-digital-signage/', label: 'Free Signage' },
@@ -44,34 +50,35 @@ export function Header() {
           <nav className="hidden md:flex md:gap-6">
             {navLinks.map((link) =>
               link.subLinks ? (
-                <div key={link.label} className="relative group">
-                  <span className="flex items-center cursor-pointer text-foreground/60 transition-colors hover:text-foreground/80">
-                    {link.label}
-                  </span>
-                  <div className="absolute hidden group-hover:block pt-2">
-                    <div className="bg-background border rounded-md shadow-lg py-2 w-48">
-                      {link.subLinks.map((subLink) => (
+                <DropdownMenu key={link.label}>
+                  <DropdownMenuTrigger asChild>
+                    <span className="flex items-center cursor-pointer text-foreground/60 transition-colors hover:text-foreground/80 data-[state=open]:text-foreground/80">
+                      {link.label}
+                    </span>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    {link.subLinks.map((subLink) => (
+                      <DropdownMenuItem key={subLink.href} asChild>
                         <Link
-                          key={subLink.href}
                           href={subLink.href}
                           className={cn(
-                            'block px-4 py-2 text-sm text-foreground/80 hover:bg-accent/50',
+                            'text-foreground/80',
                             pathname === subLink.href && 'font-semibold text-primary'
                           )}
                         >
                           {subLink.label}
                         </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               ) : (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
                     'text-foreground/60 transition-colors hover:text-foreground/80',
-                    pathname === link.href && 'text-foreground'
+                    pathname === link.href && 'text-foreground font-semibold'
                   )}
                 >
                   {link.label}

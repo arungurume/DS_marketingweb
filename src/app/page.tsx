@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { CheckCircle, PlayCircle, Star } from 'lucide-react';
+import { CheckCircle, PlayCircle, Star, Tv, Smartphone, Globe } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import { Seo } from '@/components/shared/Seo';
 import type { SoftwareApplication } from 'schema-dts';
+import { Card, CardContent } from '@/components/ui/card';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description = 'Create stunning digital signage with our easy-to-use content management system. Perfect for restaurants, retail, and more. Get started for free!';
@@ -30,6 +31,13 @@ const feature1Image = PlaceHolderImages.find(p => p.id === 'feature-1');
 const feature2Image = PlaceHolderImages.find(p => p.id === 'feature-2');
 const feature3Image = PlaceHolderImages.find(p => p.id === 'feature-3');
 
+const players = [
+    { name: 'Google TV', icon: Tv },
+    { name: 'Android TV', icon: Tv },
+    { name: 'Amazon Signage', icon: Tv },
+    { name: 'Fire TV', icon: Tv },
+    { name: 'Web Player', icon: Globe },
+]
 
 const features = [
   {
@@ -124,6 +132,29 @@ export default function Home() {
                 />
               )}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="players" className="py-20 sm:py-32">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+              Works With Your Hardware
+            </h2>
+            <p className="mt-4 text-lg text-foreground/70">
+              From dedicated signage players to the devices you already own. We support a wide range of hardware to make getting started as easy as possible.
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
+            {players.map((player) => (
+              <Card key={player.name} className="text-center">
+                  <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
+                      <player.icon className="h-10 w-10 text-primary" />
+                      <p className="font-semibold text-foreground/90">{player.name}</p>
+                  </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
