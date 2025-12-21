@@ -57,6 +57,21 @@ const features = [
   },
 ];
 
+const steps = [
+  {
+    title: 'Select the Gallery',
+    description: 'Choose a menuboard that fits your style and needs.',
+  },
+  {
+    title: 'Edit the Design/Menu',
+    description: 'Quickly edit prices, graphics, and content from anywhere.',
+  },
+  {
+    title: 'Launch to Screen',
+    description: 'Pick your screen, set the schedule, and display your menu board.',
+  },
+];
+
 const testimonials = [
   {
     quote: `DigitalSigns.ai transformed our restaurant's ambiance. Updating our menu is now a breeze, and our sales have increased by 15%!`,
@@ -186,6 +201,32 @@ export default function Home() {
                 <p className="mt-2 text-foreground/70">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="py-20 sm:py-32">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+              Digital Signage Menu in 3 Easy Steps
+            </h2>
+          </div>
+          <div className="mt-16 relative">
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2">
+                <div className="w-2/3 mx-auto border-t-2 border-dashed border-border"></div>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-8 text-center relative">
+              {steps.map((step, index) => (
+                <div key={step.title}>
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-background border-2 border-primary text-primary mx-auto font-bold text-2xl mb-4">
+                    {index + 1}
+                  </div>
+                  <h3 className="mt-4 font-headline text-xl font-semibold">{step.title}</h3>
+                  <p className="mt-2 text-muted-foreground">{step.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

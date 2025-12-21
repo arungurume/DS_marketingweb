@@ -1,29 +1,32 @@
 import Link from 'next/link';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Linkedin, Instagram, Phone, Mail } from 'lucide-react';
 import Logo from '@/components/shared/Logo';
 import { SITE_NAME } from '@/lib/constants';
 
 const socialLinks = [
-  { icon: Twitter, href: '#', 'aria-label': 'Twitter' },
-  { icon: Github, href: '#', 'aria-label': 'Github' },
   { icon: Linkedin, href: '#', 'aria-label': 'LinkedIn' },
+  { icon: Instagram, href: '#', 'aria-label': 'Instagram' },
 ];
 
 const footerLinks = {
-  Product: [
-    { label: 'Free Signage', href: '/free-digital-signage/' },
-    { label: 'Amazon Stick CMS', href: '/amazon-signage-stick-cms/' },
-    { label: 'Menu Boards', href: '/qsr-menuboard/' },
-    { label: 'Pricing', href: '#' },
-  ],
-  Company: [
+  'Main Menu': [
     { label: 'About Us', href: '/about-us-ds/' },
-    { label: 'Blog', href: '/blog/' },
-    { label: 'Contact Us', href: '#' },
+    { label: 'Services', href: '#' },
+    { label: 'Pages', href: '#' },
+    { label: 'Contact', href: '#' },
   ],
-  Legal: [
-    { label: 'Terms and Conditions', href: '/terms-and-conditions/' },
+  Solutions: [
+    { label: 'Pizza Shop', href: '/pizza-menuboard/' },
+    { label: 'Coffee Shop', href: '/cafe-menuboard/' },
+    { label: 'Burger Shop', href: '/burger-menuboard/' },
+    { label: 'Cannabis', href: '/cannabis-dispensary-menu/' },
+    { label: 'QSR Shop', href: '/qsr-menuboard/' },
+  ],
+  Resources: [
+    { label: 'Knowledge Base', href: '#' },
     { label: 'Privacy Policy', href: '/privacy-policy/' },
+    { label: 'Terms & Conditions', href: '/terms-and-conditions/' },
+    { label: 'Video guide', href: '#' },
   ],
 };
 
@@ -32,11 +35,31 @@ export function Footer() {
     <footer className="border-t border-border/40">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
-          <div className="md:col-span-4 lg:col-span-2">
+          <div className="md:col-span-4 lg:col-span-2 space-y-4">
             <Logo />
-            <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              The easiest way to power your screens.
+            <p className="text-sm text-muted-foreground max-w-xs">
+              Free Digital Signage CMS by DS - your complete solution for managing screens, boosting brand visibility, and driving sales with ease.
             </p>
+             <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:connect@digitalsigns.ai" className="hover:text-foreground">connect@digitalsigns.ai</a>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+1 (226) 336-0773</span>
+            </div>
+             <div className="flex space-x-4 mt-4">
+                {socialLinks.map((link, index) => (
+                <Link
+                    key={index}
+                    href={link.href}
+                    aria-label={link['aria-label']}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                    <link.icon className="h-5 w-5" />
+                </Link>
+                ))}
+            </div>
           </div>
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
@@ -62,18 +85,6 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            {socialLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                aria-label={link['aria-label']}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <link.icon className="h-5 w-5" />
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
