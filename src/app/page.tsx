@@ -9,7 +9,6 @@ import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import { Seo } from '@/components/shared/Seo';
 import type { SoftwareApplication } from 'schema-dts';
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
 import { GoogleTvIcon } from '@/components/icons/GoogleTvIcon';
 import { AndroidTvIcon } from '@/components/icons/AndroidTvIcon';
@@ -17,6 +16,7 @@ import { AmazonFireTvIcon } from '@/components/icons/AmazonFireTvIcon';
 import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
 import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 import { AskAiSection } from '@/components/shared/AskAiSection';
+import { Testimonials } from '@/components/shared/Testimonials';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -119,21 +119,7 @@ export default function Home() {
       <Seo schema={{ '@context': 'https://schema.org', ...jsonLd }} />
       <section className="py-20 sm:py-32">
         <div className="container text-center">
-          <div className="flex justify-center items-center gap-4">
-            <Avatar>
-              <AvatarImage
-                src="https://picsum.photos/seed/ceo/40/40"
-                alt="CEO"
-              />
-              <AvatarFallback>JD</AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="font-medium">John Doe, CEO of CafeMocha</p>
-              <p className="text-sm text-muted-foreground">
-                "The best Digital Signage platform, bar none."
-              </p>
-            </div>
-          </div>
+          <Testimonials />
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
             Cloud-Based Digital Signage Software
           </h1>
@@ -170,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-20 sm:py-32 bg-secondary">
+      <section id="features" className="py-20 sm:py-32 bg-primary/5">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -233,7 +219,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="players" className="py-20 sm:py-32 bg-secondary">
+      <section id="players" className="py-20 sm:py-32 bg-primary/5">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
