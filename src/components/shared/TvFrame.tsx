@@ -34,10 +34,10 @@ export function TvFrame() {
   const currentImage = showcaseImages[currentIndex];
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto mt-16">
+    <div className="relative w-full max-w-5xl mx-auto mt-16">
       <div className="aspect-[16/9] relative">
         <div
-          className="w-full h-full rounded-lg bg-gray-900 border-4 border-gray-700/50 shadow-2xl p-2 sm:p-3 flex items-center justify-center overflow-hidden"
+          className="w-full h-full rounded-lg bg-gray-900 border-8 border-gray-800 shadow-2xl p-1 sm:p-2 flex items-center justify-center overflow-hidden"
         >
            {currentImage && (
             <Image
@@ -55,8 +55,6 @@ export function TvFrame() {
           )}
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-[25%] h-4 bg-gray-700/60 rounded-b-md" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[calc(100%+1rem)] w-[10%] h-2 bg-gray-600/80 rounded-b-sm" />
     </div>
   );
 }
