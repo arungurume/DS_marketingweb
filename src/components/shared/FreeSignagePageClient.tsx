@@ -264,8 +264,7 @@ export function FreeSignagePageClient() {
         {/* Final CTA */}
         <section className="py-20">
             <div className="container">
-                <div className="rounded-xl bg-gray-900 p-8 sm:p-12 text-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-primary opacity-90"></div>
+                <div className="rounded-xl bg-primary p-8 sm:p-12 text-center relative overflow-hidden">
                      <div className="absolute inset-0 bg-[url(/images/cta-bg.svg)] bg-center opacity-20"></div>
                     <div className="relative z-10">
                         <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary-foreground">
