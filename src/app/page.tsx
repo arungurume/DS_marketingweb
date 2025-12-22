@@ -264,12 +264,12 @@ export default function Home() {
 
       <AskAiSection />
 
-      <section className="bg-primary text-primary-foreground py-20 sm:py-24">
+      <section className="py-20 sm:py-24">
         <div className="container text-center">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
             Ready to Revolutionize Your Displays?
           </h2>
-          <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Join thousands of businesses and start creating beautiful,
             effective digital signage today. It&apos;s free to get started with
             DSHub.
@@ -278,8 +278,6 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              variant="secondary"
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
               <Link href="/free-digital-signage/">
                 Claim Your Free Account Now
