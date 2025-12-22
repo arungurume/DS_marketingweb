@@ -19,8 +19,6 @@ import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
 import { TvWebBrowserIcon } from '@/components/icons/TvWebBrowserIcon';
-import { ChromecastIcon } from '@/components/icons/ChromecastIcon';
-import { RaspberryPiIcon } from '@/components/icons/RaspberryPiIcon';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -66,11 +64,10 @@ const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 const players = [
   { name: 'TV Web Browser', icon: TvWebBrowserIcon },
   { name: 'Web Browser', icon: WebPlayerIcon },
-  { name: 'Chromecast', icon: ChromecastIcon },
+  { name: 'Google TV', icon: GoogleTvIcon },
   { name: 'Android App', icon: AndroidTvIcon },
   { name: 'Amazon Firestick App', icon: AmazonFireTvIcon },
   { name: 'Amazon Signage Stick', icon: AmazonSignageIcon },
-  { name: 'Raspberry Pi', icon: RaspberryPiIcon },
 ];
 
 const features = [
@@ -232,7 +229,7 @@ export default function Home() {
                 className="text-center bg-background shadow-md border-border/50"
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
-                  <player.icon className="h-10 w-auto text-foreground" />
+                  <player.icon className="h-10 w-auto" />
                   <p className="font-semibold">{player.name}</p>
                 </CardContent>
               </Card>

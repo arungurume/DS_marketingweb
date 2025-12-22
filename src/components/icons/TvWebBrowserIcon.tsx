@@ -10,11 +10,11 @@ export const TvWebBrowserIcon = (props: SVGProps<SVGSVGElement>) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={cn('h-10 w-auto', props.className)}
+    className={cn('h-10 w-auto text-[#4285F4]', props.className)}
     {...props}
   >
-    <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-    <path d="M12 17h.01" />
-    <path d="M17 2l-5 5-5-5" />
+    <rect x="2" y="7" width="20" height="15" rx="2" ry="2" stroke="currentColor"/>
+    <path d="M12 17h.01"  stroke="currentColor"/>
+    <path d="M17 2l-5 5-5-5" stroke="currentColor" />
   </svg>
 );
