@@ -8,12 +8,18 @@ import {
   type ImagePlaceholder,
 } from '@/lib/placeholder-images';
 
-const showcaseImages = [
+const horizontalImages = [
   PlaceHolderImages.find((p) => p.id === 'hero-home'),
   PlaceHolderImages.find((p) => p.id === 'pizza-menu'),
-  PlaceHolderImages.find((p) => p.id === 'cafe-menu'),
-  PlaceHolderImages.find((p) => p.id === 'burger-menu'),
+  PlaceHolderImages.find((p) => p.id === 'qsr-menu'),
 ].filter(Boolean) as ImagePlaceholder[];
+
+const verticalImages = [
+  PlaceHolderImages.find((p) => p.id === 'app-showcase-1'),
+  PlaceHolderImages.find((p) => p.id === 'app-showcase-2'),
+  PlaceHolderImages.find((p) => p.id === 'app-showcase-3'),
+].filter(Boolean) as ImagePlaceholder[];
+
 
 export function TvFrame() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,38 +29,68 @@ export function TvFrame() {
     const interval = setInterval(() => {
       setIsFading(true);
       setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % showcaseImages.length);
+        const nextIndex = (currentIndex + 1) % Math.min(horizontalImages.length, verticalImages.length);
+        setCurrentIndex(nextIndex);
         setIsFading(false);
       }, 500);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentIndex]);
 
-  const currentImage = showcaseImages[currentIndex];
+  const currentHorizontalImage = horizontalImages[currentIndex];
+  const currentVerticalImage = verticalImages[currentIndex];
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto mt-16">
-      <div className="aspect-[16/9] relative">
-        <div
-          className="w-full h-full rounded-lg bg-gray-900 border-8 border-gray-800 shadow-2xl p-1 sm:p-2 flex items-center justify-center overflow-hidden"
-        >
-           {currentImage && (
-            <Image
-              src={currentImage.imageUrl}
-              alt={currentImage.description}
-              width={1200}
-              height={800}
-              priority={currentIndex === 0}
-              className={cn(
-                'w-full h-full object-cover rounded-sm transition-opacity duration-500',
-                isFading ? 'opacity-0' : 'opacity-100'
-              )}
-               data-ai-hint={currentImage.imageHint}
-            />
-          )}
+    <div className="relative w-full max-w-6xl mx-auto mt-12 sm:mt-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
+            {/* Horizontal TV */}
+            <div className="relative w-full max-w-4xl z-10">
+                <div className="aspect-[16/9] relative">
+                    <div
+                    className="w-full h-full rounded-lg bg-gray-900 border-4 sm:border-8 border-gray-800 shadow-2xl p-1 flex items-center justify-center overflow-hidden"
+                    >
+                    {currentHorizontalImage && (
+                        <Image
+                        src={currentHorizontalImage.imageUrl}
+                        alt={currentHorizontalImage.description}
+                        width={1200}
+                        height={675}
+                        priority
+                        className={cn(
+                            'w-full h-full object-cover rounded-sm transition-opacity duration-500',
+                            isFading ? 'opacity-0' : 'opacity-100'
+                        )}
+                        data-ai-hint={currentHorizontalImage.imageHint}
+                        />
+                    )}
+                    </div>
+                </div>
+            </div>
+
+            {/* Vertical TV */}
+            <div className="relative w-48 sm:w-40 sm:-ml-12">
+                 <div className="aspect-[9/16] relative">
+                    <div
+                    className="w-full h-full rounded-lg bg-gray-900 border-4 sm:border-8 border-gray-800 shadow-2xl p-1 flex items-center justify-center overflow-hidden"
+                    >
+                    {currentVerticalImage && (
+                        <Image
+                        src={currentVerticalImage.imageUrl}
+                        alt={currentVerticalImage.description}
+                        width={338}
+                        height={600}
+                        className={cn(
+                            'w-full h-full object-cover rounded-sm transition-opacity duration-500',
+                            isFading ? 'opacity-0' : 'opacity-100'
+                        )}
+                        data-ai-hint={currentVerticalImage.imageHint}
+                        />
+                    )}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   );
 }
