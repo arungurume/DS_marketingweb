@@ -37,12 +37,12 @@ const steps = [
 
 const comparisonData = [
   { feature: "Free Plan", dsai: "4 screens free (no watermark)", yodeck: "1 screen free (with watermark)", trulifi: "A trial only" },
-  { feature: "Entry Paid Plan", dsai: "Only when > 4 screens", yodeck: "Starts ~$8/screen/mo", trulifi: "Starts ~$8/screen/mo" },
-  { feature: "Watermark on Free", dsai: "None", yodeck: "Yes", trulifi: "Trial expires" },
-  { feature: "Supported Players", dsai: "Browser, Fire TV, Android TV", yodeck: "Fire TV, Android, Windows, ChromeOS", trulifi: "Fire TV, Android, Windows, ChromeOS" },
-  { feature: "Templates Included", dsai: "Menus, retail, events", yodeck: "Menus, retail, events", trulifi: "Menus, retail, events" },
+  { feature: "Entry Paid Plan", dsai: "Only when > 4 screens", yodeck: "Starts ~$8/screen/mo", trulifi: { check: true } },
+  { feature: "Watermark on Free", dsai: "None", yodeck: { check: true }, trulifi: { check: true } },
+  { feature: "Supported Players", dsai: { check: true, text: "Browser, Fire TV, Android TV" }, yodeck: "Fire TV, Android, Windows, ChromeOS", trulifi: { check: true, text: "Fire TV, Android, Windows, ChromeOS" } },
+  { feature: "Templates Included", dsai: { check: true, text: "Menus, retail, events" }, yodeck: "Menus, retail, events", trulifi: { check: true, text: "Menus, retail, events" } },
   { feature: "Ease of Setup", dsai: "Browser player, no installs", yodeck: "Requires player hardware", trulifi: "Requires app installs" },
-  { feature: "Scheduling", dsai: "Free", yodeck: "Free", trulifi: "Only on paid" },
+  { feature: "Scheduling", dsai: "Free", yodeck: { check: true }, trulifi: "Only on paid" },
 ];
 
 const whoUses = [
@@ -65,6 +65,23 @@ const faqs = [
     { question: "Can I upload my own content?", answer: "Absolutely. You can upload your own images (JPG, PNG) and videos (MP4) to our media library and use them in your designs. You can also use our free templates and stock image library." },
     { question: "What if I need more than 4 screens?", answer: "Our paid plans are simple and affordable, starting at just $20 per screen per month. You can upgrade, downgrade, or cancel anytime directly from your dashboard." },
 ]
+
+const renderCell = (data: any) => {
+    if (typeof data === 'string') {
+        return data;
+    }
+    if (typeof data === 'object' && data !== null) {
+        if (data.check) {
+            return (
+                <div className="flex flex-col items-center sm:items-start">
+                    <CheckmarkIcon val={true} />
+                    {data.text && <span className="text-sm text-muted-foreground mt-1">{data.text}</span>}
+                </div>
+            );
+        }
+    }
+    return null;
+}
 
 export function FreeSignagePageClient() {
   return (
@@ -153,45 +170,30 @@ export function FreeSignagePageClient() {
                   Accurate to the best of our knowledge (we checked September 2023). Device support and pricing may change — check each platform for current details.
               </p>
               <div className="mt-12 max-w-5xl mx-auto">
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse">
+                  <div className="overflow-x-auto rounded-lg border bg-background shadow-lg">
+                    <table className="w-full text-left">
                         <thead>
-                            <tr>
-                                <th className="p-4 font-semibold">Features</th>
+                            <tr className="bg-muted/40">
+                                <th className="p-4 font-semibold text-lg">Features</th>
                                 <th className="p-4 font-semibold text-primary bg-primary/10 rounded-t-lg">{SITE_NAME}</th>
                                 <th className="p-4 font-semibold">Yodeck</th>
                                 <th className="p-4 font-semibold">Trulifi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {comparisonData.map(row => (
-                                <tr key={row.feature} className="border-b bg-background">
+                            {comparisonData.map((row, rowIndex) => (
+                                <tr key={row.feature} className="border-t">
                                     <td className="p-4 font-medium">{row.feature}</td>
-                                    <td className="p-4 bg-primary/5">
-                                        {row.dsai === 'None' || row.dsai === 'Free' || row.dsai.includes('screen') || row.dsai.includes('player') ? row.dsai : <CheckmarkIcon val={true} />}
-                                        {row.feature === "Supported Players" && <span className="block text-sm text-muted-foreground">{row.dsai}</span>}
-                                        {row.feature === "Templates Included" && <span className="block text-sm text-muted-foreground">{row.dsai}</span>}
-                                        {row.feature === "Ease of Setup" && <span className="block text-sm text-muted-foreground">{row.dsai}</span>}
-
-                                    </td>
-                                    <td className="p-4">
-                                        {row.yodeck === 'Yes' || row.yodeck === 'Free' ? <CheckmarkIcon val={true} /> : (row.yodeck === "No" ? <CheckmarkIcon val={false}/> : row.yodeck)}
-                                        {row.feature === "Supported Players" && <span className="block text-sm text-muted-foreground">{row.yodeck}</span>}
-                                        {row.feature === "Templates Included" && <span className="block text-sm text-muted-foreground">{row.yodeck}</span>}
-
-                                    </td>
-                                    <td className="p-4">
-                                        {row.trulifi.includes('trial') || row.trulifi.includes('paid') || row.trulifi.includes('installs') ? row.trulifi : <CheckmarkIcon val={true} />}
-                                        {row.feature === "Supported Players" && <span className="block text-sm text-muted-foreground">{row.trulifi}</span>}
-                                        {row.feature === "Templates Included" && <span className="block text-sm text-muted-foreground">{row.trulifi}</span>}
-                                    </td>
+                                    <td className="p-4 bg-primary/5">{renderCell(row.dsai)}</td>
+                                    <td className="p-4">{renderCell(row.yodeck)}</td>
+                                    <td className="p-4">{renderCell(row.trulifi)}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                   </div>
                   <div className="mt-8 text-center">
-                    <Button asChild>
+                    <Button asChild size="lg">
                         <Link href="#">Claim My Free Screens</Link>
                     </Button>
                   </div>
