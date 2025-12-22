@@ -220,7 +220,7 @@ export default function Home() {
             effective digital signage today. It&apos;s free to get started with DSHub.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
               <Link href="/free-digital-signage/">
                 Claim Your Free Account Now
               </Link>
