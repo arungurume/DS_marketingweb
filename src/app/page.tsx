@@ -17,6 +17,7 @@ import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
 import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
+import { TvFrame } from '@/components/shared/TvFrame';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -54,7 +55,6 @@ export const metadata: Metadata = {
   },
 };
 
-const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-home');
 const appShowcase1 = PlaceHolderImages.find((p) => p.id === 'app-showcase-1');
 const appShowcase2 = PlaceHolderImages.find((p) => p.id === 'app-showcase-2');
 const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
@@ -140,19 +140,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-16">
-            {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                width={1200}
-                height={800}
-                className="rounded-xl shadow-lg border"
-                data-ai-hint={heroImage.imageHint}
-                priority
-              />
-            )}
-          </div>
+          <TvFrame />
         </div>
       </section>
 
