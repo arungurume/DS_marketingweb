@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms-and-conditions/',
     '/privacy-policy/',
     '/blog/',
+    '/pricing/',
   ];
 
   const staticPageRoutes = staticPages.map((path) => ({

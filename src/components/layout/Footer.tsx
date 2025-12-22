@@ -17,7 +17,7 @@ const footerLinks = [
       { label: 'Free Signage', href: '/free-digital-signage/' },
       { label: 'Menu Boards', href: '#' },
       { label: 'Amazon Stick', href: '/amazon-signage-stick-cms/' },
-      { label: 'Pricing', href: '#' },
+      { label: 'Pricing', href: '/pricing/' },
     ],
   },
   {
