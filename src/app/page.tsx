@@ -170,7 +170,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-20 sm:py-32 bg-primary/5">
+      <section id="features" className="py-20 sm:py-32 bg-secondary">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -233,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="players" className="py-20 sm:py-32 bg-primary/5">
+      <section id="players" className="py-20 sm:py-32 bg-secondary">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
