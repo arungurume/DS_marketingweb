@@ -18,6 +18,9 @@ import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
+import { TvWebBrowserIcon } from '@/components/icons/TvWebBrowserIcon';
+import { ChromecastIcon } from '@/components/icons/ChromecastIcon';
+import { RaspberryPiIcon } from '@/components/icons/RaspberryPiIcon';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -61,11 +64,13 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'Google TV', icon: GoogleTvIcon },
-  { name: 'Android TV', icon: AndroidTvIcon },
-  { name: 'Amazon Signage', icon: AmazonSignageIcon },
-  { name: 'Fire TV', icon: AmazonFireTvIcon },
-  { name: 'Web Player', icon: WebPlayerIcon },
+  { name: 'TV Web Browser', icon: TvWebBrowserIcon },
+  { name: 'Web Browser', icon: WebPlayerIcon },
+  { name: 'Chromecast', icon: ChromecastIcon },
+  { name: 'Android App', icon: AndroidTvIcon },
+  { name: 'Amazon Firestick App', icon: AmazonFireTvIcon },
+  { name: 'Amazon Signage Stick', icon: AmazonSignageIcon },
+  { name: 'Raspberry Pi', icon: RaspberryPiIcon },
 ];
 
 const features = [
@@ -220,11 +225,11 @@ export default function Home() {
               easy as possible.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {players.map((player) => (
               <Card
                 key={player.name}
-                className="text-center bg-background/50 border"
+                className="text-center bg-background shadow-md border-border/50"
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                   <player.icon className="h-10 w-auto text-foreground" />
