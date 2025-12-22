@@ -21,7 +21,7 @@ const verticalImages = [
 ].filter(Boolean) as ImagePlaceholder[];
 
 
-export function TvFrame() {
+export function TvFrame({ horizontalOnly = false }: { horizontalOnly?: boolean }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
@@ -41,33 +41,43 @@ export function TvFrame() {
   const currentHorizontalImage = horizontalImages[currentIndex];
   const currentVerticalImage = verticalImages[currentIndex];
 
+  const horizontalTv = (
+    <div className="relative w-full max-w-3xl flex-shrink">
+        <div className="aspect-[16/9] relative h-full">
+            <div
+            className="w-full h-full rounded-lg bg-gray-900 border-4 sm:border-8 border-gray-800 shadow-2xl p-1 flex items-center justify-center overflow-hidden"
+            >
+            {currentHorizontalImage && (
+                <Image
+                src={currentHorizontalImage.imageUrl}
+                alt={currentHorizontalImage.description}
+                width={1200}
+                height={675}
+                priority
+                className={cn(
+                    'w-full h-full object-cover rounded-sm transition-opacity duration-500',
+                    isFading ? 'opacity-0' : 'opacity-100'
+                )}
+                data-ai-hint={currentHorizontalImage.imageHint}
+                />
+            )}
+            </div>
+        </div>
+    </div>
+  );
+
+  if (horizontalOnly) {
+    return (
+        <div className="relative w-full max-w-xl mx-auto">
+            {horizontalTv}
+        </div>
+    );
+  }
+
   return (
     <div className="relative w-full max-w-6xl mx-auto mt-12 sm:mt-16">
         <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4 sm:gap-8">
-            {/* Horizontal TV */}
-            <div className="relative w-full max-w-3xl flex-shrink">
-                <div className="aspect-[16/9] relative h-full">
-                    <div
-                    className="w-full h-full rounded-lg bg-gray-900 border-4 sm:border-8 border-gray-800 shadow-2xl p-1 flex items-center justify-center overflow-hidden"
-                    >
-                    {currentHorizontalImage && (
-                        <Image
-                        src={currentHorizontalImage.imageUrl}
-                        alt={currentHorizontalImage.description}
-                        width={1200}
-                        height={675}
-                        priority
-                        className={cn(
-                            'w-full h-full object-cover rounded-sm transition-opacity duration-500',
-                            isFading ? 'opacity-0' : 'opacity-100'
-                        )}
-                        data-ai-hint={currentHorizontalImage.imageHint}
-                        />
-                    )}
-                    </div>
-                </div>
-            </div>
-
+            {horizontalTv}
             {/* Vertical TV */}
             <div className="relative w-40 sm:w-auto sm:flex-1 max-w-[12rem] mx-auto sm:mx-0">
                  <div className="aspect-[9/16] relative h-full">

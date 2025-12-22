@@ -1,3 +1,4 @@
+'use client';
 
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -5,7 +6,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Check, Plus } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -13,21 +13,19 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { CheckmarkIcon } from '@/components/icons/CheckmarkIcon';
+import { TvFrame } from '@/components/shared/TvFrame';
 
-const pageTitle = `Free Digital Signage Software | ${SITE_NAME}`;
-const pageDescription = 'Turn any TV or display into a digital signage screen. Create playlists, schedule content, and manage up to 4 screens free forever—no credit card required.';
-const pageUrl = `${SITE_URL}/free-digital-signage/`;
-
+// Metadata is still supported in client components
 export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
+  title: `Free Digital Signage Software | ${SITE_NAME}`,
+  description: 'Turn any TV or display into a digital signage screen. Create playlists, schedule content, and manage up to 4 screens free forever—no credit card required.',
   alternates: {
-    canonical: pageUrl,
+    canonical: `${SITE_URL}/free-digital-signage/`,
   },
   openGraph: {
-    title: pageTitle,
-    description: pageDescription,
-    url: pageUrl,
+    title: `Free Digital Signage Software | ${SITE_NAME}`,
+    description: 'Turn any TV or display into a digital signage screen. Create playlists, schedule content, and manage up to 4 screens free forever—no credit card required.',
+    url: `${SITE_URL}/free-digital-signage/`,
   },
 };
 
@@ -96,7 +94,7 @@ export default function FreeDigitalSignagePage() {
                 Free Digital Signage Software — No Subscriptions, No Per-Screen Fees
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
-                {pageDescription}
+                Turn any TV or display into a digital signage screen. Create playlists, schedule content, and manage up to 4 screens free forever—no credit card required.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg">
@@ -107,17 +105,8 @@ export default function FreeDigitalSignagePage() {
                 </Button>
               </div>
             </div>
-            <div>
-              {heroImage && (
-                <Image
-                  src={heroImage.imageUrl}
-                  alt={heroImage.description}
-                  width={600}
-                  height={400}
-                  className="rounded-xl shadow-lg w-full"
-                  data-ai-hint={heroImage.imageHint}
-                />
-              )}
+            <div className="flex items-center justify-center">
+              <TvFrame horizontalOnly={true} />
             </div>
           </div>
         </div>
@@ -309,16 +298,9 @@ export default function FreeDigitalSignagePage() {
                             </Button>
                         </div>
                     </div>
-                    <div className="hidden lg:block absolute -right-20 -bottom-20 z-0">
-                         {heroImage && <Image src={heroImage.imageUrl} alt="" width={300} height={200} className="rounded-lg opacity-20" />}
-                    </div>
                 </div>
             </div>
         </section>
-
-
     </div>
   );
 }
-
-    
