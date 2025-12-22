@@ -7,30 +7,30 @@ import { cn } from '@/lib/utils';
 const testimonials = [
   {
     quote:
-      'The best Digital Signage platform, bar none. Incredibly easy to use and has transformed our customer engagement.',
-    author: 'John Doe',
-    company: 'CEO of CafeMocha',
+      "I'm not a tech person, but I had our new digital menu running in 15 minutes. It’s that simple. Our daily specials look amazing, and customers love it.",
+    author: 'Maria Garcia',
+    company: 'Owner, The Daily Grind Cafe',
     avatar: 'https://picsum.photos/seed/ceo1/40/40',
   },
   {
     quote:
-      'Our sales have increased by 20% since we started using DigitalSigns.ai. The ability to schedule promotions is a game-changer.',
-    author: 'Jane Smith',
-    company: 'Owner of The Pizza Spot',
+      'The ability to schedule our lunch combos in advance has been a game-changer. Our sales are up and the screens look fantastic. A total win.',
+    author: 'David Chen',
+    company: 'Manager, The Pizza Spot',
     avatar: 'https://picsum.photos/seed/ceo2/40/40',
   },
   {
     quote:
-      "I'm not a tech person, but I had our digital menu up and running in 15 minutes. It's that simple!",
-    author: 'Emily Johnson',
-    company: 'Manager at Burger Bliss',
+      "We used to spend so much time and money on printed signs. Now, I can update all 12 of our locations from my laptop in a few clicks. It's brilliant.",
+    author: 'Sarah Jenkins',
+    company: 'Marketing Director, Urban Retail',
     avatar: 'https://picsum.photos/seed/ceo3/40/40',
   },
   {
     quote:
-      'The flexibility to manage all our screens from one dashboard is amazing. It saves us so much time.',
-    author: 'Michael Brown',
-    company: 'IT Director at Urban Retail',
+      "Finally, a digital signage CMS that just works. The interface is intuitive and it's saved my team countless hours. We couldn't be happier.",
+    author: 'Kevin Thompson',
+    company: 'IT Manager, Burger Bliss',
     avatar: 'https://picsum.photos/seed/ceo4/40/40',
   },
 ];
