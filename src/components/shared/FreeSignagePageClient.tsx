@@ -144,7 +144,7 @@ export function FreeSignagePageClient() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-amber-100/50">
           <div className="container">
               <h2 className="font-headline text-3xl sm:text-4xl font-bold text-center">
                   Compare DigitalSigns.ai to Other Platforms
@@ -165,7 +165,7 @@ export function FreeSignagePageClient() {
                         </thead>
                         <tbody>
                             {comparisonData.map(row => (
-                                <tr key={row.feature} className="border-b">
+                                <tr key={row.feature} className="border-b bg-background">
                                     <td className="p-4 font-medium">{row.feature}</td>
                                     <td className="p-4 bg-primary/5">
                                         {row.dsai === 'None' || row.dsai === 'Free' || row.dsai.includes('screen') || row.dsai.includes('player') ? row.dsai : <CheckmarkIcon val={true} />}
