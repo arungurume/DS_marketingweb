@@ -7,7 +7,14 @@ import { useState } from 'react';
 
 import Logo from '@/components/shared/Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
@@ -95,6 +102,12 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Mobile Menu</SheetTitle>
+                  <SheetDescription>
+                    Navigation links for DigitalSigns.ai
+                  </SheetDescription>
+                </SheetHeader>
                 <div className="p-4">
                   <Logo />
                   <div className="mt-8 flex flex-col gap-4">
