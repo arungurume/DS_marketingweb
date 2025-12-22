@@ -55,7 +55,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div className="col-span-2 lg:col-span-1">
                 <Logo />
-                 <p className="text-sm text-muted-foreground mt-4">DSHub, powered by {SITE_NAME}</p>
+                 <p className="text-sm text-muted-foreground mt-4">Powered by {SITE_NAME}</p>
             </div>
             {footerLinks.map((section) => (
                 <div key={section.title}>
