@@ -6,7 +6,7 @@ export const WebPlayerIcon = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke="#4285F4"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
