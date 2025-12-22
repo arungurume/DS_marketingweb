@@ -23,7 +23,7 @@ export function PostCard({ post }: PostCardProps) {
       </Link>
       <div className="p-6 flex flex-col flex-grow">
         <h2 className="font-headline text-xl font-bold leading-snug">
-          <Link href={`/blog/${post.slug}/`}>{post.frontmatter.title}</Link>
+          <Link href={`/blog/${post.slug}/`} className="hover:text-primary transition-colors">{post.frontmatter.title}</Link>
         </h2>
         <p className="mt-3 text-muted-foreground line-clamp-3 flex-grow">
           {post.frontmatter.description}

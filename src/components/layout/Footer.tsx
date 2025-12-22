@@ -67,7 +67,7 @@ export function Footer() {
                     <li key={link.label}>
                         <Link
                         href={link.href}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
                         {link.label}
                         </Link>
@@ -87,7 +87,7 @@ export function Footer() {
                     key={link['aria-label']}
                     href={link.href}
                     aria-label={link['aria-label']}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                 >
                     <link.icon className="h-5 w-5" />
                 </Link>

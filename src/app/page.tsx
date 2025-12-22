@@ -210,7 +210,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[hsl(var(--cta-background))] text-primary-foreground py-20 sm:py-24">
+      <section className="bg-primary text-primary-foreground py-20 sm:py-24">
         <div className="container text-center">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
             Ready to Revolutionize Your Displays?
@@ -220,7 +220,7 @@ export default function Home() {
             effective digital signage today. It&apos;s free to get started with DSHub.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="secondary" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button asChild size="lg" variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/free-digital-signage/">
                 Claim Your Free Account Now
               </Link>

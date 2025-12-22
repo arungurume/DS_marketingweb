@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Content Section */}
         <div className="container max-w-4xl mx-auto py-8 sm:py-16">
-          <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 prose-headings:text-primary prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:text-foreground">
+          <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 prose-headings:text-primary prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-foreground">
             {mdxContent}
           </div>
           

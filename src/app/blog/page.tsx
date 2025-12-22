@@ -49,9 +49,9 @@ export default function BlogIndexPage() {
               />
             </Link>
             <div>
-              <p className="text-sm text-accent font-semibold">Featured Article</p>
+              <p className="text-sm text-primary font-semibold">Featured Article</p>
               <h1 className="font-headline mt-2 text-3xl lg:text-4xl font-bold leading-tight">
-                <Link href={`/blog/${featuredPost.slug}/`}>{featuredPost.frontmatter.title}</Link>
+                <Link href={`/blog/${featuredPost.slug}/`} className="hover:text-primary transition-colors">{featuredPost.frontmatter.title}</Link>
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
                 {featuredPost.frontmatter.description}
