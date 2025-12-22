@@ -18,7 +18,6 @@ import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
-import { TvWebBrowserIcon } from '@/components/icons/TvWebBrowserIcon';
 import { McDonaldsLogo } from '@/components/icons/brands/McDonaldsLogo';
 import { StarbucksLogo } from '@/components/icons/brands/StarbucksLogo';
 import { BurgerKingLogo } from '@/components/icons/brands/BurgerKingLogo';
@@ -68,7 +67,6 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'TV Web Browser', icon: TvWebBrowserIcon },
   { name: 'Web Browser', icon: WebPlayerIcon },
   { name: 'Google TV', icon: GoogleTvIcon },
   { name: 'Android App', icon: AndroidTvIcon },
@@ -237,7 +235,7 @@ export default function Home() {
               easy as possible.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {players.map((player) => (
               <Card
                 key={player.name}
