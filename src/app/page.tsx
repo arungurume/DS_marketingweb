@@ -19,6 +19,12 @@ import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
 import { TvWebBrowserIcon } from '@/components/icons/TvWebBrowserIcon';
+import { McDonaldsLogo } from '@/components/icons/brands/McDonaldsLogo';
+import { StarbucksLogo } from '@/components/icons/brands/StarbucksLogo';
+import { BurgerKingLogo } from '@/components/icons/brands/BurgerKingLogo';
+import { NikeLogo } from '@/components/icons/brands/NikeLogo';
+import { ZaraLogo } from '@/components/icons/brands/ZaraLogo';
+import { CostaCoffeeLogo } from '@/components/icons/brands/CostaCoffeeLogo';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -96,6 +102,15 @@ const appScreens = [
   { image: appShowcase2, className: '' },
   { image: appShowcase3, className: '' },
   { image: appShowcase4, className: 'lg:col-span-2' },
+];
+
+const industryLogos = [
+    { name: 'McDonalds', icon: McDonaldsLogo },
+    { name: 'Starbucks', icon: StarbucksLogo },
+    { name: 'Burger King', icon: BurgerKingLogo },
+    { name: 'Nike', icon: NikeLogo },
+    { name: 'Zara', icon: ZaraLogo },
+    { name: 'Costa Coffee', icon: CostaCoffeeLogo },
 ];
 
 const jsonLd: SoftwareApplication = {
@@ -239,6 +254,27 @@ export default function Home() {
       </section>
 
       <AskAiSection />
+      
+      <section className="py-20 sm:py-24 bg-background">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-headline text-3xl sm:text-4xl font-bold">
+              Brands Leading the Way with Digital Signage
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Leading global brands across QSR, café, and retail industries use digital signage to modernize menus, promotions, and in-store communication.
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center">
+            {industryLogos.map((logo) => (
+              <logo.icon key={logo.name} className="h-8 w-auto text-foreground opacity-70" />
+            ))}
+          </div>
+          <p className="mt-12 text-center text-sm text-muted-foreground">
+            Logos shown represent brands known to use digital signage technology.
+          </p>
+        </div>
+      </section>
 
       <section className="py-20 sm:py-24">
         <div className="container text-center">
