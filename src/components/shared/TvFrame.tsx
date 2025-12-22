@@ -43,7 +43,7 @@ export function TvFrame() {
 
   return (
     <div className="relative w-full max-w-6xl mx-auto mt-12 sm:mt-16">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             {/* Horizontal TV */}
             <div className="relative w-full max-w-4xl">
                 <div className="aspect-[16/9] relative">
@@ -69,7 +69,7 @@ export function TvFrame() {
             </div>
 
             {/* Vertical TV */}
-            <div className="relative w-48 sm:w-40 sm:-ml-12">
+            <div className="relative w-48 sm:w-56">
                  <div className="aspect-[9/16] relative">
                     <div
                     className="w-full h-full rounded-lg bg-gray-900 border-4 sm:border-8 border-gray-800 shadow-2xl p-1 flex items-center justify-center overflow-hidden"
