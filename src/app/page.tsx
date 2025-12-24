@@ -13,12 +13,12 @@ import { cn } from '@/lib/utils';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
-import { McDonaldsLogo } from '@/components/icons/brands/McDonaldsLogo';
-import { StarbucksLogo } from '@/components/icons/brands/StarbucksLogo';
-import { BurgerKingLogo } from '@/components/icons/brands/BurgerKingLogo';
 import { NikeLogo } from '@/components/icons/brands/NikeLogo';
-import { ZaraLogo } from '@/components/icons/brands/ZaraLogo';
 import { CostaCoffeeLogo } from '@/components/icons/brands/CostaCoffeeLogo';
+import { SantanderLogo } from '@/components/icons/brands/SantanderLogo';
+import { KrispyKremeLogo } from '@/components/icons/brands/KrispyKremeLogo';
+import { ChickFilALogo } from '@/components/icons/brands/ChickFilALogo';
+import { HeyteaLogo } from '@/components/icons/brands/HeyteaLogo';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -98,11 +98,11 @@ const appScreens = [
 ];
 
 const industryLogos = [
-    { name: 'McDonalds', icon: McDonaldsLogo },
-    { name: 'Starbucks', icon: StarbucksLogo },
-    { name: 'Burger King', icon: BurgerKingLogo },
+    { name: 'Santander', icon: SantanderLogo },
+    { name: 'Krispy Kreme', icon: KrispyKremeLogo },
+    { name: 'Chick Fil A', icon: ChickFilALogo },
+    { name: 'Heytea', icon: HeyteaLogo },
     { name: 'Nike', icon: NikeLogo },
-    { name: 'Zara', icon: ZaraLogo },
     { name: 'Costa Coffee', icon: CostaCoffeeLogo },
 ];
 
@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-20 sm:py-32 bg-primary/5">
+      <section id="features" className="pt-8 pb-20 bg-primary/5">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -190,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="app-showcase" className="py-20 sm:py-32">
+      <section id="app-showcase" className="pt-8 pb-20">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {appScreens.map((screen, index) => (
@@ -217,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="players" className="py-20 sm:py-32 bg-primary/5">
+      <section id="players" className="pt-8 pb-20 bg-primary/5">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -252,7 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-8 pb-20 sm:py-24 bg-background">
+      <section className="pt-8 pb-20 bg-background">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -275,7 +275,7 @@ export default function Home() {
 
       <AskAiSection />
       
-      <section className="pt-8 pb-20 sm:py-24">
+      <section className="pt-8 pb-20">
         <div className="container text-center">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
             Ready to Revolutionize Your Displays?
