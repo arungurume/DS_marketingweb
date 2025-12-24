@@ -57,11 +57,11 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'Google TV', src: '/images/Google_TV.png', bgColor: 'bg-blue-100' },
-  { name: 'Android TV', src: '/images/Android_TV.png', bgColor: 'bg-green-100' },
-  { name: 'Fire TV', src: '/images/Fire_Tv.png', bgColor: 'bg-amber-100' },
-  { name: 'Amazon Signage', src: '/images/amazon_signage.png', bgColor: 'bg-orange-100' },
-  { name: 'Web Browser', src: '/images/web_browser.jpg', bgColor: 'bg-sky-100' },
+  { name: 'Google TV', src: '/images/Google_TV.png' },
+  { name: 'Android TV', src: '/images/Android_TV.png' },
+  { name: 'Fire TV', src: '/images/Fire_Tv.png' },
+  { name: 'Amazon Signage', src: '/images/amazon_signage.png' },
+  { name: 'Web Browser', src: '/images/browser.png' },
 ];
 
 const features = [
@@ -229,11 +229,7 @@ export default function Home() {
             {players.map((player) => (
               <Card
                 key={player.name}
-                className={cn(
-                  "text-center transition-colors shadow-none border-0",
-                  player.bgColor,
-                  "hover:bg-accent/50"
-                )}
+                className="text-center transition-colors shadow-none border-0 hover:bg-accent/50"
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                   <Image
