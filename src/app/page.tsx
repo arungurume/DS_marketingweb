@@ -264,7 +264,7 @@ export default function Home() {
                 alt={`${logo.name} logo`}
                 width={128}
                 height={40}
-                className="h-8 w-auto object-contain text-foreground opacity-70"
+                className="h-8 w-auto object-contain text-foreground opacity-70 transition-opacity duration-300 hover:opacity-100"
               />
             ))}
           </div>
