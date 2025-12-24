@@ -1,30 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SITE_NAME } from '@/lib/constants';
-import { ChatGptIcon } from '../icons/ChatGptIcon';
-import { ClaudeIcon } from '../icons/ClaudeIcon';
-import { PerplexityIcon } from '../icons/PerplexityIcon';
-
-const aiServices = [
-  {
-    name: 'ChatGPT',
-    icon: ChatGptIcon,
-    href: `https://chatgpt.com/?q=tell+me+why+${encodeURIComponent(SITE_NAME)}+is+a+great+choice+for+me`,
-    variant: 'outline' as const,
-  },
-  {
-    name: 'Claude',
-    icon: ClaudeIcon,
-    href: `https://claude.ai/chats?q=tell+me+why+${encodeURIComponent(SITE_NAME)}+is+a+great+choice+for+me`,
-    variant: 'default' as const,
-  },
-  {
-    name: 'Perplexity',
-    icon: PerplexityIcon,
-    href: `https://www.perplexity.ai/?q=tell+me+why+${encodeURIComponent(SITE_NAME)}+is+a+great+choice+for+me`,
-    variant: 'secondary' as const,
-  },
-];
+import Image from 'next/image';
 
 export function AskAiSection() {
   const question = `tell me why ${SITE_NAME} signage cms is a great choice for me`;
@@ -32,21 +9,21 @@ export function AskAiSection() {
   const serviceLinks = [
     {
       name: 'ChatGPT',
-      icon: ChatGptIcon,
+      icon: '/images/brands/ChatGPT_logo.png',
       href: `https://chatgpt.com/?q=${encodeURIComponent(question)}`,
       variant: 'outline' as const,
       className: 'bg-white text-black hover:bg-gray-200 border-gray-300',
     },
     {
       name: 'Claude',
-      icon: ClaudeIcon,
+      icon: '/images/brands/claude_logo.png',
       href: `https://claude.ai/chats?q=${encodeURIComponent(question)}`,
       variant: 'default' as const,
       className: 'bg-[#D97757] hover:bg-[#D97757]/90 text-white',
     },
     {
       name: 'Perplexity',
-      icon: PerplexityIcon,
+      icon: '/images/brands/perplexity_logo.png',
       href: `https://www.perplexity.ai/?q=${encodeURIComponent(question)}`,
       variant: 'default' as const,
       className: 'bg-[#42A599] hover:bg-[#42A599]/90 text-white',
@@ -76,7 +53,7 @@ export function AskAiSection() {
                   className={service.className}
                 >
                   <Link href={service.href} target="_blank">
-                    <service.icon className="mr-2" />
+                    <Image src={service.icon} alt={`${service.name} logo`} width={24} height={24} className="mr-2 h-6 w-6" />
                     Ask {service.name}
                   </Link>
                 </Button>
