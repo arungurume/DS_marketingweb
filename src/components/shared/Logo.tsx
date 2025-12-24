@@ -11,6 +11,7 @@ const Logo = ({ className }: { className?: string }) => (
       height={44}
       className="h-8 w-auto shrink-0"
       priority
+      unoptimized
     />
     <span className="sr-only">{SITE_NAME}</span>
   </div>
