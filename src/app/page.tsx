@@ -23,6 +23,7 @@ import { BurgerKingLogo } from '@/components/icons/brands/BurgerKingLogo';
 import { NikeLogo } from '@/components/icons/brands/NikeLogo';
 import { ZaraLogo } from '@/components/icons/brands/ZaraLogo';
 import { CostaCoffeeLogo } from '@/components/icons/brands/CostaCoffeeLogo';
+import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -66,10 +67,11 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'Google TV', icon: GoogleTvIcon },
-  { name: 'Android App', icon: AndroidTvIcon },
-  { name: 'Amazon Firestick App', icon: AmazonFireTvIcon },
-  { name: 'Amazon Signage Stick', icon: AmazonSignageIcon },
+  { name: 'Google TV', src: '/images/Google_TV.png' },
+  { name: 'Android TV', src: '/images/Android_TV.png' },
+  { name: 'Fire TV', src: '/images/Fire_Tv.png' },
+  { name: 'Amazon Signage', src: '/images/amazon_signage.png' },
+  { name: 'Web Browser', src: '/images/web_browser.jpg' },
 ];
 
 const features = [
@@ -233,14 +235,20 @@ export default function Home() {
               easy as possible.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {players.map((player) => (
               <Card
                 key={player.name}
                 className="text-center bg-background shadow-md border-border/50"
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
-                  <player.icon className="h-10 w-auto" />
+                  <Image
+                    src={player.src}
+                    alt={`${player.name} logo`}
+                    width={80}
+                    height={40}
+                    className="h-10 w-auto object-contain"
+                  />
                   <p className="font-semibold">{player.name}</p>
                 </CardContent>
               </Card>
