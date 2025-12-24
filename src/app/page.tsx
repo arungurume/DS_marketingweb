@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -121,7 +122,7 @@ export default function Home() {
   return (
     <>
       <Seo schema={{ '@context': 'https://schema.org', ...jsonLd }} />
-      <section className="pb-20 sm:pb-32">
+      <section className="pb-20 sm:pt-8 sm:pb-32">
         <div className="container text-center">
           <Testimonials />
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
