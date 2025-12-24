@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import Logo from '@/components/shared/Logo';
 import { Button } from '@/components/ui/button';
@@ -45,8 +45,52 @@ const navLinks = [
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const navRef = useRef<HTMLDivElement>(null);
+  const [hoveredPill, setHoveredPill] = useState({
+    width: 0,
+    left: 0,
+    opacity: 0,
+  });
+
+  const linkRefs = useRef<(HTMLAnchorElement | HTMLSpanElement | null)[]>([]);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const calculatePillPosition = (element: HTMLElement) => {
+    if (!navRef.current) return { width: 0, left: 0 };
+    const navRect = navRef.current.getBoundingClientRect();
+    const elementRect = element.getBoundingClientRect();
+    return {
+      width: elementRect.width,
+      left: elementRect.left - navRect.left,
+    };
+  };
+
+  const handleMouseEnter = (index: number) => {
+    const linkElement = linkRefs.current[index];
+    if (linkElement) {
+      const { width, left } = calculatePillPosition(linkElement);
+      setHoveredPill({ width, left, opacity: 1 });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const activeLinkIndex = navLinks.findIndex((link) => link.href === pathname);
+    if (activeLinkIndex !== -1) {
+      const activeLinkElement = linkRefs.current[activeLinkIndex];
+      if (activeLinkElement) {
+        const { width, left } = calculatePillPosition(activeLinkElement);
+        setHoveredPill({ width, left, opacity: 1 });
+      }
+    } else {
+      setHoveredPill({ width: 0, left: 0, opacity: 0 });
+    }
+  };
+
+  useEffect(() => {
+    handleMouseLeave(); // Set initial position on mount/path change
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm">
@@ -55,12 +99,30 @@ export function Header() {
           <Logo />
         </Link>
         <div className="flex flex-1 items-center justify-end">
-          <nav className="hidden md:flex md:gap-1">
-            {navLinks.map((link) =>
+          <nav
+            ref={navRef}
+            className="relative hidden md:flex md:gap-1"
+            onMouseLeave={handleMouseLeave}
+          >
+            <span
+              className="absolute h-full rounded-full bg-secondary transition-all duration-300 ease-out"
+              style={{
+                width: `${hoveredPill.width}px`,
+                transform: `translateX(${hoveredPill.left}px)`,
+                opacity: hoveredPill.opacity,
+                top: 0,
+                left: 0,
+              }}
+            />
+            {navLinks.map((link, index) =>
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
                   <DropdownMenuTrigger asChild>
-                    <span className="nav-link flex items-center cursor-pointer text-sm text-foreground/80 data-[state=open]:text-foreground">
+                    <span
+                      ref={(el) => (linkRefs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      className="nav-link flex items-center cursor-pointer text-sm text-foreground/80 data-[state=open]:text-foreground z-10"
+                    >
                       {link.label}
                     </span>
                   </DropdownMenuTrigger>
@@ -71,7 +133,8 @@ export function Header() {
                           href={subLink.href}
                           className={cn(
                             'text-foreground/80',
-                            pathname === subLink.href && 'font-semibold text-primary'
+                            pathname === subLink.href &&
+                              'font-semibold text-primary'
                           )}
                         >
                           {subLink.label}
@@ -83,9 +146,11 @@ export function Header() {
               ) : (
                 <Link
                   key={link.href}
+                  ref={(el) => (linkRefs.current[index] = el)}
+                  onMouseEnter={() => handleMouseEnter(index)}
                   href={link.href}
                   className={cn(
-                    'nav-link text-sm text-foreground/80',
+                    'nav-link text-sm text-foreground/80 z-10',
                     pathname === link.href && 'text-foreground font-semibold'
                   )}
                 >
@@ -116,7 +181,9 @@ export function Header() {
                       <div key={link.label}>
                         {link.subLinks ? (
                           <div>
-                            <span className="font-semibold text-foreground/80">{link.label}</span>
+                            <span className="font-semibold text-foreground/80">
+                              {link.label}
+                            </span>
                             <div className="mt-2 flex flex-col gap-2 pl-4">
                               {link.subLinks.map((subLink) => (
                                 <Link
@@ -125,7 +192,8 @@ export function Header() {
                                   onClick={closeMobileMenu}
                                   className={cn(
                                     'text-muted-foreground',
-                                    pathname === subLink.href && 'text-primary font-semibold'
+                                    pathname === subLink.href &&
+                                      'text-primary font-semibold'
                                   )}
                                 >
                                   {subLink.label}
@@ -139,7 +207,9 @@ export function Header() {
                             onClick={closeMobileMenu}
                             className={cn(
                               'text-lg',
-                              pathname === link.href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                              pathname === link.href
+                                ? 'text-primary font-semibold'
+                                : 'text-muted-foreground'
                             )}
                           >
                             {link.label}
