@@ -13,7 +13,6 @@ import { cn } from '@/lib/utils';
 import { GoogleTvIcon } from '@/components/icons/GoogleTvIcon';
 import { AndroidTvIcon } from '@/components/icons/AndroidTvIcon';
 import { AmazonFireTvIcon } from '@/components/icons/AmazonFireTvIcon';
-import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
 import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
@@ -67,7 +66,6 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'Web Browser', icon: WebPlayerIcon },
   { name: 'Google TV', icon: GoogleTvIcon },
   { name: 'Android App', icon: AndroidTvIcon },
   { name: 'Amazon Firestick App', icon: AmazonFireTvIcon },
@@ -132,7 +130,7 @@ export default function Home() {
   return (
     <>
       <Seo schema={{ '@context': 'https://schema.org', ...jsonLd }} />
-      <section className="py-20 sm:py-32">
+      <section className="pt-8 pb-20 sm:py-32">
         <div className="container text-center">
           <Testimonials />
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
@@ -159,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="py-20 sm:py-32 bg-primary/5">
+      <section id="features" className="pt-8 pb-20 sm:py-32 bg-primary/5">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -195,7 +193,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="app-showcase" className="py-20 sm:py-32">
+      <section id="app-showcase" className="pt-8 pb-20 sm:py-32">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {appScreens.map((screen, index) => (
@@ -222,7 +220,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="players" className="py-20 sm:py-32 bg-primary/5">
+      <section id="players" className="pt-8 pb-20 sm:py-32 bg-primary/5">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -235,7 +233,7 @@ export default function Home() {
               easy as possible.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {players.map((player) => (
               <Card
                 key={player.name}
@@ -251,9 +249,7 @@ export default function Home() {
         </div>
       </section>
 
-      <AskAiSection />
-      
-      <section className="py-20 sm:py-24 bg-background">
+      <section className="pt-8 pb-20 sm:py-24 bg-background">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -274,7 +270,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <AskAiSection />
+      
+      <section className="pt-8 pb-20 sm:py-24">
         <div className="container text-center">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
             Ready to Revolutionize Your Displays?
