@@ -13,12 +13,6 @@ import { cn } from '@/lib/utils';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
-import { NikeLogo } from '@/components/icons/brands/NikeLogo';
-import { CostaCoffeeLogo } from '@/components/icons/brands/CostaCoffeeLogo';
-import { SantanderLogo } from '@/components/icons/brands/SantanderLogo';
-import { KrispyKremeLogo } from '@/components/icons/brands/KrispyKremeLogo';
-import { ChickFilALogo } from '@/components/icons/brands/ChickFilALogo';
-import { HeyteaLogo } from '@/components/icons/brands/HeyteaLogo';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -98,12 +92,12 @@ const appScreens = [
 ];
 
 const industryLogos = [
-    { name: 'Santander', icon: SantanderLogo },
-    { name: 'Krispy Kreme', icon: KrispyKremeLogo },
-    { name: 'Chick Fil A', icon: ChickFilALogo },
-    { name: 'Heytea', icon: HeyteaLogo },
-    { name: 'Nike', icon: NikeLogo },
-    { name: 'Costa Coffee', icon: CostaCoffeeLogo },
+    { name: 'Santander', src: '/images/brands/santander.png' },
+    { name: 'Krispy Kreme', src: '/images/brands/krispykreme.png' },
+    { name: 'Chick Fil A', src: '/images/brands/chickfila.png' },
+    { name: 'Heytea', src: '/images/brands/heytea.png' },
+    { name: 'Nike', src: '/images/brands/nike.png' },
+    { name: 'Costa Coffee', src: '/images/brands/costa.png' },
 ];
 
 const jsonLd: SoftwareApplication = {
@@ -127,7 +121,7 @@ export default function Home() {
   return (
     <>
       <Seo schema={{ '@context': 'https://schema.org', ...jsonLd }} />
-      <section className="pt-8 pb-20 sm:py-32">
+      <section className="pt-8 pb-20 sm:pt-32 sm:pb-32">
         <div className="container text-center">
           <Testimonials />
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
@@ -264,7 +258,14 @@ export default function Home() {
           </div>
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center">
             {industryLogos.map((logo) => (
-              <logo.icon key={logo.name} className="h-8 w-auto text-foreground opacity-70" />
+              <Image
+                key={logo.name}
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                width={128}
+                height={40}
+                className="h-8 w-auto object-contain text-foreground opacity-70"
+              />
             ))}
           </div>
           <p className="mt-12 text-center text-sm text-muted-foreground">
