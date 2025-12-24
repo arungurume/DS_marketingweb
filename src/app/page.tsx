@@ -57,11 +57,11 @@ const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
 const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
 
 const players = [
-  { name: 'Google TV', src: '/images/Google_TV.png' },
-  { name: 'Android TV', src: '/images/Android_TV.png' },
-  { name: 'Fire TV', src: '/images/Fire_Tv.png' },
-  { name: 'Amazon Signage', src: '/images/amazon_signage.png' },
-  { name: 'Web Browser', src: '/images/browser.png' },
+  { name: 'Google TV', src: '/images/Google_TV.png', hoverColor: 'hover:bg-blue-100' },
+  { name: 'Android TV', src: '/images/Android_TV.png', hoverColor: 'hover:bg-green-100' },
+  { name: 'Fire TV', src: '/images/Fire_Tv.png', hoverColor: 'hover:bg-orange-100' },
+  { name: 'Amazon Signage', src: '/images/amazon_signage.png', hoverColor: 'hover:bg-orange-100' },
+  { name: 'Web Browser', src: '/images/browser.png', hoverColor: 'hover:bg-sky-100' },
 ];
 
 const features = [
@@ -129,7 +129,7 @@ export default function Home() {
             Cloud-Based Digital Signage Software
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Welcome to DSHub, powered by {SITE_NAME}. Create and manage
+            Welcome to DSHub, powered by ${SITE_NAME}. Create and manage
             stunning content on your screens with our powerful, easy-to-use
             digital signage CMS.
           </p>
@@ -229,7 +229,10 @@ export default function Home() {
             {players.map((player) => (
               <Card
                 key={player.name}
-                className="text-center transition-colors shadow-none border-0 hover:bg-accent/50"
+                className={cn(
+                  "text-center transition-colors shadow-none border-0 bg-card",
+                  player.hoverColor
+                )}
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                   <Image

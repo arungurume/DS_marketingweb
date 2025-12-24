@@ -8,6 +8,12 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './mdx-components.tsx',
   ],
+  safelist: [
+    'hover:bg-blue-100',
+    'hover:bg-green-100',
+    'hover:bg-orange-100',
+    'hover:bg-sky-100',
+  ],
   theme: {
     container: {
       center: true,
