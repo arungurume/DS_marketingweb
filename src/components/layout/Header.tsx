@@ -37,6 +37,7 @@ const navLinks = [
     ],
   },
   { href: '/amazon-signage-stick-cms/', label: 'Amazon Stick' },
+  { href: '/pricing/', label: '$5/ Screen' },
   { href: '/blog/', label: 'Blog' },
   { href: '/about-us-ds/', label: 'About Us' },
 ];
@@ -54,12 +55,12 @@ export function Header() {
           <Logo />
         </Link>
         <div className="flex flex-1 items-center justify-end">
-          <nav className="hidden md:flex md:gap-6">
+          <nav className="hidden md:flex md:gap-1">
             {navLinks.map((link) =>
               link.subLinks ? (
                 <DropdownMenu key={link.label}>
                   <DropdownMenuTrigger asChild>
-                    <span className="flex items-center cursor-pointer text-sm text-foreground/80 transition-colors hover:text-foreground data-[state=open]:text-foreground">
+                    <span className="nav-link flex items-center cursor-pointer text-sm text-foreground/80 data-[state=open]:text-foreground">
                       {link.label}
                     </span>
                   </DropdownMenuTrigger>
@@ -84,7 +85,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'text-sm text-foreground/80 transition-colors hover:text-foreground',
+                    'nav-link text-sm text-foreground/80',
                     pathname === link.href && 'text-foreground font-semibold'
                   )}
                 >
