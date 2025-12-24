@@ -92,12 +92,12 @@ const appScreens = [
 ];
 
 const industryLogos = [
-    { name: 'Santander', src: '/images/brands/Santander_logo.png' },
-    { name: 'Krispy Kreme', src: '/images/brands/Krispy-Kreme_donut.png' },
-    { name: 'Chick Fil A', src: '/images/brands/Chick-fil-A-Logo.wine.png' },
-    { name: 'Heytea', src: '/images/brands/HEYTEA_logo.png' },
-    { name: 'Nike', src: '/images/brands/Nike-Logo.png' },
-    { name: 'Costa Coffee', src: '/images/brands/Costa-Coffee.png' },
+  { name: 'Santander', src: '/images/brands/Santander_logo.png' },
+  { name: 'Krispy Kreme', src: '/images/brands/Krispy-Kreme_donut.png' },
+  { name: 'Chick Fil A', src: '/images/brands/Chick-fil-A-Logo.wine.png' },
+  { name: 'Heytea', src: '/images/brands/HEYTEA_logo.png' },
+  { name: 'Nike', src: '/images/brands/Nike-Logo.png' },
+  { name: 'Costa Coffee', src: '/images/brands/Costa-Coffee.png' },
 ];
 
 const jsonLd: SoftwareApplication = {
@@ -228,7 +228,7 @@ export default function Home() {
             {players.map((player) => (
               <Card
                 key={player.name}
-                className="text-center bg-background border border-border/50 hover:bg-accent/50 transition-colors"
+                className="text-center bg-background border-border/50 hover:bg-accent/50 transition-colors shadow-none border"
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                   <Image
