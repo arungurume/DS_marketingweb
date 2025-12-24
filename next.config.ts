@@ -31,12 +31,6 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
-      {
-        protocol: 'https',
-        hostname: 'digitalsigns.ai',
-        port: '',
-        pathname: '/wp-content/uploads/**',
-      },
     ],
   },
 };
