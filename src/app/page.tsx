@@ -92,12 +92,12 @@ const appScreens = [
 ];
 
 const industryLogos = [
-    { name: 'Santander', src: '/images/brands/santander.png' },
-    { name: 'Krispy Kreme', src: '/images/brands/krispykreme.png' },
-    { name: 'Chick Fil A', src: '/images/brands/chickfila.png' },
-    { name: 'Heytea', src: '/images/brands/heytea.png' },
-    { name: 'Nike', src: '/images/brands/nike.png' },
-    { name: 'Costa Coffee', src: '/images/brands/costa.png' },
+    { name: 'Santander', src: '/images/brands/Santander_logo.png' },
+    { name: 'Krispy Kreme', src: '/images/brands/Krispy-Kreme_donut.png' },
+    { name: 'Chick Fil A', src: '/images/brands/Chick-fil-A-Logo.wine.png' },
+    { name: 'Heytea', src: '/images/brands/HEYTEA_logo.png' },
+    { name: 'Nike', src: '/images/brands/Nike-Logo.png' },
+    { name: 'Costa Coffee', src: '/images/brands/Costa-Coffee.png' },
 ];
 
 const jsonLd: SoftwareApplication = {
