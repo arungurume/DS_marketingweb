@@ -121,7 +121,7 @@ export default function Home() {
   return (
     <>
       <Seo schema={{ '@context': 'https://schema.org', ...jsonLd }} />
-      <section className="pt-8 pb-20 sm:pb-32">
+      <section className="pb-20 sm:pb-32">
         <div className="container text-center">
           <Testimonials />
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
@@ -228,7 +228,7 @@ export default function Home() {
             {players.map((player) => (
               <Card
                 key={player.name}
-                className="text-center bg-background shadow-md border-border/50"
+                className="text-center bg-background border border-border/50 hover:bg-accent/50 transition-colors"
               >
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                   <Image
