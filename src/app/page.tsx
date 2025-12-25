@@ -129,6 +129,8 @@ export default function Home() {
         </div>
       </section>
 
+      <UseCasesSection />
+
       <section id="app-showcase" className="pt-8 pb-20">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -155,8 +157,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <UseCasesSection />
 
       <section id="players" className="pt-8 pb-20 bg-primary/5">
         <div className="container">
