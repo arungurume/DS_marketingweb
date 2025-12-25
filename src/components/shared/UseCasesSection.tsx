@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -52,7 +53,7 @@ const howItWorksSteps = [
 
 export function UseCasesSection() {
   return (
-    <section className="py-20 sm:py-32 bg-background">
+    <section className="pb-20 sm:pb-32 bg-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
