@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils';
 import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
+import { UseCasesSection } from '@/components/shared/UseCasesSection';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -122,7 +123,7 @@ export default function Home() {
   return (
     <>
       <Seo schema={{ '@context': 'https://schema.org', ...jsonLd }} />
-      <section className="pb-20 sm:pt-8 sm:pb-32">
+      <section className="pb-20 sm:pb-32 sm:pt-8">
         <div className="container text-center">
           <Testimonials />
           <h1 className="font-headline mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
@@ -211,6 +212,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <UseCasesSection />
 
       <section id="players" className="pt-8 pb-20 bg-primary/5">
         <div className="container">
