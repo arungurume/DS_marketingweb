@@ -24,7 +24,11 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 max-w-5xl mx-auto z-10" style={{ transform: 'translateY(80px)' }}>
+        <div
+          className="mt-16 max-w-5xl mx-auto"
+          style={{ transform: 'translateY(80px)' }}
+        >
+          <div className="relative h-[72%] overflow-hidden">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
                 <div className="absolute top-0 left-0 w-full h-full">
                     <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
@@ -43,6 +47,7 @@ export function SetupSection() {
                     />
                 </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
