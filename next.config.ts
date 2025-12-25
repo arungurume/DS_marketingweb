@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next';
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   typescript: {
@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  // Re-adding the allowedDevOrigins config as a good practice for the cloud environment.
+  experimental: {
+    allowedDevOrigins: [
+      '*.cluster-64pjnskmlbaxowh5lzq6i7v4ra.cloudworkstations.dev',
+    ],
   },
 };
 
