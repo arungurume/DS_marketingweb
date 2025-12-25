@@ -24,37 +24,40 @@ export function SetupSection() {
   }, []);
 
   return (
-    <section className="bg-black static">
-      <div className="container pt-20 sm:pt-32 text-center pb-20">
-        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
-          Get set up with digital signage in minutes
-        </h2>
-        <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-          Use your existing TV, media player, or computer — no additional hardware required.
-          <br />
-          Best for restaurants, retail, offices, and schools.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90"
-          >
-            <Link href="/free-digital-signage/">Sign Up For Free</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="bg-white text-black border-white hover:bg-gray-200 hover:text-black"
-          >
-            <Link href="#">Book a Demo</Link>
-          </Button>
+    <section className="relative">
+      <div className="bg-black">
+        <div className="container pt-20 sm:pt-32 text-center pb-20">
+          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
+            Get set up with digital signage in minutes
+          </h2>
+          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+            Use your existing TV, media player, or computer — no additional hardware required.
+            <br />
+            Best for restaurants, retail, offices, and schools.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link href="/free-digital-signage/">Sign Up For Free</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-white text-black border-white hover:bg-gray-200 hover:text-black"
+            >
+              <Link href="#">Book a Demo</Link>
+            </Button>
+          </div>
         </div>
+      </div>
 
+      <div className="container relative z-10">
         <div
-          className="max-w-5xl mx-auto relative"
-          style={{ bottom: '-80px' }}
+          className="max-w-5xl mx-auto relative -mt-24"
         >
           <div className="relative h-full overflow-hidden">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>

@@ -1,7 +1,9 @@
+'use client';
 import Link from 'next/link';
 import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
 import Logo from '@/components/shared/Logo';
 import { SITE_NAME } from '@/lib/constants';
+import { useEffect, useState } from 'react';
 
 const socialLinks = [
   { icon: Twitter, href: '#', 'aria-label': 'Twitter' },
@@ -49,14 +51,18 @@ const footerLinks = [
 ];
 
 export function Footer() {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <footer className="bg-secondary text-secondary-foreground relative z-20">
       <div className="container py-12 lg:py-24">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <div className="col-span-2 lg:col-span-1">
                 <Logo />
-                 <p className="text-sm text-muted-foreground mt-4">Powered by {SITE_NAME}</p>
-                 <p className="text-sm text-muted-foreground mt-2">
+                 <p className="text-sm text-muted-foreground mt-4">
                     Free Digital Signage CMS by DS – your complete solution for managing screens, boosting brand visibility, and driving sales with ease.
                  </p>
             </div>
@@ -82,7 +88,7 @@ export function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
+            &copy; {isClient ? new Date().getFullYear() : '2024'} {SITE_NAME}. All rights reserved.
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((link) => (
