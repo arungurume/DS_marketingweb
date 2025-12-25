@@ -50,7 +50,7 @@ export function SetupSection() {
             <Link href="#">Book a Demo</Link>
           </Button>
         </div>
-        <div className="mt-16 max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="relative h-full">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
               <div className="w-full h-full absolute top-0 left-0">
