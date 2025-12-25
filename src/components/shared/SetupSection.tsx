@@ -25,7 +25,7 @@ export function SetupSection() {
         </div>
 
         <div
-          className="mt-16 max-w-5xl mx-auto"
+          className="max-w-5xl mx-auto"
           style={{ transform: 'translateY(80px)' }}
         >
           <div className="relative h-[72%] overflow-hidden">
