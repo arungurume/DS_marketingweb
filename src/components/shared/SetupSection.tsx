@@ -26,7 +26,7 @@ export function SetupSection() {
   return (
     <section className="relative">
       <div className="bg-black">
-        <div className="container pt-20 sm:pt-32 text-center pb-20">
+        <div className="container pt-20 sm:pt-32 text-center pb-48">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
             Get set up with digital signage in minutes
           </h2>
@@ -55,13 +55,13 @@ export function SetupSection() {
         </div>
       </div>
 
-      <div className="container relative z-10">
+      <div className="container absolute bottom-0 left-1/2 -translate-x-1/2" style={{ bottom: '-150px' }}>
         <div
-          className="max-w-5xl mx-auto relative -mt-24"
+          className="max-w-5xl mx-auto"
         >
           <div className="relative h-full overflow-hidden">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
-                <div className="w-full h-full absolute top-0 left-0" style={{ height: '72%', overflow: 'hidden' }}>
+                <div className="w-full h-full absolute top-0 left-0">
                     <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
                     <div className="flex items-center gap-1.5 px-2 h-6">
                         <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
