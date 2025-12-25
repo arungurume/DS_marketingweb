@@ -64,10 +64,8 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <div className="flex min-h-screen flex-col">
           <Header />
-          <div className="relative">
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
+          <main className="flex-grow">{children}</main>
+          <Footer />
         </div>
         <Toaster />
       </body>

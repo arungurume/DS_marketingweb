@@ -25,43 +25,33 @@ export function SetupSection() {
   }, []);
 
   return (
-    <section className="relative pb-[200px] sm:pb-0">
-      <div className="bg-black">
-        <div className="container pt-20 sm:pt-32 text-center pb-48">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
-            Get set up with digital signage in minutes
-          </h2>
-          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-            Use your existing TV, media player, or computer — no additional hardware required.
-            <br />
-            Best for restaurants, retail, offices, and schools.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
-            >
-              <Link href="/free-digital-signage/">Sign Up For Free</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-white text-black border-white hover:bg-gray-200 hover:text-black"
-            >
-              <Link href="#">Book a Demo</Link>
-            </Button>
-          </div>
+    <section className="bg-black text-white py-20 sm:py-32 overflow-hidden">
+      <div className="container text-center">
+        <h2 className="font-headline text-4xl sm:text-5xl font-bold">
+          Get set up in minutes.
+        </h2>
+        <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+          Use your existing player, TV or computer
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <Button
+            asChild
+            size="lg"
+            className="bg-white text-black hover:bg-gray-200"
+          >
+            <Link href="/free-digital-signage/">Sign Up For Free</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="text-white border-white hover:bg-white hover:text-black"
+          >
+            <Link href="#">Book a Demo</Link>
+          </Button>
         </div>
-      </div>
-
-      <div
-        className="container absolute bottom-0 left-1/2 -translate-x-1/2"
-        style={{ bottom: '-150px' }}
-      >
-        <div className="max-w-5xl mx-auto">
-          <div className="relative h-full overflow-hidden">
+        <div className="mt-16 max-w-5xl mx-auto">
+          <div className="relative h-full">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
               <div className="w-full h-full absolute top-0 left-0">
                 <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
