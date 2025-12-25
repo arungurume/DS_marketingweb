@@ -32,7 +32,7 @@ export function AskAiSection() {
   ];
 
   return (
-    <section className="pt-8 pb-20 sm:pb-32">
+    <section className="pt-16 pb-20 sm:pb-32">
       <div className="container">
         <div className="bg-amber-100 rounded-2xl p-8 sm:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
