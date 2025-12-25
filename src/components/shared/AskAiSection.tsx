@@ -18,7 +18,7 @@ export function AskAiSection() {
     {
       name: 'Claude',
       icon: '/images/brands/claude.svg',
-      href: `https://claude.ai/chats`,
+      href: `https://claude.ai/new?q=${encodeURIComponent(question)}`,
       variant: 'default' as const,
       className: 'bg-[#D97757] hover:bg-[#D97757]/90 text-white',
     },
