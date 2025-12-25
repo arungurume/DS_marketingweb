@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SITE_NAME } from '@/lib/constants';
@@ -17,7 +18,7 @@ export function AskAiSection() {
     {
       name: 'Claude',
       icon: '/images/brands/claude.svg',
-      href: `https://claude.ai/chats?q=${encodeURIComponent(question)}`,
+      href: `https://claude.ai/chats`,
       variant: 'default' as const,
       className: 'bg-[#D97757] hover:bg-[#D97757]/90 text-white',
     },
