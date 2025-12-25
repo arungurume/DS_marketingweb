@@ -2,13 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const setupImage = PlaceHolderImages.find((p) => p.id === 'cms-playlist-view');
 
 export function SetupSection() {
   return (
-    <section className="bg-black text-white">
+    <section className="bg-black">
       <div className="container pt-20 sm:pt-32 text-center">
         <h2 className="font-headline text-4xl sm:text-5xl font-bold">
           Get set up with digital signage in minutes
@@ -32,16 +29,13 @@ export function SetupSection() {
                     <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
                     <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
                 </div>
-                {setupImage && (
-                    <Image
-                    src={setupImage.imageUrl}
-                    alt={setupImage.description}
-                    width={1080}
-                    height={721}
-                    className="rounded-b-lg w-full h-auto"
-                    data-ai-hint={setupImage.imageHint}
-                    />
-                )}
+                <Image
+                src="/images/screens/screen1.png"
+                alt="DigitalSigns.ai CMS playlist view"
+                width={1080}
+                height={721}
+                className="rounded-b-lg w-full h-auto"
+                />
             </div>
         </div>
       </div>
