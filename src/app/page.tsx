@@ -252,7 +252,7 @@ export default function Home() {
 
       <section className="pt-8 pb-20 bg-background">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center mx-auto">
             <h2 className="font-headline text-3xl sm:text-4xl font-bold">
               Brands Leading the Way with Digital Signage
             </h2>
