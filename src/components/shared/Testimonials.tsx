@@ -1,95 +1,58 @@
 'use client';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from '@/components/ui/carousel';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const testimonials = [
   {
-    quote:
-      "This free digital signage solution is a game-changer for our small business. We can now create professional-looking displays without breaking the bank.",
-    name: "Sarah Johnson",
-    title: "Owner, The Grind Coffee Shop",
-    avatar: "/placeholder-user.jpg",
-  },
-  {
-    quote:
-      "I was skeptical at first, but this platform is incredibly easy to use and has all the features we need. Highly recommended!",
-    name: "Michael Chen",
-    title: "Marketing Manager, Acme Inc.",
-    avatar: "/placeholder-user.jpg",
-  },
-  {
-    quote:
-      "The ability to update our content remotely has saved us so much time and effort. It's a fantastic solution for any business.",
-    name: "Emily Rodriguez",
-    title: "Operations Director, City Fitness",
-    avatar: "/placeholder-user.jpg",
+    quote: "The efficiency and ease of use is incredible. I can manage everything from my laptop and it updates in real time.",
+    name: 'John Smith',
+    title: 'Coffee Shop Owner at Smiths Coffee',
+    avatar: 'https://i.pravatar.cc/150?u=johnsmith',
   },
 ];
 
-export function Testimonials() {
-  return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-        <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-            What Our Users Are Saying
-          </h2>
-          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Hear from real businesses who have transformed their displays with
-            our free digital signage solution.
-          </p>
-        </div>
-        <Carousel
-          opts={{
-            align: 'start',
-          }}
-          className="w-full max-w-4xl"
-        >
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex flex-col items-start justify-center p-6 space-y-4 text-left">
-                      <p className="text-sm text-muted-foreground">
-                        "{testimonial.quote}"
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <Avatar>
-                          <AvatarImage src={testimonial.avatar} />
-                          <AvatarFallback>
-                            {testimonial.name
-                              .split(' ')
-                              .map((n) => n[0])
-                              .join('')}
-                          </AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <p className="text-sm font-semibold">
-                            {testimonial.name}
-                          </p>
-                          <p className="text-xs text-muted-foreground">
-                            {testimonial.title}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+
+export function Testimonials({ isQuote = false, fullWidth = false }: { isQuote?: boolean; fullWidth?: boolean }) {
+  const testimonial = testimonials[0];
+
+  if (isQuote) {
+    return (
+      <div className="flex items-center justify-center gap-4">
+        <Avatar className="h-10 w-10 border-2 border-white shadow-sm">
+          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+        </Avatar>
+        <blockquote className="text-sm text-gray-600 text-left max-w-sm">
+          <p className="italic">"{testimonial.quote}"</p>
+          <cite className="mt-1 not-italic font-bold text-black block text-xs">{testimonial.name}, {testimonial.title}</cite>
+        </blockquote>
       </div>
-    </section>
-  );
+    )
+  }
+
+  if (fullWidth) {
+    return (
+      <section className="w-full bg-[#f9faff] py-24 overflow-hidden">
+        <div className="container px-4 mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <Avatar className="h-24 w-24 border-4 border-white shadow-xl">
+                <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                <AvatarFallback className="text-2xl">{testimonial.name.charAt(0)}</AvatarFallback>
+              </Avatar>
+            </div>
+            <blockquote className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-8">
+              "{testimonial.quote}"
+            </blockquote>
+            <div className="flex flex-col items-center">
+              <span className="text-xl font-black text-black">{testimonial.name}</span>
+              <span className="text-lg text-gray-500 font-medium">{testimonial.title}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  return null;
 }
+

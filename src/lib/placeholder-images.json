@@ -1,0 +1,142 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-home",
+      "description": "Digital signage in a modern, well-lit cafe with comfortable seating.",
+      "imageUrl": "https://images.unsplash.com/photo-1757774858163-6ea2ea86f729?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlnaXRhbCUyMHNpZ25hZ2UlMjBjYWZlfGVufDB8fHx8MTc2NjM0MzM5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital signage cafe"
+    },
+    {
+      "id": "feature-1",
+      "description": "Image illustrating an easy-to-use interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1726066012801-14d892021339?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx1c2VyJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NjI3ODI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user interface"
+    },
+    {
+      "id": "feature-2",
+      "description": "Image showing content scheduling.",
+      "imageUrl": "https://images.unsplash.com/photo-1632200011588-7c252c8c8fbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYWxlbmRhciUyMHNjaGVkdWxlfGVufDB8fHx8MTc2NjMzNjI4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "calendar schedule"
+    },
+    {
+      "id": "feature-3",
+      "description": "Image showing multi-screen management.",
+      "imageUrl": "https://images.unsplash.com/photo-1659297396060-958799469f36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bXVsdGlwbGUlMjBzY3JlZW5zfGVufDB8fHx8MTc2NjM0MjUwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "multiple screens"
+    },
+    {
+      "id": "blog-hero-1",
+      "description": "Hero image for the ultimate guide blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1562575214-da9fcf59b907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWNobm9sb2d5JTIwYWJzdHJhY3R8ZW58MHx8fHwxNzY2MjU3MDc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology abstract"
+    },
+    {
+      "id": "blog-hero-2",
+      "description": "Hero image for the cafe menu blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1588253137728-1e4dd0fe9a93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYWZlJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY2MzIxMDQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cafe interior"
+    },
+    {
+      "id": "blog-hero-3",
+      "description": "Hero image for the QSR menu blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1625940951329-4e8d09f87692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmFzdCUyMGZvb2R8ZW58MHx8fHwxNzY2Mjk3OTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fast food"
+    },
+    {
+      "id": "blog-card-1",
+      "description": "Card image for the ultimate guide blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1760260102924-5792500d9e83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnbG93aW5nJTIwbGluZXN8ZW58MHx8fHwxNzY2MjYwNDIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glowing lines"
+    },
+    {
+      "id": "blog-card-2",
+      "description": "Card image for the cafe menu blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1453614512568-c4024d13c247?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc2NjI4MDIxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee shop"
+    },
+    {
+      "id": "blog-card-3",
+      "description": "Card image for the QSR menu blog post.",
+      "imageUrl": "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxidXJnZXJ8ZW58MHx8fHwxNzY2MzIyMjI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "burger"
+    },
+    {
+      "id": "pizza-menu",
+      "description": "Digital menu board in a pizza restaurant.",
+      "imageUrl": "https://images.unsplash.com/photo-1489564239502-7a532064e1c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwaXp6YSUyMHJlc3RhdXJhbnR8ZW58MHx8fHwxNzY2Mjc0MjM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pizza restaurant"
+    },
+    {
+      "id": "cafe-menu",
+      "description": "Digital menu board in a modern cafe.",
+      "imageUrl": "https://images.unsplash.com/photo-1611653682092-d881246b72a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYWZlfGVufDB8fHx8MTc2NjMzMjQ3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern cafe"
+    },
+    {
+      "id": "burger-menu",
+      "description": "Digital menu board in a burger joint.",
+      "imageUrl": "https://images.unsplash.com/photo-1613086608011-ba36506da4ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXJnZXIlMjBqb2ludHxlbnwwfHx8fDE3NjYyOTMwNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "burger joint"
+    },
+    {
+      "id": "cannabis-menu",
+      "description": "Digital menu board in a cannabis dispensary.",
+      "imageUrl": "https://images.unsplash.com/photo-1764795849674-829c8d6b6c1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlzcGVuc2FyeSUyMGludGVyaW9yfGVufDB8fHx8MTc2NjM0MjUwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dispensary interior"
+    },
+    {
+      "id": "qsr-menu",
+      "description": "Digital menu board in a quick-service restaurant.",
+      "imageUrl": "https://images.unsplash.com/photo-1634043319926-c2565ac15c63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXN0JTIwZm9vZCUyMGNvdW50ZXJ8ZW58MHx8fHwxNzY2MzQyNTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fast food counter"
+    },
+    {
+      "id": "free-signage",
+      "description": "Image illustrating a free digital signage offer.",
+      "imageUrl": "https://images.unsplash.com/photo-1592903297149-37fb25202dfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnaWZ0fGVufDB8fHx8MTc2NjM0MjUwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gift"
+    },
+    {
+      "id": "amazon-stick",
+      "description": "Image of an Amazon Fire Stick with a TV.",
+      "imageUrl": "https://images.unsplash.com/photo-1601944177325-f8867652837f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0diUyMHN0cmVhbWluZ3xlbnwwfHx8fDE3NjYzNDI1MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tv streaming"
+    },
+    {
+      "id": "about-us",
+      "description": "Image of a diverse team working together.",
+      "imageUrl": "https://images.unsplash.com/photo-1566140967404-b8b3932483f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NjYyMjg1MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "app-showcase-1",
+      "description": "Screenshot of the app's playlist editor.",
+      "imageUrl": "https://images.unsplash.com/photo-1683105020625-5f7c8dd746bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcHAlMjBwbGF5bGlzdHxlbnwwfHx8fDE3NjYzNDMzOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app playlist"
+    },
+    {
+      "id": "app-showcase-2",
+      "description": "Screenshot of the app's scheduling interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1591174425156-fd472f354be4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcHAlMjBzY2hlZHVsZXxlbnwwfHx8fDE3NjYzNDMzOTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app schedule"
+    },
+    {
+      "id": "app-showcase-3",
+      "description": "Screenshot of the app's analytics dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1758411898021-ef0dadaaa295?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcHAlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzY2Mjc1ODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app dashboard"
+    },
+    {
+      "id": "app-showcase-4",
+      "description": "Screenshot of the app's device management screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1762768767074-e491f1eebdfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhcHAlMjBkZXZpY2VzfGVufDB8fHx8MTc2NjM0MzM5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app devices"
+    },
+    {
+      "id": "cms-playlist-view",
+      "description": "Screenshot of the CMS playlist view, showing various media types and schedules.",
+      "imageUrl": "https://images.unsplash.com/photo-1764795849503-4318c4e43048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbXMlMjB1aXxlbnwwfHx8fDE3NjYyODM5MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cms ui"
+    }
+  ]
+}
