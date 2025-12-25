@@ -22,19 +22,21 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 h-[30vw] max-h-[420px] overflow-hidden">
-            <div className="max-w-5xl mx-auto bg-gray-800/50 rounded-xl shadow-2xl shadow-black/50 p-2 border border-gray-700">
-                <div className="flex items-center gap-1.5 px-2 h-6">
-                    <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
-                    <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
-                    <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+        <div className="mt-16 h-[calc((100vw-4rem)*0.53*0.8)] sm:h-[calc(64rem*0.53*0.8)] overflow-hidden max-w-5xl mx-auto">
+             <div className="relative">
+                <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
+                    <div className="flex items-center gap-1.5 px-2 h-6">
+                        <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                    </div>
                 </div>
                 <Image
                 src="/images/screens/screen1.png"
                 alt="DigitalSigns.ai CMS playlist view"
                 width={1080}
                 height={721}
-                className="rounded-b-lg w-full h-auto"
+                className="w-full h-auto"
                 />
             </div>
         </div>
