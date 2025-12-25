@@ -11,16 +11,16 @@ export function SetupSection() {
     <section className="bg-black text-white">
       <div className="container pt-20 sm:pt-32 text-center">
         <h2 className="font-headline text-4xl sm:text-5xl font-bold">
-          Get set up in minutes.
+          Get set up with digital signage in minutes
         </h2>
         <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-          Use your existing player, TV or computer
+          Use your existing TV, media player, or computer — no additional hardware required.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-200">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/free-digital-signage/">Sign Up For Free</Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-gray-900">
+          <Button asChild variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-black">
             <Link href="#">Book a Demo</Link>
           </Button>
         </div>
