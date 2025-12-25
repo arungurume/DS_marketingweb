@@ -8,8 +8,8 @@ const setupImage = PlaceHolderImages.find((p) => p.id === 'cms-playlist-view');
 
 export function SetupSection() {
   return (
-    <section className="bg-gray-900 text-white">
-      <div className="container py-20 sm:py-32 text-center">
+    <section className="bg-black text-white">
+      <div className="container pt-20 sm:pt-32 text-center">
         <h2 className="font-headline text-4xl sm:text-5xl font-bold">
           Get set up in minutes.
         </h2>
