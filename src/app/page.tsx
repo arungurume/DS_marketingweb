@@ -52,24 +52,12 @@ export const metadata: Metadata = {
   },
 };
 
-const appShowcase1 = PlaceHolderImages.find((p) => p.id === 'app-showcase-1');
-const appShowcase2 = PlaceHolderImages.find((p) => p.id === 'app-showcase-2');
-const appShowcase3 = PlaceHolderImages.find((p) => p.id === 'app-showcase-3');
-const appShowcase4 = PlaceHolderImages.find((p) => p.id === 'app-showcase-4');
-
 const players = [
   { name: 'Google TV', src: '/images/Google_TV.png', hoverColor: 'hover:bg-blue-100' },
   { name: 'Android TV', src: '/images/Android_TV.png', hoverColor: 'hover:bg-green-100' },
   { name: 'Fire TV', src: '/images/Fire_Tv.png', hoverColor: 'hover:bg-orange-100' },
   { name: 'Amazon Signage', src: '/images/amazon_signage.png', hoverColor: 'hover:bg-orange-100' },
   { name: 'Web Browser', src: '/images/browser.png', hoverColor: 'hover:bg-sky-100' },
-];
-
-const appScreens = [
-  { image: appShowcase1, className: 'lg:col-span-2' },
-  { image: appShowcase2, className: '' },
-  { image: appShowcase3, className: '' },
-  { image: appShowcase4, className: 'lg:col-span-2' },
 ];
 
 const industryLogos = [
@@ -128,33 +116,6 @@ export default function Home() {
       </section>
 
       <UseCasesSection />
-
-      <section id="app-showcase" className="pt-8 pb-20">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {appScreens.map((screen, index) => (
-              <div
-                key={index}
-                className={cn(
-                  'rounded-xl border shadow-lg overflow-hidden',
-                  screen.className
-                )}
-              >
-                {screen.image && (
-                  <Image
-                    src={screen.image.imageUrl}
-                    alt={screen.image.description}
-                    width={1200}
-                    height={800}
-                    className="w-full h-full object-cover"
-                    data-ai-hint={screen.image.imageHint}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="players" className="pt-8 pb-20 bg-primary/5">
         <div className="container">
