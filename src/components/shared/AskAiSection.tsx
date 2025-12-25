@@ -9,21 +9,21 @@ export function AskAiSection() {
   const serviceLinks = [
     {
       name: 'ChatGPT',
-      icon: '/images/brands/ChatGPT_logo.png',
+      icon: '/images/brands/chatgpt.svg',
       href: `https://chatgpt.com/?q=${encodeURIComponent(question)}`,
       variant: 'outline' as const,
       className: 'bg-white text-black hover:bg-gray-200 border-gray-300',
     },
     {
       name: 'Claude',
-      icon: '/images/brands/claude_logo.png',
+      icon: '/images/brands/claude.svg',
       href: `https://claude.ai/chats?q=${encodeURIComponent(question)}`,
       variant: 'default' as const,
       className: 'bg-[#D97757] hover:bg-[#D97757]/90 text-white',
     },
     {
       name: 'Perplexity',
-      icon: '/images/brands/perplexity_logo.png',
+      icon: '/images/brands/perplexity.svg',
       href: `https://www.perplexity.ai/?q=${encodeURIComponent(question)}`,
       variant: 'default' as const,
       className: 'bg-[#42A599] hover:bg-[#42A599]/90 text-white',
