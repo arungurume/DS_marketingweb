@@ -88,7 +88,7 @@ export function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {isClient ? new Date().getFullYear() : '2024'} {SITE_NAME}. All rights reserved.
+            &copy; {isClient ? new Date().getFullYear() : '2025'} {SITE_NAME}. All rights reserved.
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((link) => (
