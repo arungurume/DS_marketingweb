@@ -8,12 +8,6 @@
     ],
     "trailingSlash": true,
     "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/404.html"
-      }
-    ],
     "redirects": [
       {
         "source": "/example-old-path",
