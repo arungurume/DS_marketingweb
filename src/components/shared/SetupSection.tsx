@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -24,7 +25,7 @@ export function SetupSection() {
   }, []);
 
   return (
-    <section className="relative">
+    <section className="relative pb-[200px] sm:pb-0">
       <div className="bg-black">
         <div className="container pt-20 sm:pt-32 text-center pb-48">
           <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
@@ -55,37 +56,38 @@ export function SetupSection() {
         </div>
       </div>
 
-      <div className="container absolute bottom-0 left-1/2 -translate-x-1/2" style={{ bottom: '-150px' }}>
-        <div
-          className="max-w-5xl mx-auto"
-        >
+      <div
+        className="container absolute bottom-0 left-1/2 -translate-x-1/2"
+        style={{ bottom: '-150px' }}
+      >
+        <div className="max-w-5xl mx-auto">
           <div className="relative h-full overflow-hidden">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
-                <div className="w-full h-full absolute top-0 left-0">
-                    <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
-                    <div className="flex items-center gap-1.5 px-2 h-6">
-                        <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
-                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
-                        <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
-                    </div>
-                    </div>
-                    <div className="w-full h-full relative">
-                    {images.map((src, index) => (
-                        <Image
-                        key={src}
-                        src={src}
-                        alt={`A screenshot of the ${SITE_NAME} digital signage content management system.`}
-                        width={1080}
-                        height={721}
-                        className={cn(
-                            'w-full h-auto rounded-b-xl absolute top-0 left-0 transition-opacity duration-1000 ease-in-out',
-                            currentIndex === index ? 'opacity-100' : 'opacity-0'
-                        )}
-                        priority={index === 0}
-                        />
-                    ))}
-                    </div>
+              <div className="w-full h-full absolute top-0 left-0">
+                <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
+                  <div className="flex items-center gap-1.5 px-2 h-6">
+                    <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                    <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+                    <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                  </div>
                 </div>
+                <div className="w-full h-full relative">
+                  {images.map((src, index) => (
+                    <Image
+                      key={src}
+                      src={src}
+                      alt={`A screenshot of the ${SITE_NAME} digital signage content management system.`}
+                      width={1080}
+                      height={721}
+                      className={cn(
+                        'w-full h-auto rounded-b-xl absolute top-0 left-0 transition-opacity duration-1000 ease-in-out',
+                        currentIndex === index ? 'opacity-100' : 'opacity-0'
+                      )}
+                      priority={index === 0}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
