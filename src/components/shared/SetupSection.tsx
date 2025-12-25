@@ -7,7 +7,7 @@ export function SetupSection() {
   return (
     <section className="bg-black">
       <div className="container pt-20 sm:pt-32 text-center">
-        <h2 className="font-headline text-4xl sm:text-5xl font-bold">
+        <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
           Get set up with digital signage in minutes
         </h2>
         <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 h-[32vw] max-h-[450px] overflow-hidden">
+        <div className="mt-16 h-[30vw] max-h-[400px] overflow-hidden">
             <div className="max-w-5xl mx-auto bg-gray-800/50 rounded-xl shadow-2xl shadow-black/50 p-2 border border-gray-700">
                 <div className="flex items-center gap-1.5 px-2 h-6">
                     <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
