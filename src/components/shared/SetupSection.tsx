@@ -24,11 +24,8 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 max-w-5xl mx-auto">
-          <div
-            className="relative"
-            style={{ paddingBottom: 'calc(100% * (721 / 1080) * 0.8)' }}
-          >
+        <div className="mt-16 max-w-5xl mx-auto -mb-40 relative z-10">
+          <div className="relative" style={{ paddingBottom: 'calc(100% * (721 / 1080))' }}>
             <div className="absolute top-0 left-0 w-full h-full">
               <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
                 <div className="flex items-center gap-1.5 px-2 h-6">
