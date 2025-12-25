@@ -51,7 +51,7 @@ export function SetupSection() {
           </Button>
         </div>
       </div>
-      <div className="absolute bottom-[-200px] left-1/2 -translate-x-1/2 w-full max-w-5xl px-4 h-[500px] z-10">
+      <div className="absolute bottom-[-250px] left-1/2 -translate-x-1/2 w-full max-w-5xl px-4 h-[500px] z-10">
         <div className="relative w-full h-full">
             <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
                 <div className="flex items-center gap-1.5 px-2 h-6">
