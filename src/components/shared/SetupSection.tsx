@@ -22,7 +22,7 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 h-[25vw] max-h-[350px] overflow-hidden">
+        <div className="mt-16 h-[30vw] max-h-[420px] overflow-hidden">
             <div className="max-w-5xl mx-auto bg-gray-800/50 rounded-xl shadow-2xl shadow-black/50 p-2 border border-gray-700">
                 <div className="flex items-center gap-1.5 px-2 h-6">
                     <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
