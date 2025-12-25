@@ -1,7 +1,5 @@
+import { FreeSignagePageClient } from '@/components/content/FreeSignagePageClient';
+
 export default function Home() {
-  return (
-    <main>
-      <h1>Hello World</h1>
-    </main>
-  );
+  return <FreeSignagePageClient />;
 }
