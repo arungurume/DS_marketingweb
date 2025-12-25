@@ -131,6 +131,12 @@
       "description": "Screenshot of the app's device management screen.",
       "imageUrl": "https://images.unsplash.com/photo-1762768767074-e491f1eebdfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhcHAlMjBkZXZpY2VzfGVufDB8fHx8MTc2NjM0MzM5MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "app devices"
+    },
+    {
+      "id": "cms-playlist-view",
+      "description": "Screenshot of the CMS playlist view, showing various media types and schedules.",
+      "imageUrl": "https://images.unsplash.com/photo-1764795849503-4318c4e43048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbXMlMjB1aXxlbnwwfHx8fDE3NjYyODM5MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cms ui"
     }
   ]
 }

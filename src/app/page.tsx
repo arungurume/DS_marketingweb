@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 import { PlayCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 import { Seo } from '@/components/shared/Seo';
 import type { SoftwareApplication } from 'schema-dts';
@@ -15,6 +14,7 @@ import { AskAiSection } from '@/components/shared/AskAiSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { TvFrame } from '@/components/shared/TvFrame';
 import { UseCasesSection } from '@/components/shared/UseCasesSection';
+import { SetupSection } from '@/components/shared/SetupSection';
 
 const title = `The Easiest Way To Power Your Screens | ${SITE_NAME}`;
 const description =
@@ -185,28 +185,7 @@ export default function Home() {
 
       <AskAiSection />
       
-      <section className="pt-8 pb-20">
-        <div className="container text-center">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold">
-            Ready to Revolutionize Your Displays?
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of businesses and start creating beautiful,
-            effective digital signage today. It&apos;s free to get started with
-            DSHub.
-          </p>
-          <div className="mt-8">
-            <Button
-              asChild
-              size="lg"
-            >
-              <Link href="/free-digital-signage/">
-                Claim Your Free Account Now
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <SetupSection />
     </>
   );
 }
