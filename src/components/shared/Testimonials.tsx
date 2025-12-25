@@ -8,17 +8,17 @@ import { SITE_NAME } from '@/lib/constants';
 const testimonials = [
   {
     quote:
+      "The ability to schedule our lunch combos in advance has been a game-changer. Our sales are up and the screens look fantastic. A total win.",
+    author: 'David Chen',
+    company: 'Manager, The Pizza Spot',
+    avatar: 'https://picsum.photos/seed/ceo2/40/40',
+  },
+  {
+    quote:
       "I'm not a tech person, but I had our new digital menu running in 15 minutes. It’s that simple. Our daily specials look amazing, and customers love it.",
     author: 'Maria Garcia',
     company: 'Owner, The Daily Grind Cafe',
     avatar: 'https://picsum.photos/seed/ceo1/40/40',
-  },
-  {
-    quote:
-      'The ability to schedule our lunch combos in advance has been a game-changer. Our sales are up and the screens look fantastic. A total win.',
-    author: 'David Chen',
-    company: 'Manager, The Pizza Spot',
-    avatar: 'https://picsum.photos/seed/ceo2/40/40',
   },
   {
     quote:

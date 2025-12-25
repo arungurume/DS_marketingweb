@@ -37,7 +37,7 @@ const navLinks = [
     ],
   },
   { href: '/amazon-signage-stick-cms/', label: 'Amazon Stick' },
-  { href: '/pricing/', label: '$5/ Screen' },
+  { href: '/pricing/', label: 'Pricing' },
   { href: '/blog/', label: 'Blog' },
   { href: '/about-us-ds/', label: 'About Us' },
 ];
@@ -75,7 +75,7 @@ export function Header() {
   };
 
   const handleMouseLeave = () => {
-    const activeLinkIndex = navLinks.findIndex((link) => link.href === pathname);
+    const activeLinkIndex = navLinks.findIndex((link) => pathname.startsWith(link.href) && link.href !== '/');
     if (activeLinkIndex !== -1) {
       const activeLinkElement = linkRefs.current[activeLinkIndex];
       if (activeLinkElement) {
@@ -223,7 +223,7 @@ export function Header() {
             </Sheet>
           </div>
           <div className="hidden md:flex items-center gap-2 ml-6">
-            <Button variant="outline">Book Demo</Button>
+            <Button variant="outline">Book a Demo</Button>
             <Button>Start Free</Button>
           </div>
         </div>

@@ -1,4 +1,4 @@
-
+'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { SITE_NAME } from '@/lib/constants';
@@ -27,12 +27,12 @@ export function AskAiSection() {
       icon: '/images/brands/perplexity.svg',
       href: `https://www.perplexity.ai/?q=${encodeURIComponent(question)}`,
       variant: 'default' as const,
-      className: 'bg-[#42A599] hover:bg-[#42A599]/90 text-white',
+      className: 'bg-teal-500 hover:bg-teal-600 text-white',
     },
   ];
 
   return (
-    <section className="pt-16 pb-20 sm:pb-32">
+    <section className="py-16 sm:py-24">
       <div className="container">
         <div className="bg-amber-100 rounded-2xl p-8 sm:p-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">

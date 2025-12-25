@@ -10,13 +10,9 @@ import {
 
 const horizontalImages = [
   PlaceHolderImages.find((p) => p.id === 'hero-home'),
-  PlaceHolderImages.find((p) => p.id === 'pizza-menu'),
-  PlaceHolderImages.find((p) => p.id === 'qsr-menu'),
 ].filter(Boolean) as ImagePlaceholder[];
 
 const verticalImages = [
-  PlaceHolderImages.find((p) => p.id === 'app-showcase-1'),
-  PlaceHolderImages.find((p) => p.id === 'app-showcase-2'),
   PlaceHolderImages.find((p) => p.id === 'app-showcase-3'),
 ].filter(Boolean) as ImagePlaceholder[];
 
@@ -26,10 +22,11 @@ export function TvFrame({ horizontalOnly = false }: { horizontalOnly?: boolean }
   const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
+    if (horizontalImages.length <= 1) return;
     const interval = setInterval(() => {
       setIsFading(true);
       setTimeout(() => {
-        const nextIndex = (currentIndex + 1) % Math.min(horizontalImages.length, verticalImages.length);
+        const nextIndex = (currentIndex + 1) % horizontalImages.length;
         setCurrentIndex(nextIndex);
         setIsFading(false);
       }, 500);
@@ -39,7 +36,7 @@ export function TvFrame({ horizontalOnly = false }: { horizontalOnly?: boolean }
   }, [currentIndex]);
 
   const currentHorizontalImage = horizontalImages[currentIndex];
-  const currentVerticalImage = verticalImages[currentIndex];
+  const currentVerticalImage = verticalImages[0];
 
   const horizontalTv = (
     <div className="relative w-full max-w-3xl flex-shrink">
@@ -68,7 +65,7 @@ export function TvFrame({ horizontalOnly = false }: { horizontalOnly?: boolean }
 
   if (horizontalOnly) {
     return (
-        <div className="relative w-full max-w-xl mx-auto">
+        <div className="relative w-full max-w-xl mx-auto mt-16 sm:mt-24">
             {horizontalTv}
         </div>
     );
@@ -76,7 +73,7 @@ export function TvFrame({ horizontalOnly = false }: { horizontalOnly?: boolean }
 
   return (
     <div className="relative w-full max-w-6xl mx-auto mt-12 sm:mt-16">
-        <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4 sm:gap-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
             {horizontalTv}
             {/* Vertical TV */}
             <div className="relative w-40 sm:w-auto sm:flex-1 max-w-[12rem] mx-auto sm:mx-0">

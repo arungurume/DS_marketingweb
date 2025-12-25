@@ -81,7 +81,7 @@ export function UseCasesSection() {
   const [activeUseCase, setActiveUseCase] = useState(useCases[0]);
 
   return (
-    <section className="pb-20 sm:pb-32 bg-background">
+    <section className="py-20 sm:py-32 bg-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold">
@@ -113,7 +113,7 @@ export function UseCasesSection() {
                   value={item.value}
                   className="border-0 mb-4"
                 >
-                  <AccordionTrigger className="p-6 bg-card rounded-lg shadow-sm data-[state=open]:shadow-lg data-[state=open]:rounded-b-none data-[state=open]:border data-[state=open]:border-primary hover:no-underline [&>svg]:ml-4">
+                  <AccordionTrigger className="p-6 bg-card rounded-lg shadow-sm data-[state=open]:shadow-lg data-[state=open]:rounded-b-none border data-[state=open]:border-primary hover:no-underline [&>svg]:ml-4">
                     <div className="text-left flex-grow">
                       <p className="text-sm font-semibold text-primary">
                         {item.category}
@@ -124,7 +124,7 @@ export function UseCasesSection() {
                       </p>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="bg-card rounded-b-lg p-6 pt-0 -mt-2 data-[state=open]:border data-[state=open]:border-t-0 data-[state=open]:border-primary">
+                  <AccordionContent className="bg-card rounded-b-lg p-6 pt-0 -mt-2 border border-t-0 data-[state=open]:border-primary">
                     {item.features && (
                       <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 pt-4">
                         {item.features.map((feature) => (
