@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 export function SetupSection() {
   return (
     <section className="bg-black">
-      <div className="container pt-20 sm:pt-32 text-center">
+      <div className="container pt-20 sm:pt-32 text-center relative">
         <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
           Get set up with digital signage in minutes
         </h2>
@@ -24,25 +24,25 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 max-w-5xl mx-auto -mb-40 relative z-10">
-          <div className="relative" style={{ paddingBottom: 'calc(100% * (721 / 1080))' }}>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
-                <div className="flex items-center gap-1.5 px-2 h-6">
-                  <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
-                  <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
-                  <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+        <div className="mt-16 max-w-5xl mx-auto z-10" style={{ transform: 'translateY(80px)' }}>
+            <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
+                <div className="absolute top-0 left-0 w-full h-full">
+                    <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
+                        <div className="flex items-center gap-1.5 px-2 h-6">
+                            <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                            <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+                            <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+                    <Image
+                        src="/images/screens/screen1.png"
+                        alt="DigitalSigns.ai CMS playlist view"
+                        width={1080}
+                        height={721}
+                        className="w-full h-auto rounded-b-xl"
+                    />
                 </div>
-              </div>
-              <Image
-                src="/images/screens/screen1.png"
-                alt="DigitalSigns.ai CMS playlist view"
-                width={1080}
-                height={721}
-                className="w-full h-auto"
-              />
             </div>
-          </div>
         </div>
       </div>
     </section>
