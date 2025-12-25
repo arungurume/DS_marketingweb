@@ -5,15 +5,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "trailingSlash": true,
-    "cleanUrls": true,
-    "redirects": [
-      {
-        "source": "/example-old-path",
-        "destination": "/example-new-path",
-        "type": 301
-      }
     ]
   }
 }
