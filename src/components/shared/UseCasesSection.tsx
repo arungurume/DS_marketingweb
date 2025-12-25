@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Check, ChevronRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 import Link from 'next/link';
 
 const useCases = [
@@ -76,9 +76,9 @@ export function UseCasesSection() {
                 <AccordionItem
                   key={item.value}
                   value={item.value}
-                  className="border-0"
+                  className="border-0 mb-4"
                 >
-                  <AccordionTrigger className="p-6 bg-card rounded-lg shadow-sm data-[state=open]:shadow-lg data-[state=open]:border data-[state=open]:border-primary hover:no-underline [&[data-state=open]>div>svg]:hidden [&[data-state=closed]>div>svg]:rotate-0">
+                  <AccordionTrigger className="p-6 bg-card rounded-lg shadow-sm data-[state=open]:shadow-lg data-[state=open]:rounded-b-none data-[state=open]:border data-[state=open]:border-primary hover:no-underline [&>svg]:ml-4">
                     <div className="text-left flex-grow">
                       <p className="text-sm font-semibold text-primary">
                         {item.category}
@@ -88,11 +88,8 @@ export function UseCasesSection() {
                         {item.description}
                       </p>
                     </div>
-                    <div className="p-2 rounded-full bg-secondary">
-                        <ChevronRight className="h-5 w-5 text-muted-foreground transition-transform duration-200" />
-                    </div>
                   </AccordionTrigger>
-                  <AccordionContent className="bg-card rounded-b-lg p-6 pt-0 -mt-2">
+                  <AccordionContent className="bg-card rounded-b-lg p-6 pt-0 -mt-2 data-[state=open]:border data-[state=open]:border-t-0 data-[state=open]:border-primary">
                     {item.features && (
                       <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 pt-4">
                         {item.features.map((feature) => (
@@ -125,7 +122,7 @@ export function UseCasesSection() {
                         </div>
                     ))}
                 </div>
-                <div className="h-48 w-full rounded-lg border-2 border-dashed border-border flex items-center justify-center">
+                <div className="aspect-[16/9] w-full rounded-lg border-2 border-dashed border-border flex items-center justify-center">
                     <p className="text-muted-foreground">Screen preview</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
