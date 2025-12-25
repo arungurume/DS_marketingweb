@@ -65,27 +65,6 @@ const players = [
   { name: 'Web Browser', src: '/images/browser.png', hoverColor: 'hover:bg-sky-100' },
 ];
 
-const features = [
-  {
-    icon: '/images/icons/editor.svg',
-    title: 'Intuitive Content Creation',
-    description:
-      'Leverage our user-friendly, drag-and-drop editor to build beautiful, dynamic content for your digital displays. Absolutely no design experience required.',
-  },
-  {
-    icon: '/images/icons/scheduler.svg',
-    title: 'Advanced Scheduling & Automation',
-    description:
-      'Organize your digital signage content for days, weeks, or even months. Configure automated schedules to update your screens at the perfect time.',
-  },
-  {
-    icon: '/images/icons/remote.svg',
-    title: 'Remote Screen Management',
-    description:
-      'Our powerful cloud-based CMS lets you control one screen or thousands from any device, anywhere in the world. DSHub gives you complete control.',
-  },
-];
-
 const appScreens = [
   { image: appShowcase1, className: 'lg:col-span-2' },
   { image: appShowcase2, className: '' },
@@ -147,42 +126,6 @@ export default function Home() {
           </div>
 
           <TvFrame />
-        </div>
-      </section>
-
-      <section id="features" className="pt-8 pb-20 bg-primary/5">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl sm:text-4xl font-bold">
-              All-in-One Digital Signage Content Management
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Our cloud-based platform is packed with powerful features designed
-              to make managing your digital signs simple, effective, and
-              scalable.
-            </p>
-          </div>
-          <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
-            {features.map((feature, index) => (
-              <div key={index}>
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mx-auto">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width={24}
-                    height={24}
-                    className="h-6 w-6"
-                  />
-                </div>
-                <h3 className="font-headline text-xl font-semibold mt-6">
-                  {feature.title}
-                </h3>
-                <p className="mt-2 text-muted-foreground">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
