@@ -25,7 +25,7 @@ export function SetupSection() {
 
   return (
     <section className="bg-black static">
-      <div className="container pt-20 sm:pt-32 text-center">
+      <div className="container pt-20 sm:pt-32 text-center pb-20">
         <h2 className="font-headline text-4xl sm:text-5xl font-bold text-white">
           Get set up with digital signage in minutes
         </h2>
@@ -53,7 +53,7 @@ export function SetupSection() {
         </div>
 
         <div
-          className="max-w-5xl mx-auto relative z-10"
+          className="max-w-5xl mx-auto relative"
           style={{ bottom: '-80px' }}
         >
           <div className="relative h-full overflow-hidden">
@@ -86,6 +86,9 @@ export function SetupSection() {
             </div>
           </div>
         </div>
+        <p className="mt-28 text-gray-400 text-sm max-w-2xl mx-auto relative z-20">
+          Free Digital Signage CMS by DS – your complete solution for managing screens, boosting brand visibility, and driving sales with ease.
+        </p>
       </div>
     </section>
   );
