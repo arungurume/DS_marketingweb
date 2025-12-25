@@ -57,8 +57,8 @@ export function Testimonials() {
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex flex-col items-center justify-center p-6 space-y-4">
-                      <p className="text-sm text-center text-muted-foreground">
+                    <CardContent className="flex flex-col items-start justify-center p-6 space-y-4 text-left">
+                      <p className="text-sm text-muted-foreground">
                         "{testimonial.quote}"
                       </p>
                       <div className="flex items-center gap-2">

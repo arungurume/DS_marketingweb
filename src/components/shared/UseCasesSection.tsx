@@ -69,7 +69,7 @@ export function UseCasesSection() {
         <div className="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {useCases.map((useCase) => (
             <Card key={useCase.title}>
-              <CardHeader>
+              <CardHeader className="p-0">
                 <div className="relative aspect-video w-full overflow-hidden rounded-t-lg">
                   <Image
                     src={useCase.image}
