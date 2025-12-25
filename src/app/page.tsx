@@ -109,9 +109,7 @@ export default function Home() {
             Cloud-Based Digital Signage Software
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Welcome to DSHub, powered by ${SITE_NAME}. Create and manage
-            stunning content on your screens with our powerful, easy-to-use
-            digital signage CMS.
+            Easily create, schedule, and manage content across your screens — without complex hardware.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
