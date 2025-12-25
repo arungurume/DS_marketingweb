@@ -4,7 +4,6 @@ import { AndroidTvIcon } from '@/components/icons/AndroidTvIcon';
 import { AmazonFireTvIcon } from '@/components/icons/AmazonFireTvIcon';
 import { AmazonSignageIcon } from '@/components/icons/AmazonSignageIcon';
 import { WebPlayerIcon } from '@/components/icons/WebPlayerIcon';
-import { cn } from '@/lib/utils';
 
 const hardware = [
     { name: 'Google TV', icon: GoogleTvIcon, description: "Google TV" },

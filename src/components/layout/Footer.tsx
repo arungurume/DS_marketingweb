@@ -39,13 +39,11 @@ const socialLinks = [
 ]
 
 export function Footer() {
-    const [isClient, setIsClient] = useState(false);
+    const [currentYear, setCurrentYear] = useState<number | null>(null);
 
     useEffect(() => {
-        setIsClient(true);
+        setCurrentYear(new Date().getFullYear());
     }, []);
-
-    const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-background/95 border-t py-12 sm:py-16">
@@ -60,7 +58,7 @@ export function Footer() {
                     <ul className="mt-4 space-y-3">
                         {links.map(link => (
                             <li key={link.title}>
-                                <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                                <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                     {link.title}
                                 </Link>
                             </li>
@@ -71,7 +69,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t pt-8 flex flex-col sm:flex-row items-center justify-between">
             <p className="text-sm text-muted-foreground order-2 sm:order-1 mt-4 sm:mt-0">
-                &copy; {isClient ? currentYear : ''} DigitalSigns.ai. All rights reserved.
+                &copy; {currentYear ?? ''} DigitalSigns.ai. All rights reserved.
             </p>
             <div className="flex items-center gap-2 order-1 sm:order-2">
                 {socialLinks.map(link => (

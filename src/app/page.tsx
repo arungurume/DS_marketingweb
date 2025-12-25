@@ -1,3 +1,4 @@
+
 import { HeroSection } from '@/components/shared/HeroSection';
 import { Testimonials } from '@/components/shared/Testimonials';
 import { UseCasesSection } from '@/components/shared/UseCasesSection';

@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Bot, User, CornerDownLeft } from 'lucide-react';
+import { Bot, CornerDownLeft } from 'lucide-react';
 
 export function AskAiSection() {
     return (
