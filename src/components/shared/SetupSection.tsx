@@ -25,14 +25,19 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 max-w-5xl mx-auto">
+        <div className="mt-16 max-w-5xl mx-auto bg-gray-800/50 rounded-xl shadow-2xl shadow-black/50 p-2 border border-gray-700">
+          <div className="flex items-center gap-1.5 px-2 h-6">
+            <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+            <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+            <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+          </div>
           {setupImage && (
             <Image
               src={setupImage.imageUrl}
               alt={setupImage.description}
               width={1080}
               height={721}
-              className="rounded-xl shadow-2xl shadow-black/50"
+              className="rounded-b-lg w-full h-auto"
               data-ai-hint={setupImage.imageHint}
             />
           )}
