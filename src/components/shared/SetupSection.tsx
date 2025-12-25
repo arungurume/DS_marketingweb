@@ -12,6 +12,8 @@ export function SetupSection() {
         </h2>
         <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
           Use your existing TV, media player, or computer — no additional hardware required.
+          <br />
+          Best for restaurants, retail, offices, and schools.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
@@ -22,8 +24,8 @@ export function SetupSection() {
           </Button>
         </div>
 
-        <div className="mt-16 h-[calc((100vw-4rem)*0.53*0.8)] sm:h-[calc(64rem*0.53*0.8)] overflow-hidden max-w-5xl mx-auto">
-             <div className="relative">
+        <div className="mt-16 max-w-5xl mx-auto overflow-hidden">
+            <div className="relative aspect-[1080/577]">
                 <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
                     <div className="flex items-center gap-1.5 px-2 h-6">
                         <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
