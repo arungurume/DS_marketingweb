@@ -231,7 +231,7 @@ export function FreeSignagePageClient() {
                         template.image && (
                              <div key={template.title} className="text-center">
                                 <div className="rounded-lg border shadow-md overflow-hidden aspect-[9/16]">
-                                    <Image src={template.image.imageUrl} alt={template.image.description} width={300} height={400} className="w-full h-full object-cover" data-ai-hint={template.image.imageHint} />
+                                    <Image src={template.image.imageUrl} alt={`${template.title} template for ${SITE_NAME}`} width={300} height={400} className="w-full h-full object-cover" data-ai-hint={template.image.imageHint} />
                                 </div>
                                 <p className="mt-4 font-medium">{template.title}</p>
                             </div>

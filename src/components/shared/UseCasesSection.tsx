@@ -15,6 +15,7 @@ import { Check } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { SITE_NAME } from '@/lib/constants';
 
 const useCases = [
   {
@@ -161,7 +162,7 @@ export function UseCasesSection() {
                     {activeUseCase && activeUseCase.image ? (
                          <Image
                             src={activeUseCase.image.imageUrl}
-                            alt={activeUseCase.image.description}
+                            alt={`Example of ${SITE_NAME} used for ${activeUseCase.category}`}
                             width={1200}
                             height={675}
                             className="w-full h-full object-cover transition-opacity duration-300"

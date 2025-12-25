@@ -6,7 +6,7 @@ const Logo = ({ className }: { className?: string }) => (
   <div className={cn('flex items-center gap-2', className)}>
     <Image
       src="/images/logo.png"
-      alt={`${SITE_NAME} Logo`}
+      alt={`${SITE_NAME} company logo`}
       width={138}
       height={44}
       className="h-8 w-auto shrink-0"

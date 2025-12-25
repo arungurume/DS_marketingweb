@@ -41,7 +41,7 @@ export default function BlogIndexPage() {
             <Link href={`/blog/${featuredPost.slug}/`} aria-label={featuredPost.frontmatter.title}>
               <Image
                 src={featuredPost.frontmatter.image}
-                alt={featuredPost.frontmatter.title}
+                alt={featuredPost.frontmatter.description}
                 width={1200}
                 height={600}
                 className="w-full rounded-xl shadow-lg aspect-video object-cover"

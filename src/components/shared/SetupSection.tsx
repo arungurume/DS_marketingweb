@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { SITE_NAME } from '@/lib/constants';
 
 const images = [
   '/images/screens/screen1.png',
@@ -29,8 +30,7 @@ export function SetupSection() {
           Get set up with digital signage in minutes
         </h2>
         <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-          Use your existing TV, media player, or computer — no additional
-          hardware required.
+          Use your existing TV, media player, or computer — no additional hardware required.
           <br />
           Best for restaurants, retail, offices, and schools.
         </p>
@@ -53,36 +53,36 @@ export function SetupSection() {
         </div>
 
         <div
-          className="max-w-5xl mx-auto"
+          className="max-w-5xl mx-auto relative"
           style={{ transform: 'translateY(80px)' }}
         >
           <div className="relative h-full overflow-hidden">
             <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
-              <div className="absolute top-0 left-0 w-full h-full">
-                <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
-                  <div className="flex items-center gap-1.5 px-2 h-6">
-                    <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
-                    <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
-                    <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
-                  </div>
+                <div className="w-full h-full absolute top-0 left-0" style={{ height: '72%', overflow: 'hidden' }}>
+                    <div className="bg-gray-800/50 rounded-t-xl p-2 border-b-0 border border-gray-700">
+                    <div className="flex items-center gap-1.5 px-2 h-6">
+                        <div className="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+                    </div>
+                    </div>
+                    <div className="w-full h-full relative">
+                    {images.map((src, index) => (
+                        <Image
+                        key={src}
+                        src={src}
+                        alt={`A screenshot of the ${SITE_NAME} digital signage content management system.`}
+                        width={1080}
+                        height={721}
+                        className={cn(
+                            'w-full h-auto rounded-b-xl absolute top-0 left-0 transition-opacity duration-1000 ease-in-out',
+                            currentIndex === index ? 'opacity-100' : 'opacity-0'
+                        )}
+                        priority={index === 0}
+                        />
+                    ))}
+                    </div>
                 </div>
-                <div className="w-full h-full relative">
-                  {images.map((src, index) => (
-                    <Image
-                      key={src}
-                      src={src}
-                      alt={`DigitalSigns.ai CMS screenshot ${index + 1}`}
-                      width={1080}
-                      height={721}
-                      className={cn(
-                        'w-full h-auto rounded-b-xl absolute top-0 left-0 transition-opacity duration-1000 ease-in-out',
-                        currentIndex === index ? 'opacity-100' : 'opacity-0'
-                      )}
-                      priority={index === 0}
-                    />
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

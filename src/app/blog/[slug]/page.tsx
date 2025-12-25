@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const { content, frontmatter } = post;
-  const { title, date, author, image, tags } = frontmatter;
+  const { title, date, author, image, tags, description } = frontmatter;
   const components = useMDXComponents({});
 
   const { content: mdxContent } = await compileMDX({
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <header className="relative h-[400px] sm:h-[500px] w-full">
           <Image
             src={image}
-            alt={title}
+            alt={description || title}
             fill
             className="object-cover"
             priority

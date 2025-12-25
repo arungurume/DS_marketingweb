@@ -68,7 +68,7 @@ export default function CannabisMenuPage() {
             {pageImage && (
               <Image
                 src={pageImage.imageUrl}
-                alt={pageImage.description}
+                alt={`A compliant digital cannabis menu by ${SITE_NAME} inside a modern dispensary`}
                 width={1200}
                 height={800}
                 className="rounded-xl shadow-lg my-8"

@@ -47,7 +47,7 @@ export default function AboutUsPage() {
             {aboutUsImage && (
               <Image
                 src={aboutUsImage.imageUrl}
-                alt={aboutUsImage.description}
+                alt={`The ${SITE_NAME} team collaborating in a modern office`}
                 width={1200}
                 height={800}
                 className="rounded-xl shadow-lg"

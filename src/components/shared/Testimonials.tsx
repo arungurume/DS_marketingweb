@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
+import { SITE_NAME } from '@/lib/constants';
 
 const testimonials = [
   {
@@ -61,7 +62,7 @@ export function Testimonials() {
       )}
     >
       <Avatar>
-        <AvatarImage src={currentTestimonial.avatar} alt={currentTestimonial.author} />
+        <AvatarImage src={currentTestimonial.avatar} alt={`Avatar of ${currentTestimonial.author}, a happy customer of ${SITE_NAME}.`} />
         <AvatarFallback>
           {currentTestimonial.author
             .split(' ')

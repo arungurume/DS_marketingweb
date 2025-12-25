@@ -51,7 +51,7 @@ export default function AmazonStickPage() {
                 {amazonStickImage && (
                 <Image
                     src={amazonStickImage.imageUrl}
-                    alt={amazonStickImage.description}
+                    alt={`An Amazon Fire TV stick used for digital signage with the ${SITE_NAME} CMS`}
                     width={1200}
                     height={800}
                     className="rounded-xl shadow-lg"

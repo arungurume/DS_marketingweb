@@ -68,7 +68,7 @@ export default function QsrMenuBoardPage() {
             {pageImage && (
               <Image
                 src={pageImage.imageUrl}
-                alt={pageImage.description}
+                alt={`A digital menu board for a Quick Service Restaurant by ${SITE_NAME}`}
                 width={1200}
                 height={800}
                 className="rounded-xl shadow-lg my-8"

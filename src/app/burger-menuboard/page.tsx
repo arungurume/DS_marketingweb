@@ -68,7 +68,7 @@ export default function BurgerMenuBoardPage() {
             {pageImage && (
               <Image
                 src={pageImage.imageUrl}
-                alt={pageImage.description}
+                alt={`A digital menu board by ${SITE_NAME} showing delicious burgers in a restaurant`}
                 width={1200}
                 height={800}
                 className="rounded-xl shadow-lg my-8"

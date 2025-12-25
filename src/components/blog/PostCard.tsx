@@ -15,7 +15,7 @@ export function PostCard({ post }: PostCardProps) {
       <Link href={`/blog/${post.slug}/`} aria-label={post.frontmatter.title}>
         <Image
           src={post.frontmatter.cardImage || post.frontmatter.image}
-          alt={post.frontmatter.title}
+          alt={post.frontmatter.description}
           width={400}
           height={250}
           className="w-full object-cover aspect-video"

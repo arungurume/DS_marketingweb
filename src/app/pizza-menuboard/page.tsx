@@ -72,7 +72,7 @@ export default function PizzaMenuBoardPage() {
             {pageImage && (
               <Image
                 src={pageImage.imageUrl}
-                alt={pageImage.description}
+                alt={`A digital pizza menu board by ${SITE_NAME} displaying pizza and deals`}
                 width={1200}
                 height={800}
                 className="rounded-xl shadow-lg my-8"

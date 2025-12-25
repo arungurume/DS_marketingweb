@@ -142,7 +142,7 @@ export default function Home() {
                 <CardContent className="p-6 flex flex-col items-center justify-center gap-4">
                   <Image
                     src={player.src}
-                    alt={`${player.name} logo`}
+                    alt={`${player.name} logo, a supported player for ${SITE_NAME}`}
                     width={80}
                     height={40}
                     className="h-10 w-auto object-contain"
@@ -170,7 +170,7 @@ export default function Home() {
               <Image
                 key={logo.name}
                 src={logo.src}
-                alt={`${logo.name} logo`}
+                alt={`${logo.name} logo, a brand that uses digital signage`}
                 width={128}
                 height={40}
                 className="h-8 w-auto object-contain text-foreground opacity-70 transition-opacity duration-300 hover:opacity-100"

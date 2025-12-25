@@ -68,7 +68,7 @@ export default function CafeMenuBoardPage() {
             {pageImage && (
               <Image
                 src={pageImage.imageUrl}
-                alt={pageImage.description}
+                alt={`A stylish digital cafe menu board from ${SITE_NAME} in a modern coffee shop`}
                 width={1200}
                 height={800}
                 className="rounded-xl shadow-lg my-8"
