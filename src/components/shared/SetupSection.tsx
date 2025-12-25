@@ -86,9 +86,6 @@ export function SetupSection() {
             </div>
           </div>
         </div>
-        <p className="mt-28 text-gray-400 text-sm max-w-2xl mx-auto relative z-20">
-          Free Digital Signage CMS by DS – your complete solution for managing screens, boosting brand visibility, and driving sales with ease.
-        </p>
       </div>
     </section>
   );

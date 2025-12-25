@@ -56,6 +56,9 @@ export function Footer() {
             <div className="col-span-2 lg:col-span-1">
                 <Logo />
                  <p className="text-sm text-muted-foreground mt-4">Powered by {SITE_NAME}</p>
+                 <p className="text-sm text-muted-foreground mt-2">
+                    Free Digital Signage CMS by DS – your complete solution for managing screens, boosting brand visibility, and driving sales with ease.
+                 </p>
             </div>
             {footerLinks.map((section) => (
                 <div key={section.title}>
