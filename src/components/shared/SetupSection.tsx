@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -25,35 +24,33 @@ export function SetupSection() {
   }, []);
 
   return (
-    <section className="relative text-white overflow-hidden">
-      <div className="bg-black">
-        <div className="container text-center py-20 sm:py-32">
-          <h2 className="font-headline text-4xl sm:text-5xl font-bold">
-            Get set up in minutes.
-          </h2>
-          <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-            Use your existing player, TV or computer
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-black hover:bg-gray-200"
-            >
-              <Link href="/free-digital-signage/">Sign Up For Free</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="text-white border-white hover:bg-white hover:text-black"
-            >
-              <Link href="#">Book a Demo</Link>
-            </Button>
-          </div>
+    <section className="bg-black text-white">
+      <div className="container text-center pt-20 sm:pt-32">
+        <h2 className="font-headline text-4xl sm:text-5xl font-bold">
+          Get set up in minutes.
+        </h2>
+        <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+          Use your existing player, TV or computer
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <Button
+            asChild
+            size="lg"
+            className="bg-white text-black hover:bg-gray-200"
+          >
+            <Link href="/free-digital-signage/">Sign Up For Free</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="text-white border-white hover:bg-white hover:text-black"
+          >
+            <Link href="#">Book a Demo</Link>
+          </Button>
         </div>
       </div>
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 mt-8">
         <div className="relative h-full">
           <div className="relative" style={{ aspectRatio: '1080 / 721' }}>
             <div className="w-full h-full absolute top-0 left-0">
