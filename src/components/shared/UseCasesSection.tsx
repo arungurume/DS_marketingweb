@@ -9,8 +9,12 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 import { Check } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const useCases = [
   {
@@ -24,24 +28,46 @@ const useCases = [
       'Menu boards',
       'Limited offers',
     ],
+    image: PlaceHolderImages.find((p) => p.id === 'pizza-menu'),
   },
   {
     value: 'item-2',
     category: 'RETAIL STORES',
     title: 'Promote in-store offers',
     description: 'Campaigns & product highlights',
+    features: [
+        'Seasonal promotions',
+        'Dynamic pricing',
+        'Brand storytelling',
+        'Upsell products',
+    ],
+    image: PlaceHolderImages.find((p) => p.id === 'qsr-menu'),
   },
   {
     value: 'item-3',
     category: 'OFFICES & CORPORATE',
     title: 'Share internal updates',
     description: 'Announcements, KPIs & meetings',
+    features: [
+        'Welcome messages',
+        'Company-wide alerts',
+        'Dashboard integrations',
+        'Meeting room schedules',
+    ],
+    image: PlaceHolderImages.find((p) => p.id === 'app-showcase-4'),
   },
   {
     value: 'item-4',
     category: 'SCHOOLS & CAMPUSES',
     title: 'Keep everyone informed',
     description: 'Events, alerts & schedules',
+    features: [
+        'Cafeteria menus',
+        'Campus event calendars',
+        'Emergency alerts',
+        'Student achievements',
+    ],
+    image: PlaceHolderImages.find((p) => p.id === 'app-showcase-2'),
   },
 ];
 
@@ -52,6 +78,8 @@ const howItWorksSteps = [
 ]
 
 export function UseCasesSection() {
+  const [activeUseCase, setActiveUseCase] = useState(useCases[0]);
+
   return (
     <section className="pb-20 sm:pb-32 bg-background">
       <div className="container">
@@ -72,6 +100,12 @@ export function UseCasesSection() {
               defaultValue="item-1"
               collapsible
               className="w-full"
+              onValueChange={(value) => {
+                const newActiveUseCase = useCases.find(uc => uc.value === value);
+                if (newActiveUseCase) {
+                    setActiveUseCase(newActiveUseCase);
+                }
+              }}
             >
               {useCases.map((item) => (
                 <AccordionItem
@@ -123,8 +157,21 @@ export function UseCasesSection() {
                         </div>
                     ))}
                 </div>
-                <div className="aspect-[16/9] w-full rounded-lg border-2 border-dashed border-border flex items-center justify-center">
-                    <p className="text-muted-foreground">Screen preview</p>
+                <div className="aspect-[16/9] w-full rounded-lg bg-muted overflow-hidden">
+                    {activeUseCase && activeUseCase.image ? (
+                         <Image
+                            src={activeUseCase.image.imageUrl}
+                            alt={activeUseCase.image.description}
+                            width={1200}
+                            height={675}
+                            className="w-full h-full object-cover transition-opacity duration-300"
+                            data-ai-hint={activeUseCase.image.imageHint}
+                        />
+                    ) : (
+                        <div className="flex items-center justify-center h-full">
+                            <p className="text-muted-foreground">Screen preview</p>
+                        </div>
+                    )}
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <Button asChild size="lg">
