@@ -44,8 +44,8 @@ export function HeroSection() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-24">
-            <Button className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 px-8 text-lg font-bold rounded-lg shadow-lg shadow-blue-500/10 transition-transform hover:scale-[1.02]">
-              Start For Free
+            <Button asChild className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 px-8 text-lg font-bold rounded-lg shadow-lg shadow-blue-500/10 transition-transform hover:scale-[1.02]">
+              <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
             </Button>
             <Button variant="outline" className="border-gray-200 bg-white hover:bg-gray-50 text-black h-14 px-8 text-lg font-bold rounded-lg shadow-sm transition-transform hover:scale-[1.02]">
               <PlayCircle className="mr-2 h-6 w-6" />

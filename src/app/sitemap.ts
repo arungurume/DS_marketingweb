@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about-us-ds/',
     '/free-digital-signage/',
     '/amazon-signage-stick-cms/',
+    '/amazon-signage-stick/',
+    '/how-to-setup-amazon-signage-stick/',
     '/pizza-menuboard/',
     '/cafe-menuboard/',
     '/burger-menuboard/',
@@ -26,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/qsr-menuboard/',
     '/terms-and-conditions/',
     '/privacy-policy/',
+    '/gdpr/',
     '/blog/',
     '/pricing/',
   ];

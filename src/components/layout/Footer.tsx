@@ -19,10 +19,10 @@ const footerLinks = {
         { title: 'Blog', href: '/blog' },
         { title: 'Contact', href: '/contact' },
     ],
-    Support: [
-        { title: 'Help Center', href: '#' },
+    Legal: [
+        { title: 'GDPR Overview', href: '/gdpr' },
         { title: 'Privacy Policy', href: '/privacy-policy' },
-        { title: 'Terms', href: '/terms-and-conditions' },
+        { title: 'Terms & Conditions', href: '/terms-and-conditions' },
     ],
     Solutions: [
         { title: 'Pizza Shop', href: '/pizza-menuboard' },
@@ -59,6 +59,12 @@ export function Footer() {
                         <p className="mt-6 text-[15px] text-gray-500 max-w-[280px] leading-relaxed font-normal">
                             Free Digital Signage CMS by DS – your complete solution for managing screens, boosting brand visibility, and driving sales with ease.
                         </p>
+                        <div className="mt-6 flex flex-col gap-2">
+                            <p className="text-sm font-bold text-black">Support</p>
+                            <a href="mailto:support@digtialsigns.ai" className="text-[14px] text-gray-500 hover:text-[#2B7CD3] transition-colors">
+                                support@digtialsigns.ai
+                            </a>
+                        </div>
 
                     </div>
                     {Object.entries(footerLinks).map(([title, links]) => (

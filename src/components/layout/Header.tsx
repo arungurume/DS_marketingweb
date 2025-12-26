@@ -12,7 +12,7 @@ import { Menu } from 'lucide-react';
 const mainNavLinks = [
   { href: '/', label: 'Free Signage' },
   { href: '/menu-boards', label: 'Menu Boards' },
-  { href: '/amazon-stick', label: 'Amazon Stick' },
+  { href: '/amazon-signage-stick', label: 'Amazon Signage Stick' },
   { href: '#', label: 'Solutions', isMega: true },
   { href: '/pricing', label: '$5/ Screen' },
   { href: '/blog', label: 'Blog' },
@@ -177,10 +177,10 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             <Button asChild variant="outline" className="hidden sm:flex border-gray-200 text-black font-bold h-11 px-6 rounded-xl transition-all hover:bg-gray-50 hover:scale-[1.02] active:scale-[0.98]">
-              <Link href="#">Book Demo</Link>
+              <a href="https://hub.digitalsigns.ai/">Login</a>
             </Button>
             <Button asChild className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-11 px-6 rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
-              <Link href="#">Start Free</Link>
+              <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
             </Button>
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -221,6 +221,15 @@ export function Header() {
                       )}
                     </div>
                   ))}
+
+                  <div className="pt-6 mt-6 border-t border-gray-100 flex flex-col gap-4">
+                    <Button asChild variant="outline" className="w-full font-bold h-12 rounded-xl">
+                      <a href="https://hub.digitalsigns.ai/">Login</a>
+                    </Button>
+                    <Button asChild className="w-full bg-[#2B7CD3] text-white font-bold h-12 rounded-xl">
+                      <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                    </Button>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

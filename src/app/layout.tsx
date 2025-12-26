@@ -5,6 +5,7 @@ import { Outfit, Inter } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { CookieConsent } from '@/components/shared/CookieConsent';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 
 const outfit = Outfit({
@@ -54,6 +55,7 @@ export default function RootLayout({
         <main className="font-outfit">{children}</main>
         <Footer />
         <Toaster />
+        <CookieConsent />
       </body>
     </html>
   );

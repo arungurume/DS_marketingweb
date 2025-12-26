@@ -83,7 +83,7 @@ export default function MeetingRoomsPage() {
                                 <Link href="/book-demo">Book a Demo</Link>
                             </Button>
                             <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 font-bold h-12 px-6 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
-                                <Link href="/start-free">Start Free</Link>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
                             </Button>
                         </div>
 

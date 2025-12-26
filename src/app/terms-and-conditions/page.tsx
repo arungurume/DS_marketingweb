@@ -24,38 +24,97 @@ export default function TermsAndConditionsPage() {
     <div className="pb-16 sm:pb-24">
       <PageHeader
         title="Terms and Conditions"
-        subtitle={`Last updated: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`}
+        subtitle="Effective Date: April 19, 2025"
       />
       <div className="container">
         <div className="prose prose-lg max-w-4xl mx-auto text-foreground/80">
           <h2>1. Introduction</h2>
           <p>
-            Welcome to {SITE_NAME}! These terms and conditions outline the rules and regulations for the use of our website and services, located at {SITE_URL}. By accessing this website, we assume you accept these terms and conditions. Do not continue to use {SITE_NAME} if you do not agree to all of the terms and conditions stated on this page.
+            These Terms and Conditions ("Terms") govern your use of {SITE_NAME}'s services, including our website, DSHub, DSEditor, and DSPlayer. By accessing or using our services, you agree to be bound by these Terms. If you do not agree, please refrain from using our services.
           </p>
-          <h2>2. Intellectual Property Rights</h2>
-          <p>
-            Other than the content you own, under these Terms, {SITE_NAME} and/or its licensors own all the intellectual property rights and materials contained in this Website. You are granted a limited license only for purposes of viewing the material contained on this Website.
-          </p>
-          <h2>3. Restrictions</h2>
-          <p>You are specifically restricted from all of the following:</p>
+
+          <h2>2. Definitions</h2>
           <ul>
-            <li>publishing any Website material in any other media;</li>
-            <li>selling, sublicensing and/or otherwise commercializing any Website material;</li>
-            <li>publicly performing and/or showing any Website material;</li>
-            <li>using this Website in any way that is or may be damaging to this Website;</li>
-            <li>using this Website in any way that impacts user access to this Website;</li>
+            <li><strong>"Services":</strong> All offerings provided by {SITE_NAME}, including software, platforms, and support.</li>
+            <li><strong>"User":</strong> Any individual or entity using our Services, including free and paid account holders.</li>
+            <li><strong>"Content":</strong> All materials uploaded, submitted, or displayed through our platform.</li>
           </ul>
-          <h2>4. Your Content</h2>
+
+          <h2>3. Account Registration</h2>
+          <ul>
+            <li>You must provide accurate, complete, and current information.</li>
+            <li>You are responsible for maintaining the confidentiality of your credentials.</li>
+            <li>You agree to notify us immediately of any unauthorized access or misuse.</li>
+          </ul>
+
+          <h2>4. Use of Services</h2>
+          <ul>
+            <li>You agree not to use our Services for any unlawful or harmful activity.</li>
+            <li>You must not upload or transmit malicious code, infringing content, or violate third-party rights.</li>
+            <li>All use must comply with applicable laws and these Terms.</li>
+          </ul>
+
+          <h2>5. Plans and Payments</h2>
+          <ul>
+            <li><strong>Free Plan:</strong> Offers limited access to features and is subject to change without notice.</li>
+            <li><strong>Paid Plan:</strong> Includes additional features, billed in advance monthly or annually.</li>
+            <li><strong>Payment Processing:</strong> All payments are securely handled by <strong>Stripe</strong>. We do not store your payment data.</li>
+          </ul>
+
+          <h2>6. Refunds</h2>
           <p>
-            In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant {SITE_NAME} a non-exclusive, worldwide irrevocable, sub-licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.
+            All payments are final. We do not offer refunds on subscription fees or add-ons once payment is processed, except where required by law.
           </p>
-          <h2>5. No warranties</h2>
+
+          <h2>7. Fee Changes</h2>
           <p>
-            This Website is provided “as is,” with all faults, and {SITE_NAME} express no representations or warranties, of any kind related to this Website or the materials contained on this Website.
+            We reserve the right to modify our pricing. Any changes will be communicated in advance via our platform or email. Continued use of the Services after the effective date constitutes acceptance of the new fees.
           </p>
-          <h2>6. Limitation of liability</h2>
+
+          <h2>8. Intellectual Property</h2>
           <p>
-            In no event shall {SITE_NAME}, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.
+            All content, software, and branding associated with the Services are the property of {SITE_NAME} or its licensors. You may not reproduce, modify, or distribute our content without written consent.
+          </p>
+
+          <h2>9. User Content</h2>
+          <p>
+            You retain ownership of your uploaded content. By using the platform, you grant us a limited license to store and display your content solely for providing the Services.
+          </p>
+
+          <h2>10. Termination</h2>
+          <p>We may suspend or terminate your access to our Services at any time, with or without notice, if:</p>
+          <ul>
+            <li>You violate these Terms or misuse the platform.</li>
+            <li>Your subscription expires or is not renewed.</li>
+            <li>Required by legal or security reasons.</li>
+          </ul>
+          <p>Upon termination, your account data may be deleted and access permanently revoked.</p>
+
+          <h2>11. Disclaimers</h2>
+          <p>
+            Our Services are provided "as is" without warranties of any kind. We do not guarantee uninterrupted service, and we are not responsible for any loss resulting from service downtime.
+          </p>
+
+          <h2>12. Limitation of Liability</h2>
+          <p>
+            To the extent permitted by law, {SITE_NAME} shall not be liable for any indirect, incidental, or consequential damages, including data loss, business interruption, or financial harm.
+          </p>
+
+          <h2>13. Changes to Terms</h2>
+          <p>
+            We may update these Terms periodically. All changes will be posted on this page and are effective upon posting. Continued use after changes indicates your acceptance.
+          </p>
+
+          <h2>14. Governing Law</h2>
+          <p>
+            These Terms are governed by the laws of <strong>Ontario, Canada</strong>. Any disputes arising from these Terms will be resolved in the courts of Ontario.
+          </p>
+
+          <h2>15. Contact Us</h2>
+          <p>
+            For questions or concerns regarding these Terms, please contact us:
+            <br />
+            <strong>Email:</strong> <a href="mailto:support@digitalsigns.ai" className="text-[#2B7CD3] font-bold">support@digitalsigns.ai</a>
           </p>
         </div>
       </div>

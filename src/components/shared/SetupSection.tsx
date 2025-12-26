@@ -37,10 +37,10 @@ export function SetupSection() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button asChild className="font-headline bg-[#F5D631] text-black hover:bg-[#eacb2e] h-14 px-10 text-lg font-bold rounded-lg shadow-xl shadow-yellow-500/10 transition-transform hover:scale-[1.02]">
-                            <Link href="#">Sign Up For Free</Link>
+                            <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
                         </Button>
                         <Button asChild variant="outline" className="font-headline bg-white text-black border-none hover:bg-gray-100 h-14 px-10 text-lg font-bold rounded-lg transition-all hover:scale-[1.02]">
-                            <Link href="#">Book a Demo</Link>
+                            <a href="https://hub.digitalsigns.ai/">Login</a>
                         </Button>
                     </div>
                 </div>

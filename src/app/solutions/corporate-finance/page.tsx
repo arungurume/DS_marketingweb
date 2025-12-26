@@ -391,7 +391,7 @@ export default function CorporateFinancePage() {
                                     <Link href="/book-demo">Contact Sales</Link>
                                 </Button>
                                 <Button asChild size="lg" variant="ghost" className="text-white hover:bg-white/10 font-bold h-14 px-8 rounded-xl border border-white/20 hover:scale-105 transition-transform">
-                                    <Link href="/start-free">Start Free</Link>
+                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
                                 </Button>
                             </div>
                         </div>

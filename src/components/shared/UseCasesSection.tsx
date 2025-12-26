@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Check } from 'lucide-react';
@@ -131,11 +132,11 @@ export function UseCasesSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="font-headline flex-1 bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 text-lg font-bold rounded-lg shadow-lg">
-                                Start Free
+                            <Button asChild className="font-headline flex-1 bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 text-lg font-bold rounded-lg shadow-lg">
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
                             </Button>
-                            <Button variant="outline" className="font-headline flex-1 border-gray-200 text-black h-14 text-lg font-bold rounded-lg shadow-sm bg-white hover:bg-gray-50">
-                                Pricing
+                            <Button asChild variant="outline" className="font-headline flex-1 border-gray-200 text-black h-14 text-lg font-bold rounded-lg shadow-sm bg-white hover:bg-gray-50">
+                                <Link href="/pricing">Pricing</Link>
                             </Button>
                         </div>
                     </div>
