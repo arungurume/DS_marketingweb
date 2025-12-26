@@ -82,7 +82,7 @@ export function AmazonSignageStickClient() {
                         <div className="relative rounded-[40px] bg-[#F1EFEC] p-10 shadow-sm border border-gray-100">
                             <div className="relative rounded-[20px] overflow-hidden bg-white aspect-[4/3] shadow-xl">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1601944177325-f8867652837f?q=80&w=2574&auto=format&fit=crop"
+                                    src="/images/amazon/Amazon_signage_DShub.png"
                                     alt="Amazon Signage Stick connected to a TV running DigitalSigns.ai menus"
                                     fill
                                     className="object-cover"
@@ -327,7 +327,7 @@ export function AmazonSignageStickClient() {
                             <div className="relative rounded-[32px] overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 p-6 shadow-2xl group">
                                 <div className="relative aspect-video rounded-xl overflow-hidden">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1659297396060-958799469f36?q=80&w=2574&auto=format&fit=crop"
+                                        src="/images/amazon/Banner1.png"
                                         alt="Multiple Amazon Signage Sticks managed by DigitalSigns.ai CMS"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
