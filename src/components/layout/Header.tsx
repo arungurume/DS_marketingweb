@@ -21,21 +21,57 @@ const mainNavLinks = [
 
 const solutionsData = [
   {
-    title: 'Hospitality & Food',
+    title: 'Food & Hospitality',
     links: [
-      { label: 'Quick Service (QSR)', href: '/solutions/qsr' },
-      { label: 'Coffee Shops & Cafes', href: '/solutions/cafes' },
-      { label: 'Bars & Nightclubs', href: '/solutions/bars' },
-      { label: 'Pizzeria Boards', href: '/solutions/pizzerias' },
+      { label: 'Quick Service (QSR)', href: '/solutions/food-hospitality/qsr' },
+      { label: 'Fine Dining', href: '/solutions/food-hospitality/fine-dining' },
+      { label: 'Casual Dining', href: '/solutions/food-hospitality/casual-dining' },
+      { label: 'Bars & Nightclubs', href: '/solutions/food-hospitality/bars-nightclubs' },
+      { label: 'Pizzerias', href: '/solutions/food-hospitality/pizzerias' },
+      { label: 'Food Trucks', href: '/solutions/food-hospitality/food-trucks' },
+      { label: 'Coffee Shops & Cafes', href: '/solutions/food-hospitality/coffee-shops-cafes' },
     ]
   },
   {
-    title: 'Retail & Business',
+    title: 'Retail & Commerce',
     links: [
-      { label: 'Retail Store Displays', href: '/solutions/retail' },
-      { label: 'Supermarket Signage', href: '/solutions/supermarkets' },
-      { label: 'Corporate HR Boards', href: '/solutions/corporate' },
-      { label: 'Healthcare Media', href: '/solutions/healthcare' },
+      { label: 'Retail Store Displays', href: '/solutions/retail/stores' },
+      { label: 'Supermarket Signage', href: '/solutions/retail/supermarkets' },
+      { label: 'Shopping Malls', href: '/solutions/retail/shopping-malls' },
+      { label: 'Real Estate Displays', href: '/solutions/retail/real-estate' },
+      { label: 'Pharmacy Solutions', href: '/solutions/retail/pharmacies' },
+      { label: 'Auto Dealerships', href: '/solutions/retail/auto-dealerships' },
+    ]
+  },
+  {
+    title: 'Corporate & Finance',
+    links: [
+      { label: 'Corporate Offices', href: '/solutions/corporate-finance/offices' },
+      { label: 'Meeting Rooms', href: '/solutions/corporate-finance/meeting-rooms' },
+      { label: 'Banks & Finance', href: '/solutions/corporate-finance/banks' },
+      { label: 'Warehouse & Logistics', href: '/solutions/corporate-finance/warehouses' },
+      { label: 'Clinics & Healthcare', href: '/solutions/corporate-finance/clinics' },
+      { label: 'Manufacturing Floors', href: '/solutions/corporate-finance/manufacturing' },
+    ]
+  },
+  {
+    title: 'Education & Public',
+    links: [
+      { label: 'K-12 Schools', href: '/solutions/education-public/k12' },
+      { label: 'Universities', href: '/solutions/education-public/universities' },
+      { label: 'Government Agencies', href: '/solutions/education-public/government' },
+      { label: 'Museums & Galleries', href: '/solutions/education-public/museums' },
+      { label: 'Events & Arenas', href: '/solutions/education-public/events-arenas' },
+      { label: 'Community Centers', href: '/solutions/education-public/community-centers' },
+    ]
+  },
+  {
+    title: 'Cannabis Industry',
+    links: [
+      { label: 'Dispensary Menus', href: '/solutions/cannabis/dispensaries' },
+      { label: 'Growth Facilities', href: '/solutions/cannabis/growth-facilities' },
+      { label: 'Processing Plants', href: '/solutions/cannabis/processing' },
+      { label: 'Delivery Services', href: '/solutions/cannabis/delivery' },
     ]
   }
 ];
@@ -80,25 +116,25 @@ export function Header() {
                 {/* Mega Menu Dropdown */}
                 {link.isMega && (
                   <div className={cn(
-                    "absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] w-[900px]",
+                    "absolute top-[calc(100%-1px)] left-1/2 -translate-x-1/2 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] w-[1340px]",
                     isMegaOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible"
                   )}>
                     <div className="bg-white/95 backdrop-blur-3xl border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-[32px] overflow-hidden flex">
-                      {/* Left: Industry Grid (2/3) */}
-                      <div className="flex-1 p-12 grid grid-cols-2 gap-16">
+                      {/* Left: Industry Grid (1 row) */}
+                      <div className="flex-1 p-10 grid grid-cols-5 gap-6">
                         {solutionsData.map((category) => (
                           <div key={category.title}>
-                            <h4 className="font-headline font-semibold text-gray-900 text-sm tracking-widest uppercase mb-8 pb-3 border-b border-gray-100/50">
+                            <h4 className="font-headline font-semibold text-gray-900 text-xs tracking-widest uppercase mb-5 pb-3 border-b border-gray-100/50">
                               {category.title}
                             </h4>
-                            <ul className="space-y-6">
+                            <ul className="space-y-3.5">
                               {category.links.map((subLink) => (
                                 <li key={subLink.label}>
                                   <Link
                                     href={subLink.href}
-                                    className="text-[15px] text-gray-500 hover:text-[#00AEEF] transition-all duration-300 block font-medium group/item flex items-center gap-3 hover:translate-x-1"
+                                    className="text-[15px] text-gray-500 hover:text-[#2B7CD3] transition-all duration-300 block font-medium group/item flex items-center gap-3 hover:translate-x-1 whitespace-nowrap"
                                   >
-                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover/item:bg-[#00AEEF] transition-colors" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-200 group-hover/item:bg-[#2B7CD3] transition-colors shrink-0" />
                                     {subLink.label}
                                   </Link>
                                 </li>
@@ -109,9 +145,9 @@ export function Header() {
                       </div>
 
                       {/* Right: Solution Spotlight (1/3) */}
-                      <div className="w-[320px] bg-gray-50/50 p-12 border-l border-gray-100 flex flex-col justify-between">
+                      <div className="w-[360px] bg-gray-50/50 p-10 border-l border-gray-100 flex flex-col justify-between">
                         <div>
-                          <span className="inline-block px-3 py-1 bg-[#00AEEF]/10 text-[#00AEEF] text-[10px] font-bold tracking-tighter uppercase rounded-full mb-6">
+                          <span className="inline-block px-3 py-1 bg-[#2B7CD3]/10 text-[#2B7CD3] text-[10px] font-bold tracking-tighter uppercase rounded-full mb-4">
                             Solution Spotlight
                           </span>
                           <h3 className="font-headline font-semibold text-2xl text-black leading-snug mb-4">
@@ -125,7 +161,7 @@ export function Header() {
                         <div className="mt-8">
                           <Link
                             href="/solutions"
-                            className="inline-flex items-center gap-2 text-sm font-bold text-[#00AEEF] hover:gap-3 transition-all duration-300"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#2B7CD3] hover:gap-3 transition-all duration-300"
                           >
                             Explore All Industries
                             <span className="text-lg">→</span>
@@ -143,7 +179,7 @@ export function Header() {
             <Button asChild variant="outline" className="hidden sm:flex border-gray-200 text-black font-bold h-11 px-6 rounded-xl transition-all hover:bg-gray-50 hover:scale-[1.02] active:scale-[0.98]">
               <Link href="#">Book Demo</Link>
             </Button>
-            <Button asChild className="bg-[#00AEEF] hover:bg-[#0096ce] text-white font-bold h-11 px-6 rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <Button asChild className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-11 px-6 rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
               <Link href="#">Start Free</Link>
             </Button>
 
@@ -164,7 +200,7 @@ export function Header() {
                         onClick={() => !link.isMega && setIsOpen(false)}
                         className={cn(
                           'text-lg font-bold flex flex-col',
-                          pathname === link.href ? 'text-[#00AEEF]' : 'hover:text-[#00AEEF]'
+                          pathname === link.href ? 'text-[#2B7CD3]' : 'hover:text-[#2B7CD3]'
                         )}
                       >
                         {link.label}

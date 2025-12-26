@@ -26,8 +26,8 @@ const amazonStickImage = PlaceHolderImages.find((p) => p.id === 'amazon-stick');
 
 const steps = [
     { title: "Plug In", description: "Connect your Amazon Fire TV Stick to any TV with an HDMI port." },
-    { title: "Install App", description: "Download the free DigitalSigns.ai player app from the Amazon Appstore." },
-    { title: "Pair Screen", description: "Enter the code shown on your TV into your DigitalSigns.ai dashboard to pair the screen." },
+    { title: "Install App", description: "Download the free .DS (DigitalSigns.ai) player app from the Amazon Appstore." },
+    { title: "Pair Screen", description: "Enter the code shown on your TV into your .DS (DigitalSigns.ai) dashboard to pair the screen." },
     { title: "Push Content", description: "Your scheduled content will instantly appear on the screen. It's that simple!" },
 ];
 

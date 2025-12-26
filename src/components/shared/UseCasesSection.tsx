@@ -76,12 +76,12 @@ export function UseCasesSection() {
                                     key={useCase.value}
                                     className={cn(
                                         "border border-gray-100 rounded-xl mb-4 p-1 px-4 transition-all duration-300",
-                                        activeUseCase === useCase.value ? "border-[#00AEEF] bg-white shadow-sm" : "hover:border-gray-200"
+                                        activeUseCase === useCase.value ? "border-[#2B7CD3] bg-white shadow-sm" : "hover:border-gray-200"
                                     )}
                                 >
                                     <AccordionTrigger className="hover:no-underline py-5 text-left border-none">
                                         <div className="flex flex-col items-start gap-1">
-                                            <span className="font-body text-[#00AEEF] text-[11px] font-bold uppercase tracking-[0.05em] mb-1">{useCase.tag}</span>
+                                            <span className="font-body text-[#2B7CD3] text-[11px] font-bold uppercase tracking-[0.05em] mb-1">{useCase.tag}</span>
                                             <span className="font-headline font-semibold text-xl text-gray-900 tracking-tight">{useCase.title}</span>
                                             <span className="font-body text-gray-500 font-normal text-[15px] mt-0.5">{useCase.subtext}</span>
                                         </div>
@@ -90,7 +90,7 @@ export function UseCasesSection() {
                                         <div className="grid grid-cols-2 gap-y-4 gap-x-8 border-t border-gray-50 pt-6">
                                             {useCase.features.map(feature => (
                                                 <div key={feature} className="flex items-center gap-3">
-                                                    <Check className="h-4 w-4 text-[#00AEEF] stroke-[3px]" />
+                                                    <Check className="h-4 w-4 text-[#2B7CD3] stroke-[3px]" />
                                                     <span className="font-body text-[14px] text-gray-600 font-medium">{feature}</span>
                                                 </div>
                                             ))}
@@ -131,7 +131,7 @@ export function UseCasesSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="font-headline flex-1 bg-[#00AEEF] hover:bg-[#0096ce] text-white h-14 text-lg font-bold rounded-lg shadow-lg">
+                            <Button className="font-headline flex-1 bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 text-lg font-bold rounded-lg shadow-lg">
                                 Start Free
                             </Button>
                             <Button variant="outline" className="font-headline flex-1 border-gray-200 text-black h-14 text-lg font-bold rounded-lg shadow-sm bg-white hover:bg-gray-50">

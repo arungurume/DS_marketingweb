@@ -8,7 +8,7 @@ import { PostCard } from '@/components/blog/PostCard';
 import { PageHeader } from '@/components/shared/PageHeader';
 
 const pageTitle = `Blog | ${SITE_NAME}`;
-const pageDescription = 'The latest news, tips, and insights on digital signage, marketing, and business growth from the DigitalSigns.ai team.';
+const pageDescription = 'The latest news, tips, and insights on digital signage, marketing, and business growth from the .DS (DigitalSigns.ai) team.';
 const pageUrl = `${SITE_URL}/blog/`;
 
 export const metadata: Metadata = {
