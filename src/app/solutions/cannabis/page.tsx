@@ -79,7 +79,7 @@ export default function CannabisPage() {
                             <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white font-bold h-12 px-6 rounded-xl shadow-lg shadow-green-900/10 transition-transform hover:scale-105">
                                 <Link href="/book-demo">Book a Demo</Link>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 font-bold h-12 px-6 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
+                            <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 hover:text-gray-900 font-bold h-12 px-6 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
                                 <Link href="#templates">See Templates</Link>
                             </Button>
                         </div>
@@ -366,7 +366,7 @@ export default function CannabisPage() {
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
                                 <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white font-bold h-14 px-8 rounded-xl shadow-lg hover:scale-105 transition-transform">
-                                    <Link href="/book-demo">Contact Sales</Link>
+                                    <a href="https://wa.me/12263360773">Contact Sales</a>
                                 </Button>
                                 <Button asChild size="lg" variant="ghost" className="text-white hover:bg-white/10 font-bold h-14 px-8 rounded-xl border border-white/20 hover:scale-105 transition-transform">
                                     <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>

@@ -82,7 +82,7 @@ export default function CorporateOfficesPage() {
                             <Button asChild size="lg" className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-12 px-6 rounded-xl shadow-lg shadow-blue-900/10 transition-transform hover:scale-105">
                                 <Link href="/book-demo">Book a Demo</Link>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 font-bold h-12 px-6 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
+                            <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 hover:text-gray-900 font-bold h-12 px-6 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
                                 <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
                             </Button>
                         </div>
@@ -285,7 +285,7 @@ export default function CorporateOfficesPage() {
                             </div>
                             <div className="flex flex-wrap gap-3 flex-shrink-0">
                                 <Button asChild className="bg-[#3b82f6] hover:bg-[#2563eb] text-white font-bold h-11 px-6 rounded-xl border border-transparent transition-transform hover:scale-105">
-                                    <Link href="/book-demo">Contact Sales</Link>
+                                    <a href="https://wa.me/12263360773">Contact Sales</a>
                                 </Button>
                                 <Button asChild variant="ghost" className="text-white hover:bg-white/10 font-bold h-11 px-6 rounded-xl border border-white/20 transition-transform hover:scale-105">
                                     <Link href="/pricing">View Pricing</Link>

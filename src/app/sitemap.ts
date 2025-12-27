@@ -3,6 +3,7 @@ export const dynamic = 'force-static';
 
 import { SITE_URL } from '@/lib/constants';
 import { getAllPosts } from '@/lib/blog';
+import { getAllSpaSlugs } from '@/lib/spa-locations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
@@ -26,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/burger-menuboard/',
     '/cannabis-dispensary-menu/',
     '/qsr-menuboard/',
+    '/spa-digital-signage/',
     '/terms-and-conditions/',
     '/privacy-policy/',
     '/gdpr/',
@@ -40,5 +42,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === '/' ? 1.0 : 0.9,
   }));
 
-  return [...staticPageRoutes, ...blogPostRoutes];
+  // Generate routes for all spa locations
+  const spaSlugs = getAllSpaSlugs();
+  const spaLocationRoutes = spaSlugs.map(({ city, businessType }) => ({
+    url: `${SITE_URL}/spa-digital-signage/${city}/${businessType}/`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPageRoutes, ...blogPostRoutes, ...spaLocationRoutes];
 }

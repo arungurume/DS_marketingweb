@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 
 const mainNavLinks = [
-  { href: '/', label: 'Free Signage' },
+  { href: '/free-digital-signage', label: 'Free Digital Signage' },
   { href: '/menu-boards', label: 'Menu Boards' },
   { href: '/amazon-signage-stick', label: 'Amazon Signage Stick' },
   { href: '#', label: 'Solutions', isMega: true },
@@ -30,6 +30,7 @@ const solutionsData = [
       { label: 'Pizzerias', href: '/solutions/food-hospitality/pizzerias' },
       { label: 'Food Trucks', href: '/solutions/food-hospitality/food-trucks' },
       { label: 'Coffee Shops & Cafes', href: '/solutions/food-hospitality/coffee-shops-cafes' },
+      { label: 'Spas & Wellness Centers', href: '/spa-digital-signage' },
     ]
   },
   {
@@ -176,7 +177,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button asChild variant="outline" className="hidden sm:flex border-gray-200 text-black font-bold h-11 px-6 rounded-xl transition-all hover:bg-gray-50 hover:scale-[1.02] active:scale-[0.98]">
+            <Button asChild variant="outline" className="hidden sm:flex border-gray-200 text-black hover:text-black font-bold h-11 px-6 rounded-xl transition-all hover:bg-gray-50 hover:scale-[1.02] active:scale-[0.98]">
               <a href="https://hub.digitalsigns.ai/">Login</a>
             </Button>
             <Button asChild className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-11 px-6 rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
@@ -223,7 +224,7 @@ export function Header() {
                   ))}
 
                   <div className="pt-6 mt-6 border-t border-gray-100 flex flex-col gap-4">
-                    <Button asChild variant="outline" className="w-full font-bold h-12 rounded-xl">
+                    <Button asChild variant="outline" className="w-full font-bold h-12 rounded-xl text-black hover:text-black hover:bg-gray-50">
                       <a href="https://hub.digitalsigns.ai/">Login</a>
                     </Button>
                     <Button asChild className="w-full bg-[#2B7CD3] text-white font-bold h-12 rounded-xl">

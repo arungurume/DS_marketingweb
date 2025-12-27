@@ -198,7 +198,7 @@ export default function AboutUsPage() {
                         <Button asChild size="lg" className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white px-10 h-14 text-lg font-bold rounded-xl shadow-2xl transition-transform hover:scale-[1.02]">
                             <Link href="#">Try .DS (DigitalSigns.ai) for Free</Link>
                         </Button>
-                        <Button asChild variant="outline" size="lg" className="border-gray-800 bg-transparent text-white hover:bg-white/5 px-10 h-14 text-lg font-bold rounded-xl transition-all">
+                        <Button asChild variant="outline" size="lg" className="border-gray-800 bg-transparent text-white hover:text-white hover:bg-white/5 px-10 h-14 text-lg font-bold rounded-xl transition-all">
                             <Link href="/pricing">View Pricing</Link>
                         </Button>
                     </div>

@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/shared/CookieConsent';
+import { WhatsAppButton } from '@/components/shared/WhatsAppButton';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 
 const outfit = Outfit({
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         <CookieConsent />
+        <WhatsAppButton />
       </body>
     </html>
   );

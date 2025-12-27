@@ -33,7 +33,7 @@ export function CookieConsent() {
 
     return (
         <div className={cn(
-            "fixed bottom-6 left-6 right-6 md:left-auto md:right-10 md:w-[400px] z-[100] transition-all duration-500 transform translate-y-0",
+            "fixed bottom-6 left-6 right-6 md:right-auto md:left-10 md:w-[400px] z-[100] transition-all duration-500 transform translate-y-0",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         )}>
             <div className="bg-white/95 backdrop-blur-xl border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-2xl p-6 md:p-8">
