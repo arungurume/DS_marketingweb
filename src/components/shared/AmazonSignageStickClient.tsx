@@ -190,7 +190,7 @@ export function AmazonSignageStickClient() {
                     </div>
 
                     <div className="mt-8">
-                        <Link href="#" className="inline-flex items-center gap-2 text-sm font-bold text-orange-500 hover:underline">
+                        <Link href="/amazon-signage-stick/comparison" className="inline-flex items-center gap-2 text-sm font-bold text-orange-500 hover:underline">
                             For a deeper breakdown, see our full comparison: Amazon Signage Stick vs Fire TV Stick – Detailed Comparison →
                         </Link>
                     </div>

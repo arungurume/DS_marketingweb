@@ -10,11 +10,10 @@ import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 
 const mainNavLinks = [
+  { href: '#', label: 'Players', isDropdown: true },
   { href: '/free-digital-signage', label: 'Free Digital Signage' },
-  { href: '/menu-boards', label: 'Menu Boards' },
   { href: '/amazon-signage-stick', label: 'Amazon Signage Stick' },
   { href: '#', label: 'Solutions', isMega: true },
-  { href: '/pricing', label: '$5/ Screen' },
   { href: '/blog', label: 'Blog' },
   { href: '/about-us', label: 'About Us' },
 ];
@@ -81,6 +80,7 @@ export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isMegaOpen, setIsMegaOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-xl">
@@ -93,32 +93,65 @@ export function Header() {
               <div
                 key={link.label}
                 className="relative group h-20 flex items-center"
-                onMouseEnter={() => link.isMega && setIsMegaOpen(true)}
-                onMouseLeave={() => link.isMega && setIsMegaOpen(false)}
+                onMouseEnter={() => {
+                  if (link.isMega) setIsMegaOpen(true);
+                  if (link.isDropdown) setIsDropdownOpen(true);
+                }}
+                onMouseLeave={() => {
+                  if (link.isMega) setIsMegaOpen(false);
+                  if (link.isDropdown) setIsDropdownOpen(false);
+                }}
               >
                 <Link
                   href={link.href}
                   className={cn(
-                    'relative px-4 py-2.5 text-[15px] font-bold tracking-tight transition-all duration-300 rounded-full flex items-center gap-1',
-                    pathname === link.href || (link.isMega && isMegaOpen)
+                    'relative px-4 py-2.5 text-[15px] font-normal tracking-tight transition-all duration-300 rounded-full flex items-center gap-1',
+                    pathname === link.href || (link.isMega && isMegaOpen) || (link.isDropdown && isDropdownOpen)
                       ? 'text-black'
-                      : 'text-gray-500 hover:text-black'
+                      : 'text-gray-600 hover:text-black'
                   )}
                 >
                   <span className="relative z-10">{link.label}</span>
                   <span className={cn(
                     "absolute inset-0 bg-gray-100/80 rounded-full transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]",
-                    pathname === link.href || (link.isMega && isMegaOpen)
+                    pathname === link.href || (link.isMega && isMegaOpen) || (link.isDropdown && isDropdownOpen)
                       ? "scale-100 opacity-100"
                       : "scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100"
                   )} />
                 </Link>
 
+                {/* Dropdown for Players */}
+                {link.isDropdown && (
+                  <div className={cn(
+                    "absolute top-[calc(100%-5px)] left-0 w-[260px] bg-white border border-gray-100 shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-2xl overflow-hidden transition-all duration-300",
+                    isDropdownOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible pointer-events-none"
+                  )}>
+                    <div className="p-2 space-y-1">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.dshub.signage&hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-semibold text-gray-700 hover:text-[#2B7CD3] transition-colors"
+                      >
+                        Google TV / Android TV
+                      </a>
+                      <a
+                        href="https://www.amazon.com.br/DS-DSPlayer-Digitalsigns-ai/dp/B0F7Y9Q598"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-semibold text-gray-700 hover:text-[#2B7CD3] transition-colors"
+                      >
+                        Amazon Fire TV
+                      </a>
+                    </div>
+                  </div>
+                )}
+
                 {/* Mega Menu Dropdown */}
                 {link.isMega && (
                   <div className={cn(
-                    "absolute top-[calc(100%-1px)] left-1/2 -translate-x-1/2 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] w-[1340px]",
-                    isMegaOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible"
+                    "fixed top-[80px] left-1/2 -translate-x-1/2 w-full max-w-[1340px] px-6 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                    isMegaOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible pointer-events-none"
                   )}>
                     <div className="bg-white/95 backdrop-blur-3xl border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-[32px] overflow-hidden flex">
                       {/* Left: Industry Grid (1 row) */}
@@ -198,9 +231,9 @@ export function Header() {
                     <div key={link.label}>
                       <Link
                         href={link.href}
-                        onClick={() => !link.isMega && setIsOpen(false)}
+                        onClick={() => !link.isMega && !link.isDropdown && setIsOpen(false)}
                         className={cn(
-                          'text-lg font-bold flex flex-col',
+                          'text-lg font-normal flex flex-col',
                           pathname === link.href ? 'text-[#2B7CD3]' : 'hover:text-[#2B7CD3]'
                         )}
                       >

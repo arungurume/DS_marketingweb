@@ -15,7 +15,7 @@ const useCases = [
         title: 'Show scheduled menus',
         subtext: 'Breakfast, lunch, dinner & promos',
         features: ['Day-part scheduling', 'Instant price updates', 'Menu boards', 'Limited offers'],
-        image: '/images/screens/screen1.png'
+        image: '/images/homepage/Burger_menuboard_h.png'
     },
     {
         value: 'promotions',
@@ -23,7 +23,7 @@ const useCases = [
         title: 'Promote in-store offers',
         subtext: 'Campaigns & product highlights',
         features: ['Holiday sales ads', 'New arrivals', 'Live stock updates', 'In-store marketing'],
-        image: '/images/screens/screen2.png'
+        image: '/images/homepage/Retailboard_h.png'
     },
     {
         value: 'internal-updates',
@@ -31,7 +31,7 @@ const useCases = [
         title: 'Share internal updates',
         subtext: 'Announcements, KPIs & meetings',
         features: ['Meeting room logs', 'CEO messages', 'KPI dashboards', 'Slack integrations'],
-        image: '/images/screens/screen1.png'
+        image: '/images/homepage/office_h.png'
     },
     {
         value: 'stay-informed',
@@ -39,7 +39,7 @@ const useCases = [
         title: 'Keep everyone informed',
         subtext: 'Events, alerts & schedules',
         features: ['Campus alerts', 'Event schedules', 'Wayfinding', 'Social feeds'],
-        image: '/images/screens/screen2.png'
+        image: '/images/homepage/School_menuboard_h.png'
     },
 ];
 
@@ -54,7 +54,7 @@ export function UseCasesSection() {
     const activeData = useCases.find(u => u.value === activeUseCase) || useCases[0];
 
     return (
-        <section className="py-24 bg-white w-full overflow-hidden">
+        <section className="pb-24 bg-white w-full overflow-hidden">
             <div className="max-w-[1240px] mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="font-headline font-semibold text-3xl md:text-[40px] text-gray-900 tracking-tight mb-4">
@@ -132,10 +132,10 @@ export function UseCasesSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button asChild className="font-headline flex-1 bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 text-lg font-bold rounded-lg shadow-lg">
+                            <Button asChild className="font-headline flex-1 bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 text-lg font-normal rounded-lg shadow-lg">
                                 <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
                             </Button>
-                            <Button asChild variant="outline" className="font-headline flex-1 border-gray-200 text-black h-14 text-lg font-bold rounded-lg shadow-sm bg-white hover:bg-gray-50">
+                            <Button asChild variant="outline" className="font-headline flex-1 border-gray-200 text-black h-14 text-lg font-normal rounded-lg shadow-sm bg-white hover:bg-gray-50">
                                 <Link href="/pricing">Pricing</Link>
                             </Button>
                         </div>
