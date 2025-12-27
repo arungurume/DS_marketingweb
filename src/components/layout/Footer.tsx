@@ -12,7 +12,6 @@ const footerLinks = {
         { title: 'Pricing', href: '/pricing' },
         { title: 'Templates', href: '/templates' },
         { title: 'Amazon Signage Stick', href: '/amazon-signage-stick' },
-        { title: 'Menu Boards', href: '/menu-boards' },
     ],
     Company: [
         { title: 'About Us', href: '/about-us' },
@@ -26,8 +25,8 @@ const footerLinks = {
         { title: 'Terms & Conditions', href: '/terms-and-conditions' },
     ],
     Solutions: [
-        { title: 'Pizza Shop', href: '/pizza-menuboard' },
-        { title: 'Coffee Shop', href: '/cafe-menuboard' },
+        { title: 'Pizza Shop', href: '/solutions/food-hospitality/pizzerias' },
+        { title: 'Coffee Shop', href: '/solutions/food-hospitality/coffee-shops-cafes' },
         { title: 'Restaurant', href: '/solutions/food-hospitality/fine-dining' },
         { title: 'QSR', href: '/solutions/food-hospitality/qsr' },
         { title: 'Dispensary', href: '/solutions/cannabis/dispensaries' },

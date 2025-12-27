@@ -138,8 +138,8 @@ export default function QSRPage() {
                         <div className="relative rounded-[26px] border border-gray-100 overflow-hidden bg-white shadow-[0_10px_30px_rgba(11,18,32,0.08)]">
                             <div className="w-full h-[320px] bg-gray-100 relative">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1556742521-9713bf272865?q=80&w=2574&auto=format&fit=crop"
-                                    alt="QSR digital signage with menu boards and drive-thru displays"
+                                    src="/images/homepage/Burger_menuboard_h.png"
+                                    alt="QSR digital signage with menu boards"
                                     fill
                                     className="object-cover"
                                 />
