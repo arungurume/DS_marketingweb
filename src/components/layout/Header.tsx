@@ -105,7 +105,7 @@ export function Header() {
                 <Link
                   href={link.href}
                   className={cn(
-                    'relative px-4 py-2.5 text-[15px] font-normal tracking-tight transition-all duration-300 rounded-full flex items-center gap-1',
+                    'relative px-4 py-2.5 text-[15px] font-medium tracking-tight transition-all duration-300 rounded-full flex items-center gap-1',
                     pathname === link.href || (link.isMega && isMegaOpen) || (link.isDropdown && isDropdownOpen)
                       ? 'text-black'
                       : 'text-gray-600 hover:text-black'
@@ -233,7 +233,7 @@ export function Header() {
                         href={link.href}
                         onClick={() => !link.isMega && !link.isDropdown && setIsOpen(false)}
                         className={cn(
-                          'text-lg font-normal flex flex-col',
+                          'text-lg font-medium flex flex-col',
                           pathname === link.href ? 'text-[#2B7CD3]' : 'hover:text-[#2B7CD3]'
                         )}
                       >

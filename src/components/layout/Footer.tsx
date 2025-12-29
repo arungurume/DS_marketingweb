@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 const footerLinks = {
     'Digital Signage': [
         { title: 'Free Digital Signage', href: '/free-digital-signage' },
-        { title: 'Pricing', href: '/pricing' },
         { title: 'Templates', href: '/templates' },
         { title: 'Amazon Signage Stick', href: '/amazon-signage-stick' },
     ],
