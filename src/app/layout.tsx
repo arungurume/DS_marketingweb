@@ -51,6 +51,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTJ47CHKVK"></script>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag("js", new Date());
+          gtag("config", "G-QTJ47CHKVK", { anonymize_ip: true });
+        ` }} />
+      </head>
       <body className="font-outfit bg-background text-foreground antialiased selection:bg-blue-100">
         <Header />
         <main className="font-outfit">{children}</main>

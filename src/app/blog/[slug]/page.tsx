@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { compileMDX } from 'next-mdx-remote/rsc';
-import { useMDXComponents } from '@/mdx-components';
+import { mdxComponents } from '@/mdx-components';
 import { PostCard } from '@/components/blog/PostCard';
 import { Badge } from '@/components/ui/badge';
 import { Seo } from '@/components/shared/Seo';
@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const { content, frontmatter } = post;
   const { title, date, author, image, tags, description } = frontmatter;
-  const components = useMDXComponents({});
+  const components = mdxComponents;
 
   const { content: mdxContent } = await compileMDX({
     source: content,
