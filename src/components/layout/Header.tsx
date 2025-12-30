@@ -13,6 +13,7 @@ const mainNavLinks = [
   { href: '#', label: 'Players', isDropdown: true },
   { href: '/free-digital-signage', label: 'Free Digital Signage' },
   { href: '/amazon-signage-stick', label: 'Amazon Signage Stick' },
+  { href: '/templates', label: 'Templates' },
   { href: '#', label: 'Solutions', isMega: true },
   { href: '/blog', label: 'Blog' },
   { href: '/about-us', label: 'About Us' },
