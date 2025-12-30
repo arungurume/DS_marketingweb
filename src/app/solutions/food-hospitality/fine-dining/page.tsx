@@ -124,7 +124,7 @@ export default function FineDiningPage() {
                         <div className="relative rounded-[26px] border border-gray-100 overflow-hidden bg-white shadow-[0_10px_30px_rgba(11,18,32,0.08)]">
                             <div className="w-full h-[320px] bg-gray-100 relative">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?q=80&w=2670&auto=format&fit=crop"
+                                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2670&auto=format&fit=crop"
                                     alt="Elegant fine dining restaurant setting with subtle digital displays"
                                     fill
                                     className="object-cover"
