@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/shared/CookieConsent';
 import { WhatsAppButton } from '@/components/shared/WhatsAppButton';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -20,6 +21,7 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const defaultOgImage = PlaceHolderImages.find(p => p.id === 'cannabis-menu');
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og.png',
+        url: defaultOgImage?.imageUrl || '/og.png',
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -48,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_NAME} | Cloud-Based Digital Signage Software`,
     description: 'Easily create, schedule, and manage content across your screens — without complex hardware. Get started for free.',
-    images: ['/og.png'],
+    images: [defaultOgImage?.imageUrl || '/og.png'],
   },
 };
 
@@ -81,4 +83,3 @@ export default function RootLayout({
     </html>
   );
 }
-
