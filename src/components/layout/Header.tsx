@@ -131,7 +131,7 @@ export function Header() {
                         href="https://play.google.com/store/apps/details?id=com.dshub.signage&hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-semibold text-gray-700 hover:text-[#2B7CD3] transition-colors"
+                        className="block px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-medium text-gray-700 hover:text-[#2B7CD3] transition-colors"
                       >
                         Google TV / Android TV
                       </a>
@@ -139,7 +139,7 @@ export function Header() {
                         href="https://www.amazon.com.br/DS-DSPlayer-Digitalsigns-ai/dp/B0F7Y9Q598"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-semibold text-gray-700 hover:text-[#2B7CD3] transition-colors"
+                        className="block px-4 py-3 rounded-xl hover:bg-gray-50 text-sm font-medium text-gray-700 hover:text-[#2B7CD3] transition-colors"
                       >
                         Amazon Fire TV
                       </a>
@@ -158,7 +158,7 @@ export function Header() {
                       <div className="flex-1 p-10 grid grid-cols-5 gap-6">
                         {solutionsData.map((category) => (
                           <div key={category.title}>
-                            <h4 className="font-headline font-semibold text-gray-900 text-xs tracking-widest uppercase mb-5 pb-3 border-b border-gray-100/50">
+                            <h4 className="font-headline font-medium text-gray-900 text-xs tracking-widest uppercase mb-5 pb-3 border-b border-gray-100/50">
                               {category.title}
                             </h4>
                             <ul className="space-y-3.5">
@@ -181,10 +181,10 @@ export function Header() {
                       {/* Right: Solution Spotlight (1/3) */}
                       <div className="w-[360px] bg-gray-50/50 p-10 border-l border-gray-100 flex flex-col justify-between">
                         <div>
-                          <span className="inline-block px-3 py-1 bg-[#2B7CD3]/10 text-[#2B7CD3] text-[10px] font-bold tracking-tighter uppercase rounded-full mb-4">
+                          <span className="inline-block px-3 py-1 bg-[#2B7CD3]/10 text-[#2B7CD3] text-[10px] font-medium tracking-tighter uppercase rounded-full mb-4">
                             Solution Spotlight
                           </span>
-                          <h3 className="font-headline font-semibold text-2xl text-black leading-snug mb-4">
+                          <h3 className="font-headline font-medium text-2xl text-black leading-snug mb-4">
                             Industry-Specific Power
                           </h3>
                           <p className="text-sm text-gray-500 leading-relaxed font-medium">
@@ -243,10 +243,10 @@ export function Header() {
                         <div className="mt-4 grid gap-6 pl-4">
                           {solutionsData.map((cat) => (
                             <div key={cat.title}>
-                              <h5 className="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2">{cat.title}</h5>
+                              <h5 className="text-[11px] font-medium uppercase tracking-wider text-gray-400 mb-2">{cat.title}</h5>
                               <div className="grid gap-2">
                                 {cat.links.slice(0, 3).map(l => (
-                                  <Link key={l.label} href={l.href} className="text-sm font-semibold text-gray-600">{l.label}</Link>
+                                  <Link key={l.label} href={l.href} className="text-sm font-medium text-gray-600">{l.label}</Link>
                                 ))}
                               </div>
                             </div>

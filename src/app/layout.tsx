@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og.png',
+        url: `${SITE_URL}/og.png`,
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_NAME} | Cloud-Based Digital Signage Software`,
     description: 'Easily create, schedule, and manage content across your screens — without complex hardware. Get started for free.',
-    images: ['/og.png'],
+    images: [`${SITE_URL}/og.png`],
   },
 };
 
