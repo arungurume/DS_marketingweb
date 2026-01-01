@@ -29,6 +29,14 @@ const footerLinks = {
         { title: 'Restaurant', href: '/solutions/food-hospitality/fine-dining' },
         { title: 'QSR', href: '/solutions/food-hospitality/qsr' },
         { title: 'Dispensary', href: '/solutions/cannabis/dispensaries' },
+    ],
+    Alternatives: [
+        { title: 'ScreenCloud Alternative', href: '/alternatives/screencloud' },
+        { title: 'Yodeck Alternative', href: '/alternatives/yodeck' },
+        { title: 'OptiSigns Alternative', href: '/alternatives/optisigns' },
+        { title: 'NoviSign Alternative', href: '/alternatives/novisign' },
+        { title: 'Rise Vision Alternative', href: '/alternatives/rise-vision' },
+        { title: 'View all alternatives →', href: '/alternatives' },
     ]
 }
 
@@ -51,7 +59,7 @@ export function Footer() {
     return (
         <footer className="bg-white border-t border-gray-50 py-24 w-full overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
                     <div className="col-span-2 md:col-span-1">
                         <Logo />
                         <p className="mt-6 text-[15px] text-gray-500 max-w-[280px] leading-relaxed font-normal">
