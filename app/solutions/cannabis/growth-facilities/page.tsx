@@ -119,7 +119,7 @@ export default function GrowthFacilitiesPage() {
                         <div className="relative rounded-[26px] border border-gray-100 overflow-hidden bg-white shadow-[0_10px_30px_rgba(11,18,32,0.08)]">
                             <div className="w-full h-[320px] bg-gray-100 relative">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=2670&auto=format&fit=crop"
+                                    src="/images/solutions/cannabis/growth-facility-signage.png"
                                     alt="Large-scale cannabis cultivation facility with digital monitoring screens"
                                     fill
                                     className="object-cover"
