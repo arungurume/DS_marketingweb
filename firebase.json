@@ -7,6 +7,13 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/enhancing-digital-signage-with-ai-unveiling-the-transformative-potential/**",
+        "destination": "/blog/enhancing-digital-signage-with-ai-unveiling-the-transformative-potential/",
+        "type": 302
+      }
     ]
   }
 }
