@@ -119,8 +119,8 @@ export default function BanksFinancePage() {
                         <div className="relative rounded-[26px] border border-gray-100 overflow-hidden bg-white shadow-[0_10px_30px_rgba(11,18,32,0.08)]">
                             <div className="w-full h-[320px] bg-gray-100 relative">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1541354451442-952fe8ef844b?q=80&w=2670&auto=format&fit=crop"
-                                    alt="Modern bank interior with live financial ticker and promotional screens"
+                                    src="https://images.unsplash.com/photo-1594918635811-20a233306dc5?q=80&w=2670&auto=format&fit=crop"
+                                    alt="Modern luxury bank lobby with sleek digital information screens and premium interior design"
                                     fill
                                     className="object-cover"
                                 />
