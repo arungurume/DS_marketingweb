@@ -59,8 +59,8 @@ export function Footer() {
     return (
         <footer className="bg-white border-t border-gray-50 py-24 w-full overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
-                    <div className="col-span-2 md:col-span-1">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-12">
+                    <div className="col-span-2 md:col-span-3 lg:col-span-1">
                         <Logo />
                         <p className="mt-6 text-[15px] text-gray-500 max-w-[280px] leading-relaxed font-normal">
                             Free Digital Signage CMS by DS – your complete solution for managing screens, boosting brand visibility, and driving sales with ease.

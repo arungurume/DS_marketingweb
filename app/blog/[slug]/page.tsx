@@ -10,6 +10,7 @@ import { PostCard } from '@/components/blog/PostCard';
 import { Badge } from '@/components/ui/badge';
 import { Seo } from '@/components/shared/Seo';
 import type { Article } from 'schema-dts';
+import remarkGfm from 'remark-gfm';
 
 type BlogPostPageProps = {
   params: {
@@ -65,32 +66,32 @@ export function generateStaticParams() {
 }
 
 const getJsonLd = (post: Post): Article => {
-    const { title, description, image, date, author } = post.frontmatter;
-    const url = `${SITE_URL}/blog/${post.slug}/`;
+  const { title, description, image, date, author } = post.frontmatter;
+  const url = `${SITE_URL}/blog/${post.slug}/`;
 
-    return {
-        '@type': 'Article',
-        headline: title,
-        description,
-        image,
-        datePublished: date,
-        author: {
-            '@type': 'Person',
-            name: author,
-        },
-        publisher: {
-            '@type': 'Organization',
-            name: SITE_NAME,
-            logo: {
-                '@type': 'ImageObject',
-                url: `${SITE_URL}/logo.png`,
-            }
-        },
-        mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': url,
-        },
-    }
+  return {
+    '@type': 'Article',
+    headline: title,
+    description,
+    image,
+    datePublished: date,
+    author: {
+      '@type': 'Person',
+      name: author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo.png`,
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+  }
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -108,6 +109,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     components,
     options: {
       parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
     },
   });
 
@@ -153,16 +157,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 prose-headings:text-primary prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-foreground">
             {mdxContent}
           </div>
-          
+
           {tags && tags.length > 0 && (
-             <div className="mt-8 border-t pt-8">
-                <h3 className="font-headline text-lg font-semibold">Tags</h3>
-                <div className="flex flex-wrap gap-2 mt-4">
-                    {tags.map(tag => (
-                        <Badge key={tag} variant="secondary" className="text-sm">{tag}</Badge>
-                    ))}
-                </div>
-             </div>
+            <div className="mt-8 border-t pt-8">
+              <h3 className="font-headline text-lg font-semibold">Tags</h3>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {tags.map(tag => (
+                  <Badge key={tag} variant="secondary" className="text-sm">{tag}</Badge>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </article>
@@ -170,16 +174,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section className="py-16 sm:py-24 bg-primary/5">
-            <div className="container">
-                <h2 className="font-headline text-3xl font-bold text-center text-primary">
-                    Continue Reading
-                </h2>
-                <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {relatedPosts.map(relatedPost => (
-                        <PostCard key={relatedPost.slug} post={relatedPost} />
-                    ))}
-                </div>
+          <div className="container">
+            <h2 className="font-headline text-3xl font-bold text-center text-primary">
+              Continue Reading
+            </h2>
+            <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedPosts.map(relatedPost => (
+                <PostCard key={relatedPost.slug} post={relatedPost} />
+              ))}
             </div>
+          </div>
         </section>
       )}
     </>
