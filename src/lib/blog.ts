@@ -35,6 +35,6 @@ export function getAllPosts(): Post[] {
   const slugs = fs.readdirSync(postsDirectory);
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    .sort((post1, post2) => (post1.frontmatter.date > post2.frontmatter.date ? -1 : 1));
+    .sort((post1, post2) => (new Date(post1.frontmatter.date).getTime() > new Date(post2.frontmatter.date).getTime() ? -1 : 1));
   return posts;
 }
