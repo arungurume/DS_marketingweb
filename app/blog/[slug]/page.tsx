@@ -10,7 +10,7 @@ import { PostCard } from '@/components/blog/PostCard';
 import { Badge } from '@/components/ui/badge';
 import { Seo } from '@/components/shared/Seo';
 import type { Article } from 'schema-dts';
-import remarkGfm from 'remark-gfm';
+
 
 type BlogPostPageProps = {
   params: {
@@ -109,9 +109,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     components,
     options: {
       parseFrontmatter: false,
-      mdxOptions: {
-        remarkPlugins: [remarkGfm],
-      },
     },
   });
 
