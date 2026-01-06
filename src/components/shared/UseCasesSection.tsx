@@ -133,7 +133,7 @@ export function UseCasesSection() {
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button asChild className="font-headline flex-1 bg-[#2B7CD3] hover:bg-[#246BB5] text-white h-14 text-lg font-normal rounded-lg shadow-lg">
-                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                             </Button>
                             <Button asChild variant="outline" className="font-headline flex-1 border-gray-200 text-black h-14 text-lg font-normal rounded-lg shadow-sm bg-white hover:bg-gray-50">
                                 <Link href="/pricing">Pricing</Link>

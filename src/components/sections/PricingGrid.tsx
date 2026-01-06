@@ -24,7 +24,7 @@ export function PricingGrid() {
                 "Core Apps Included"
             ],
             cta: "Get Started for Free",
-            href: "https://hub.digitalsigns.ai/signup",
+            href: "https://hub.digitalsigns.ai/#/usermanagement/signin",
             variant: "outline",
             popular: false
         },
@@ -44,7 +44,7 @@ export function PricingGrid() {
                 "Proof of Play Reports"
             ],
             cta: "Start 14-Day Free Trial",
-            href: "https://hub.digitalsigns.ai/signup",
+            href: "https://hub.digitalsigns.ai/#/usermanagement/signin",
             variant: "default",
             popular: true
         }

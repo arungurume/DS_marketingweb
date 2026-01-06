@@ -56,7 +56,7 @@ export default function TemplatesPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
                             <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white h-12 px-8 text-lg font-normal rounded-lg">
-                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Get Started Free</a>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Get Started Free</a>
                             </Button>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ export default function TemplatesPage() {
                                 Sign up for a free account today and we'll notify you as soon as the full template library launches.
                             </p>
                             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-white/90 h-14 px-10 text-lg font-medium rounded-xl transition-all hover:scale-105">
-                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign Up Free</a>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign Up Free</a>
                             </Button>
                         </div>
                         {/* Abstract Background Shapes */}

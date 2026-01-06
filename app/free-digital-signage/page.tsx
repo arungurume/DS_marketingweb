@@ -60,7 +60,7 @@ export default function FreeDigitalSignagePage() {
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <Button asChild size="lg" className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-12 px-8 rounded-xl shadow-lg shadow-blue-900/10 transition-transform hover:scale-105">
-                  <a href="https://hub.digitalsigns.ai/signup">Get Started Free</a>
+                  <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Get Started Free</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 hover:text-gray-900 font-bold h-12 px-8 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
                   <Link href="/how-it-works">See How It Works</Link>
@@ -185,7 +185,7 @@ export default function FreeDigitalSignagePage() {
 
           <div className="flex justify-center gap-4 mt-12">
             <Button asChild size="lg" className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-12 px-8 rounded-xl shadow-lg shadow-blue-900/10">
-              <a href="https://hub.digitalsigns.ai/signup">Claim My Free Plan</a>
+              <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Claim My Free Plan</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 hover:text-gray-900 font-bold h-12 px-8 rounded-xl bg-white hover:bg-gray-50">
               <Link href="/pricing">View Pricing</Link>
@@ -295,7 +295,7 @@ export default function FreeDigitalSignagePage() {
               </div>
               <div className="flex flex-col sm:flex-row justify-end gap-4">
                 <Button asChild size="lg" className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-12 px-8 rounded-xl shadow-lg">
-                  <a href="https://hub.digitalsigns.ai/signup">Get Started Free</a>
+                  <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Get Started Free</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="bg-transparent border-white/20 text-white hover:text-white font-bold h-12 px-8 rounded-xl hover:bg-white/10 hover:border-white/40">
                   <Link href="/demo">See Live Demo</Link>

@@ -215,7 +215,7 @@ export function Header() {
               <a href="https://hub.digitalsigns.ai/">Login</a>
             </Button>
             <Button asChild className="bg-[#2B7CD3] hover:bg-[#246BB5] text-white font-bold h-11 px-6 rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
-              <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+              <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
             </Button>
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -262,7 +262,7 @@ export function Header() {
                       <a href="https://hub.digitalsigns.ai/">Login</a>
                     </Button>
                     <Button asChild className="w-full bg-[#2B7CD3] text-white font-bold h-12 rounded-xl">
-                      <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                      <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                     </Button>
                   </div>
                 </div>

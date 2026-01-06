@@ -100,7 +100,7 @@ export function FreeSignagePageClient() {
                             </p>
                             <div className="mt-8 flex flex-col sm:flex-row gap-4">
                                 <Button asChild size="lg">
-                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                                 </Button>
                                 <Button asChild variant="outline" size="lg">
                                     <Link href="#">See How It Works</Link>
@@ -194,7 +194,7 @@ export function FreeSignagePageClient() {
                         </div>
                         <div className="mt-8 text-center">
                             <Button asChild size="lg">
-                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Claim My Free Screens</a>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Claim My Free Screens</a>
                             </Button>
                         </div>
                     </div>
@@ -277,7 +277,7 @@ export function FreeSignagePageClient() {
                             </p>
                             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                                 </Button>
                                 <Button asChild variant="outline" size="lg" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
                                     <a href="https://hub.digitalsigns.ai/">Login</a>

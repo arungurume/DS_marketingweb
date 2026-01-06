@@ -45,7 +45,7 @@ export default function AlternativePage({ params }: PageProps) {
         notFound();
     }
 
-    const amazonLink = "https://hub.digitalsigns.ai/#/usermanagement/signup";
+    const amazonLink = "https://hub.digitalsigns.ai/#/usermanagement/signin";
     const brandBlue = "#2B7CD3"; // DigitalSigns Blue
     const brandBlueLight = "#F0F7FF"; // Very light blue background
 
@@ -273,7 +273,7 @@ export default function AlternativePage({ params }: PageProps) {
 
                     <div className="flex justify-center mt-12">
                         <Button asChild size="lg" className="bg-[#2B7CD3] hover:bg-[#206bc4] text-white font-bold h-12 px-8 rounded-full transition-all text-base shadow-lg shadow-blue-500/20">
-                            <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">
+                            <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">
                                 Try DigitalSigns.ai free for 14 days
                             </a>
                         </Button>

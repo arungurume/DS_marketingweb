@@ -98,7 +98,7 @@ export default function QSRPage() {
                                 <Link href="/book-demo">Book a Demo</Link>
                             </Button>
                             <Button asChild variant="outline" size="lg" className="border-gray-200 text-gray-700 hover:text-gray-900 font-bold h-12 px-6 rounded-xl bg-white hover:bg-gray-50 transition-transform hover:scale-105">
-                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                             </Button>
                             <Button asChild variant="ghost" size="lg" className="text-gray-600 font-bold h-12 px-6 rounded-xl hover:bg-gray-50">
                                 <Link href="/pricing">View Pricing</Link>

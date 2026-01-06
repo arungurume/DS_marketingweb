@@ -397,7 +397,7 @@ export default function FoodHospitalityPage() {
                                     <a href="https://wa.me/12263360773">Contact Sales</a>
                                 </Button>
                                 <Button asChild size="lg" variant="ghost" className="text-white hover:bg-white/10 font-bold h-14 px-8 rounded-xl border border-white/20 hover:scale-105 transition-transform">
-                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                                    <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                                 </Button>
                             </div>
                         </div>

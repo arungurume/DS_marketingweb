@@ -309,7 +309,7 @@ export default function SolutionsPage() {
                                 <a href="https://wa.me/12263360773">Contact Sales</a>
                             </Button>
                             <Button asChild variant="ghost" className="text-white hover:bg-white/10 font-bold h-11 px-6 rounded-xl border border-white/20">
-                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signup">Sign up free</a>
+                                <a href="https://hub.digitalsigns.ai/#/usermanagement/signin">Sign up free</a>
                             </Button>
                             <Button asChild variant="ghost" className="text-white hover:bg-white/10 font-bold h-11 px-6 rounded-xl border border-white/20">
                                 <Link href="/pricing">View Pricing</Link>
