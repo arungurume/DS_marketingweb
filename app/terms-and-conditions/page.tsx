@@ -81,7 +81,16 @@ export default function TermsAndConditionsPage() {
             You retain ownership of your uploaded content. By using the platform, you grant us a limited license to store and display your content solely for providing the Services.
           </p>
 
-          <h2>10. Termination</h2>
+          <h2>10. Third-Party Services and Integrations</h2>
+          <p>
+            Our Services may integrate with third-party platforms, such as <strong>Canva</strong>, YouTube, and Meta.
+          </p>
+          <ul>
+            <li><strong>Canva Connect:</strong> By using the Canva integration, you agree to comply with <a href="https://www.canva.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer">Canva's Terms of Use</a> and acknowledge that your use of Canva is subject to their policies. We are not responsible for any issues arising from your use of Canva's platform.</li>
+            <li><strong>Responsibility:</strong> We do not control and are not responsible for the content, privacy policies, or practices of any third-party services. You acknowledge and agree that {SITE_NAME} shall not be liable for any damage or loss caused by your use of third-party integrations.</li>
+          </ul>
+
+          <h2>11. Termination</h2>
           <p>We may suspend or terminate your access to our Services at any time, with or without notice, if:</p>
           <ul>
             <li>You violate these Terms or misuse the platform.</li>
@@ -90,27 +99,27 @@ export default function TermsAndConditionsPage() {
           </ul>
           <p>Upon termination, your account data may be deleted and access permanently revoked.</p>
 
-          <h2>11. Disclaimers</h2>
+          <h2>12. Disclaimers</h2>
           <p>
             Our Services are provided "as is" without warranties of any kind. We do not guarantee uninterrupted service, and we are not responsible for any loss resulting from service downtime.
           </p>
 
-          <h2>12. Limitation of Liability</h2>
+          <h2>13. Limitation of Liability</h2>
           <p>
             To the extent permitted by law, {SITE_NAME} shall not be liable for any indirect, incidental, or consequential damages, including data loss, business interruption, or financial harm.
           </p>
 
-          <h2>13. Changes to Terms</h2>
+          <h2>14. Changes to Terms</h2>
           <p>
             We may update these Terms periodically. All changes will be posted on this page and are effective upon posting. Continued use after changes indicates your acceptance.
           </p>
 
-          <h2>14. Governing Law</h2>
+          <h2>15. Governing Law</h2>
           <p>
             These Terms are governed by the laws of <strong>Ontario, Canada</strong>. Any disputes arising from these Terms will be resolved in the courts of Ontario.
           </p>
 
-          <h2>15. Contact Us</h2>
+          <h2>16. Contact Us</h2>
           <p>
             For questions or concerns regarding these Terms, please contact us:
             <br />

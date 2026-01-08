@@ -89,7 +89,17 @@ export default function PrivacyPolicyPage() {
 
             <h3>Canva Integration</h3>
             <p>
-              You may connect Your Canva account to import designs directly into {SITE_NAME}. This integration is subject to <a href="https://www.canva.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">Canva's Privacy Policy</a>. We only access the designs You explicitly choose to import.
+              Our Service integrates with <strong>Canva Connect</strong> to allow You to browse and import Your Canva designs directly into {SITE_NAME}. By using this integration:
+            </p>
+            <ul>
+              <li><strong>Data Access:</strong> We only access Canva designs and metadata that You explicitly choose to import or list through the Canva Connect interface.</li>
+              <li><strong>Data Usage:</strong> Imported designs are used to create content for Your digital signage displays.</li>
+              <li><strong>Data Retention:</strong> We retain imported Canva assets as long as Your {SITE_NAME} account remains active. If You disconnect Your Canva account or delete Your {SITE_NAME} account, all associated Canva data is scheduled for deletion within 30 days.</li>
+              <li><strong>Data Storage & Hosting:</strong> All imported data is stored securely in our cloud-based infrastructure (hosted on AWS and Google Cloud) using industry-standard encryption.</li>
+              <li><strong>Security Practices:</strong> We conduct regular security assessments and internal audits to ensure the safety of Your data. For any security-related inquiries or to report a vulnerability, please contact us at <a href="mailto:support@digitalsigns.ai" className="text-[#2B7CD3] font-bold">support@digitalsigns.ai</a>.</li>
+            </ul>
+            <p>
+              Your use of this integration is governed by <a href="https://www.canva.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">Canva's Privacy Policy</a> and <a href="https://www.canva.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer">Canva's Terms of Use</a>.
             </p>
 
             <h3>Meta (Instagram & Facebook) Integration</h3>
