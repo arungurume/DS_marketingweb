@@ -68,6 +68,23 @@ export default function RootLayout({
           gtag("js", new Date());
           gtag("config", "G-QTJ47CHKVK", { anonymize_ip: true });
         ` }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'DigitalSigns.ai',
+              url: SITE_URL,
+              logo: `${SITE_URL}/images/logo.png`,
+              sameAs: [
+                'https://www.linkedin.com/company/digitalsignsai/',
+                'https://www.youtube.com/@DigitalSigns.ai',
+                'https://www.instagram.com/digitalsignsai/',
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="font-outfit bg-background text-foreground antialiased selection:bg-blue-100">
         <Header />

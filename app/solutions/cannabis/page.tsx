@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { ArrowRight, Leaf, Activity, ShieldCheck, Truck, Zap, Monitor, Layers, ChevronRight, BarChart3, Database } from 'lucide-react';
+import { TemplateStrip } from '@/components/shared/TemplateStrip';
 
 export default function CannabisPage() {
     return (
@@ -249,27 +250,7 @@ export default function CannabisPage() {
                         </Link>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="border border-gray-100 rounded-[18px] overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 cursor-pointer group">
-                                <div className="bg-gray-100 aspect-[16/9] relative md:h-[200px]">
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-300">
-                                        <Image
-                                            src={`https://images.unsplash.com/photo-${1557804506000 + i}?auto=format&fit=crop&w=600&q=80`}
-                                            alt={`Cannabis Template ${i}`}
-                                            fill
-                                            className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                                        />
-                                    </div>
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                                </div>
-                                <div className="p-4">
-                                    <h4 className="font-bold text-sm text-gray-900 mb-1">Dispensary Menu Layout {i}</h4>
-                                    <p className="text-xs text-gray-500">Optimized for high THC/CBD clarity and brand aesthetic.</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <TemplateStrip limit={6} />
                 </div>
             </section>
 

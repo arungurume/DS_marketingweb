@@ -6,7 +6,7 @@ const hardware = [
     { name: 'Google TV', image: '/images/Google_TV.png', description: "Google TV", href: "https://play.google.com/store/apps/details?id=com.dshub.signage&hl=en" },
     { name: 'Android TV', image: '/images/Android_TV.png', description: "Android TV", href: "https://play.google.com/store/apps/details?id=com.dshub.signage&hl=en" },
     { name: 'Fire TV', image: '/images/Fire_Tv.png', description: "Fire TV", href: "https://www.amazon.com.br/DS-DSPlayer-Digitalsigns-ai/dp/B0F7Y9Q598" },
-    { name: 'Amazon Signage stick', image: '/images/amazon_signage.png', description: "Amazon Signage stick", href: "/amazon-signage-stick" },
+    { name: 'Amazon Signage', image: '/images/amazon_signage.png', description: "Amazon Signage", href: "/amazon-signage-stick" },
     { name: 'Web Browsers', image: '/images/browser.png', description: "Web Browsers", href: "https://hub.digitalsigns.ai/" },
 ];
 

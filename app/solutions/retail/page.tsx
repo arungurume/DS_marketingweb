@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { TemplateStrip } from '@/components/shared/TemplateStrip';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { ArrowRight, ShoppingBag, ShoppingCart, Map, Home, Activity, Car, Zap, Tag, Monitor, Layers, ChevronRight } from 'lucide-react';
 
@@ -263,28 +264,7 @@ export default function RetailPage() {
                         </Link>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="border border-gray-100 rounded-[18px] overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 cursor-pointer group">
-                                <div className="bg-gray-100 aspect-[16/9] relative md:h-[200px]">
-                                    {/* Placeholder for template image */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-300">
-                                        <Image
-                                            src={`https://images.unsplash.com/photo-${1557804506000 + i}?auto=format&fit=crop&w=600&q=80`} // Random retail-ish placeholder
-                                            alt={`Retail Template ${i}`}
-                                            fill
-                                            className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                                        />
-                                    </div>
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                                </div>
-                                <div className="p-4">
-                                    <h4 className="font-bold text-sm text-gray-900 mb-1">Seasonal Sale Promo {i}</h4>
-                                    <p className="text-xs text-gray-500">Perfect for window displays and high-traffic zones.</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <TemplateStrip limit={6} />
 
                     <div className="mt-8 text-center md:hidden">
                         <Button variant="outline" asChild>

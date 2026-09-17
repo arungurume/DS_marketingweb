@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         <div className="prose prose-lg max-w-4xl mx-auto text-foreground/80">
           <h2>Introduction</h2>
           <p>
-            This Privacy Policy explains how {SITE_NAME} collects, uses, discloses, and protects your personal information when you use our services, including our website, DSHub, DSEditor, and DSPlayer. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.
+            This Privacy Policy explains how {SITE_NAME} collects, uses, discloses, and protects your personal information when you use our services, including our website, DSHub, and DSPlayer. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.
           </p>
 
           <h2>Information We Collect</h2>

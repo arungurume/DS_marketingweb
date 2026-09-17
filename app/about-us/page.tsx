@@ -84,7 +84,7 @@ export default function AboutUsPage() {
                 </div>
             </section>
 
-            {/* Product Section: DSEditor */}
+            {/* Product Section: Canva Integration */}
             <section className="py-24 bg-gray-50/30">
                 <div className="max-w-[1240px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1 relative">
@@ -93,23 +93,23 @@ export default function AboutUsPage() {
                                 <div className="inline-block mb-6 p-4 rounded-full bg-white/5 backdrop-blur-sm group-hover:bg-white/10 transition-colors">
                                     <BarChart className="h-12 w-12 text-[#2B7CD3]" />
                                 </div>
-                                <h4 className="text-white font-headline text-2xl font-bold mb-4">Design Editor Mockup</h4>
-                                <p className="text-gray-400 font-normal">Visualizing the drag-and-drop experience</p>
+                                <h4 className="text-white font-headline text-2xl font-bold mb-4">Canva Integration</h4>
+                                <p className="text-gray-400 font-normal">Design in Canva, publish to your screens</p>
                             </div>
                         </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                        <div className="inline-block px-3 py-1 rounded-full bg-green-50 text-green-600 text-xs font-bold tracking-widest uppercase mb-6">CANVA ALTERNATIVE</div>
-                        <h2 className="font-headline text-4xl font-semibold text-gray-900 mb-6 tracking-tight">DSEditor Menu Design</h2>
+                        <div className="inline-block px-3 py-1 rounded-full bg-green-50 text-green-600 text-xs font-bold tracking-widest uppercase mb-6">CANVA INTEGRATION</div>
+                        <h2 className="font-headline text-4xl font-semibold text-gray-900 mb-6 tracking-tight">Design in Canva, Connect to Your Screens</h2>
                         <p className="font-body text-lg text-gray-600 mb-8 leading-relaxed">
-                            Not every business has a graphic designer. That’s why we created DSEditor—a simple, drag-and-drop tool built specifically for restaurants. Think of it as a Canva alternative tailored for digital signage.
+                            No separate editor to learn. Connect your Canva account and pull your designs and templates straight into DigitalSigns.ai—then publish a menu, promo, or announcement to any screen in a click, using the tools you already know.
                         </p>
                         <ul className="space-y-4">
                             {[
-                                'Ready-to-use templates for menus & promos',
-                                'Export to JPEG, PDF, or publish directly',
-                                'Perfect for signage, print, or social media',
-                                'Easy customization with no experience'
+                                'Connect your Canva account with one click (official Canva Connect)',
+                                'Browse your Canva designs and folders right inside DigitalSigns.ai',
+                                'Import any design to publish it straight to your screens',
+                                'Re-edit in Canva and re-import to update your signage anytime'
                             ].map((item) => (
                                 <li key={item} className="flex items-center gap-3">
                                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-50 flex items-center justify-center">
@@ -176,7 +176,7 @@ export default function AboutUsPage() {
                                 .DS (DigitalSigns.ai) was founded with a single vision: to democratize digital signage technology. We saw that most businesses—from local cafes to global franchises—struggled with outdated, expensive, or overly complex legacy systems.
                             </p>
                             <p>
-                                Our team built **DSHub** and **DSEditor** to provide a modern, cloud-based alternative. By combining powerful remote management with intuitive drag-and-drop design, we've created the most accessible **Free Digital Signage CMS** on the market today.
+                                Our team built **DSHub** with native **Canva integration** to provide a modern, cloud-based alternative. By combining powerful remote management with the design tools you already use, we've created the most accessible **Free Digital Signage CMS** on the market today.
                             </p>
                             <p>
                                 Whether you're a small coffee shop looking to build its first **digital menu board** or a corporate office managing a global network of displays, we provide the tools you need to stay ahead in a fast-changing digital world.
