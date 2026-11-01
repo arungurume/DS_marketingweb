@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Logo from '@/components/shared/Logo';
 import { Linkedin, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LEGAL_ENTITY, SITE_NAME } from '@/lib/constants';
 
 const footerLinks = {
     'Digital Signage': [
@@ -94,7 +95,7 @@ export function Footer() {
                 </div>
                 <div className="mt-12 border-t pt-8 flex flex-col sm:flex-row items-center justify-between">
                     <p className="text-sm text-muted-foreground order-2 sm:order-1 mt-4 sm:mt-0">
-                        &copy; {isClient ? currentYear : ''} DigitalSigns.ai. All rights reserved.
+                        &copy; {isClient ? currentYear : ''} {LEGAL_ENTITY}, operating as {SITE_NAME}. All rights reserved.
                     </p>
                     <div className="flex items-center gap-2 order-1 sm:order-2">
                         {socialLinks.map(link => (

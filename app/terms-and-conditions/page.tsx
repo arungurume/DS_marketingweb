@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { SITE_NAME, SITE_URL } from '@/lib/constants';
+import { LEGAL_ENTITY, SITE_NAME, SITE_URL } from '@/lib/constants';
 
 const pageTitle = `Terms and Conditions | ${SITE_NAME}`;
 const pageDescription = `Please read our terms and conditions carefully before using the ${SITE_NAME} service.`;
@@ -30,7 +30,7 @@ export default function TermsAndConditionsPage() {
         <div className="prose prose-lg max-w-4xl mx-auto text-foreground/80">
           <h2>1. Introduction</h2>
           <p>
-            These Terms and Conditions ("Terms") govern your use of {SITE_NAME}'s services, including our website, DSHub, and DSPlayer. By accessing or using our services, you agree to be bound by these Terms. If you do not agree, please refrain from using our services.
+            {SITE_NAME} is operated by {LEGAL_ENTITY}. These Terms and Conditions ("Terms") govern your use of {SITE_NAME}'s services, including our website, DSHub, and DSPlayer. By accessing or using our services, you agree to be bound by these Terms. If you do not agree, please refrain from using our services.
           </p>
 
           <h2>2. Definitions</h2>
@@ -122,6 +122,8 @@ export default function TermsAndConditionsPage() {
           <h2>16. Contact Us</h2>
           <p>
             For questions or concerns regarding these Terms, please contact us:
+            <br />
+            <strong>Operator:</strong> {LEGAL_ENTITY}, operating as {SITE_NAME}
             <br />
             <strong>Email:</strong> <a href="mailto:support@digitalsigns.ai" className="text-[#2B7CD3] font-bold">support@digitalsigns.ai</a>
           </p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { SITE_NAME, SITE_URL } from '@/lib/constants';
+import { LEGAL_ENTITY, SITE_NAME, SITE_URL } from '@/lib/constants';
 
 const pageTitle = `Privacy Policy | ${SITE_NAME}`;
 const pageDescription = `This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service.`;
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         <div className="prose prose-lg max-w-4xl mx-auto text-foreground/80">
           <h2>Introduction</h2>
           <p>
-            This Privacy Policy explains how {SITE_NAME} collects, uses, discloses, and protects your personal information when you use our services, including our website, DSHub, and DSPlayer. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.
+            {SITE_NAME} is operated by {LEGAL_ENTITY}. This Privacy Policy explains how {SITE_NAME} collects, uses, discloses, and protects your personal information when you use our services, including our website, DSHub, and DSPlayer. By accessing or using our services, you agree to the collection and use of information in accordance with this policy.
           </p>
 
           <h2>Information We Collect</h2>
@@ -154,6 +154,8 @@ export default function PrivacyPolicyPage() {
           <h2>Contact Us</h2>
           <p>
             If you have any questions about this Privacy Policy, please contact us at:
+            <br />
+            <strong>Operator:</strong> {LEGAL_ENTITY}, operating as {SITE_NAME}
             <br />
             <strong>Email:</strong> <a href="mailto:support@digitalsigns.ai" className="text-[#2B7CD3] font-bold">support@digitalsigns.ai</a>
           </p>
