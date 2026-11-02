@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import { mdxComponents } from '@/mdx-components';
 import { PostCard } from '@/components/blog/PostCard';
 import { Badge } from '@/components/ui/badge';
@@ -109,6 +110,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     components,
     options: {
       parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
     },
   });
 
